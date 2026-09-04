@@ -85,7 +85,7 @@
 			<td>AV1:</td>
 		</tr>
 		<tr>
-			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
+			<td>Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</td>
 			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
