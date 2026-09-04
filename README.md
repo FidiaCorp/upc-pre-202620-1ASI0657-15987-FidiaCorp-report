@@ -2,17 +2,21 @@
 
   <img src="https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report/blob/main/Resources/UPC_logo.png?raw_true" alt="Logo-UPC" width="150">
 
-**Universidad Peruana de Ciencias Aplicadas**  
+**Universidad Peruana de Ciencias Aplicadas**
+
 **Ingeniería de Software**
 
-**Periodo:** 2026-20  
-**Curso:** 1ASI0657 | Fundamentos de Arquitectura de Software  
-**NRC:** 15987
-**Docente:** Wilder Aurelio Vega Calero
+**1ASI0657 | Fundamentos de Arquitectura de Software**<br>
+**202620**
 
-## Informe de Trabajo Final
+**NRC: 15987**
 
-**Proyecto:** CrediCasa
+
+**Profesor: Wilder Aurelio Vega Calero**
+
+## Trabajo Final
+
+**Nombre del producto: CrediCasa** 
 
 **Integrantes:**
 
@@ -24,7 +28,8 @@
 | [Por completar] | Pumahualcca Garcia, Diego Rodrigo |
 | u202224130 | Ramos Hinostroza, Diego Antonio |
 
-</div>
+<div align="justify">
+
 
 <div style="page-break-after: always;"></div>
 
