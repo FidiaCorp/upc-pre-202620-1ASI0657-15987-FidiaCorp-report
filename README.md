@@ -22,7 +22,7 @@
 
 | Código | Apellidos y nombres |
 |---|---|
-| [Por completar] | Choque, Oliver Jonseck |
+| [Por completar] | Jonseck Choque, Oliver |
 | [Por completar] | De Las Casas Latour, Sebastian |
 | [Por completar] | Godoy Santillan, Jesus Andres |
 | [Por completar] | Pumahualcca Garcia, Diego Rodrigo |
@@ -81,12 +81,12 @@
 	<tbody>
 		<tr>
 			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-			<td><strong>Choque, Oliver Jonseck:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 		<tr>
 			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-			<td><strong>Choque, Oliver Jonseck:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 	</tbody>
@@ -112,7 +112,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>Choque, Oliver Jonseck</td>
+			<td>Jonseck Choque, Oliver</td>
 			<td>[Por completar]</td>
 			<td>[Por completar]</td>
 			<td>[Por completar]</td>
