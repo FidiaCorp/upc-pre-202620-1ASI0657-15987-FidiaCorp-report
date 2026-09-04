@@ -23,10 +23,10 @@
 | Código | Apellidos y nombres |
 |---|---|
 | [Por completar] | Jonseck Choque, Oliver |
-| [Por completar] | De Las Casas Latour, Sebastian |
 | [Por completar] | Godoy Santillan, Jesus Andres |
 | [Por completar] | Pumahualcca Garcia, Diego Rodrigo |
 | u202224130 | Ramos Hinostroza, Diego Antonio |
+| u202310349 | Rubio Otiz, Luis Sebastián |
 
 <div align="justify">
 
@@ -38,6 +38,8 @@
 | Versión | Fecha | Autor(es) | Descripción de modificación |
 |---|---|---|---|
 | 1.0 | 03/09/2026 | Diego Antonio Ramos Hinostroza | Creación del documento y estructura base |
+| 1.0.0.1 | 03/09/2026 | Luis Sebastián Rubio Ortiz | Modificación de nombre y agregado de código de estudiante |
+
 
 <div style="page-break-after: always;"></div>
 
@@ -81,12 +83,12 @@
 	<tbody>
 		<tr>
 			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 		<tr>
 			<td>Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>De Las Casas Latour, Sebastian:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo::</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1:<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 	</tbody>
@@ -118,12 +120,6 @@
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
-			<td>De Las Casas Latour, Sebastian</td>
-			<td>[Por completar]</td>
-			<td>[Por completar]</td>
-			<td>[Por completar]</td>
-		</tr>
-		<tr>
 			<td>Godoy Santillan, Jesus Andres</td>
 			<td>[Por completar]</td>
 			<td>[Por completar]</td>
@@ -137,6 +133,12 @@
 		</tr>
 		<tr>
 			<td>Ramos Hinostroza, Diego Antonio - u202224130</td>
+			<td>[Por completar]</td>
+			<td>[Por completar]</td>
+			<td>[Por completar]</td>
+		</tr>
+		<tr>
+			<td>Rubio Ortiz, Luis Sebastián - u202310349</td>
 			<td>[Por completar]</td>
 			<td>[Por completar]</td>
 			<td>[Por completar]</td>
