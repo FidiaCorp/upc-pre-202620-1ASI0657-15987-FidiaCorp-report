@@ -139,7 +139,7 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		</tr>
 		<tr>
 			<td>Pumahualcca Garcia, Diego Rodrigo</td>
-			<td>[Por completar]</td>
+			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). </td>
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
@@ -356,15 +356,21 @@ CrediCasa entrega al comprador de vivienda una plataforma transparente, auditabl
 
 ## 2.1. Competidores
 
-Analicen competidores directos e indirectos y definan la posición diferenciadora de CrediCasa.
+A continuación, se presenta el análisis de los competidores directos e indirectos en el mercado peruano, definiendo la posición diferenciadora de CrediCasa frente a las alternativas actuales de simulación y originación crediticia.
 
 | Competidor | Perfil | Fortalezas | Debilidades | Oportunidad para CrediCasa |
 |---|---|---|---|---|
-| [Por completar] | [Por completar] | [Por completar] | [Por completar] | [Por completar] |
+| FinTech | Plataforma FinTech peruana especializada en préstamos con garantía hipotecaria y asesoría para consolidación de deudas. | Fuerte presencia digital, proceso de pre-calificación en línea ágil y un enfoque sólido en la educación financiera del usuario. | Su modelo de negocio se centra más en la liquidez y consolidación de deudas que en la originación de créditos para la compra de primera vivienda directamente desde salas de venta inmobiliarias. | Capturar el segmento B2B mediante un modelo SaaS para inmobiliarias, integrando un motor de cálculo directamente en el proceso de preventa. |
+| Simuladores Web Bancarios | Plataformas digitales tradicionales de las entidades bancarias utilizadas como canales de captación de leads para créditos hipotecarios. | Cuentan con un gran respaldo financiero, confianza de marca por parte del consumidor y conexión directa con el core bancario para aprobaciones crediticias. | Se caracterizan por ser simuladores web cerrados y desactualizados, con una omisión sistemática de gastos colaterales obligatorios, lo que genera opacidad en la TCEA real. Además, carecen de flexibilidad para modelar periodos de gracia o capitalizaciones complejas. | Proveer una herramienta centralizada y multientidad que elimine la asimetría informativa, mostrando el costo real del financiamiento (TCEA, VAN, TIR) desde el primer momento. |
+| PropTech | Marketplaces inmobiliarios que conectan la oferta de proyectos habitacionales con compradores, integrando calculadoras de crédito básicas. | Poseen un altísimo tráfico de usuarios en etapa de búsqueda de vivienda y mantienen alianzas estratégicas con la mayoría de las promotoras inmobiliarias del país. | Sus calculadoras financieras son genéricas y superficiales; no desglosan el impacto matemático de los seguros (desgravamen, multirriesgo) ni permiten estructurar opciones avanzadas como cuotas balón o regímenes multimoneda. | Posicionar a CrediCasa como el motor financiero especializado que las promotoras necesitan para evitar la pérdida de prospectos calificados por falta de pre-calificaciones exactas e inmediatas. |
 
 ### 2.1.1. Estrategias frente a los competidores
 
-[Por completar]
+Para consolidar la ventaja competitiva de CrediCasa frente a las alternativas expuestas, se plantean las siguientes estrategias:
+
+- Diferenciación por Transparencia Matemática y Normativa: A diferencia de los simuladores bancarios y calculadoras PropTech genéricas, CrediCasa transparentará el costo financiero real automatizando la evaluación mediante el cálculo del Valor Actual Neto (VAN), la Tasa Interna de Retorno (TIR) y la Tasa de Costo Efectivo Anual (TCEA). Se auditarán los cronogramas bajo el método francés vencido ordinario, incluyendo explícitamente los seguros obligatorios dispuestos por la SBS.
+- Penetración B2B en el Punto de Venta (Salas de Venta): Mientras que los competidores esperan a que el cliente busque el financiamiento por su cuenta, CrediCasa se insertará en el momento crítico de la preventa. Al proveer esta herramienta a las inmobiliarias bajo un modelo SaaS, se mitigará la caída de operaciones y se reducirán los tiempos muertos de hasta 20 días laborales que actualmente generan pérdida de reservas.
+- Flexibilidad Estructural Multiescenario: La plataforma permitirá modelar escenarios que la competencia no soporta en tiempo real, tales como operaciones multimoneda (Soles y Dólares), conversión estricta entre tasas efectivas y nominales, y la aplicación de períodos de gracia totales o parciales. Esto empoderará al usuario frente a la rigidez de las entidades tradicionales.
 
 Definan objetivos, participantes, criterios de selección, preguntas y método de registro para cada segmento.
 
