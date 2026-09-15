@@ -151,7 +151,7 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		</tr>
 		<tr>
 			<td>Pumahualcca Garcia, Diego Rodrigo</td>
-			<td>[Por completar]</td>
+			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con un conocimiento en el diseño de arquitectura de software y desarrollo backend. En el desarrollo de CrediCasa, mi objetivo principal es utilizar la tecnología para resolver un problema real y social: la falta de transparencia en los créditos hipotecarios.</td>
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
