@@ -732,8 +732,61 @@ La distinción entre tasa de interés y TCEA se apoya en la [orientación de la 
 
 ## 3.2. User Stories
 
+## E01 - Gestión de cuentas y autentificación
+
+**Descripción:** Como usuario, requiero de un sistema de autentificación que me permita registrarme, iniciar sesión, modificar y cerrar sesión, para acceder de manera segura a la plataforma.<br>
+<br> **Objetivo:** Proveer al usuario con un sistema sencillo, capaz y seguro para ingresar.<br>
+<br> **Criterios de aceptación:** <br>
+- Ingresar a la plataforma mediante de correo y contraseña.
+- Actualización de la información del perfil.
+- Authentificación de dos pasos.
+
+ ## E02 - Pago de la suscripción
+
+**Descripción:** Como usuario, requiero de un sistema de pagos simple que me permita ingresar mis datos bancarios de manera segura, para pagar mi suscripción<br>
+<br> **Objetivo:** Proveer al usuario una pagina fácil de utilizar para realizar un pago. <br>
+<br> **Criterios de aceptación:** <br> 
+- Pago por medio de diversos procesadores de pago.
+- Verificación del estado del pago.
+
+## E03 - Gestion de los bienes inmobiliarios
+
+**Descripción:** Como usuario, deseo un sistema que me permita registrar mis bienes inmobiliarios de manera fácil y rapida, además de verificar la legitimidad de este. <br>
+<br> **Objetivo:** Proveer al usuario con un sistema intuitivo que permita registrar y autentificar los bienes. <br>
+<br> **Criterios de aceptación:** <br> 
+- Registrar un bien inmobiliario.
+- Eliminar un bien inmobiliario ya registrado.
+- Verificar que se trate un bien genuino.
+
+## E04 - Revision del credito ofrecido
+
+**Descripción:** Como usuario, deseo que el sistema me avise una vez el banco me haya ofrecido el credito, junto a su tasa, frecuencia de pago, etc. <br>
+<br> **Objetivo:** Crear un sistema que ayude al cliente cuando ya se le haya ofrecido un credito por el inmobiliario. <br>
+<br> **Criterios de aceptación:** <br> 
+- Notificación cuando se haya ofrecido un bien.
+- Creación de un cronograma de pagos.
+- Boton para descargar el cronograma como un archivo .xlsx.
+
+## E05 - Sistema de busqueda
+
+**Descripción:** Como usuario, deseo que el aplicativo me permita revisar tambien otros inmuebles, el credito que podria recibir por estos e información al respecto. <br>
+<br> **Objetivo:** Crear un sistema que permita al usuario buscar inmuebles según diversos "Tags" <br>
+<br> **Criterios de aceptación:** <br>
+- Implementar una barra de busqueda.
+- Busqueda de inmuebles por tags.
+- Implementar una IA para apoyar al usuario en su busqueda.
+
+## E06 - Mensajeria
+
+**Descripción:** Como usuario, deseo poseer un sistema de mensajeria para comunicarme con los bancos o propietarios del inmueble <br>
+<br> **Objetivo:** Implementar un sistema de mensajeria, que apoye al usuario. <br>
+<br> **Criterios de aceptación:** <br>
+- Implementar un sistema de mensajeria.
+- Implementar una opción para bloquear a otros usuarios.
+- Implementar un boton para descargar la conversación.
+
 | ID | Epic | User Story | Criterios de aceptación | Prioridad |
-|---|---|---|---|---|
+|----|------|------------|-------------------------|-----------|
 | US01 | [Por completar] | Como [usuario], quiero [acción], para [beneficio]. | Given / When / Then | Must |
 
 ## 3.3. Impact Map
