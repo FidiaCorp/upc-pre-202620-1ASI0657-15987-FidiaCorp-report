@@ -24,7 +24,7 @@
 |---|---|
 | [Por completar] | Jonseck Choque, Oliver |
 | u20251c350 | Godoy Santillan, Jesus Andres |
-| [Por completar] | Pumahualcca Garcia, Diego Rodrigo |
+| u202219266 | Pumahualcca Garcia, Diego Rodrigo |
 | u202224130 | Ramos Hinostroza, Diego Antonio |
 | u202310349 | Rubio Otiz, Luis Sebastián |
 
@@ -78,7 +78,7 @@
 		- [2.3.5. As-Is Scenario Mapping](#235-as-is-scenario-mapping)
 	- [2.4. Big Picture EventStorming](#24-big-picture-eventstorming)
 	- [2.5. Ubiquitous Language](#25-ubiquitous-language)
-- [Capítulo III: Requirements Elicitation & Analysis](#capítulo-iii-requirements-elicitation--analysis)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
 	- [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
 	- [3.2. User Stories](#32-user-stories)
 	- [3.3. Impact Map](#33-impact-map)
@@ -102,12 +102,12 @@
 	<tbody>
 		<tr>
 			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1: Investigué y actualicé de manera autónoma conceptos avanzados de arquitectura empresarial y descomposición por microservicios basados en Domain-Driven Design (DDD). Asimismo, asimilé la normativa técnica y financiera de la SBS relativa a la transparencia en créditos hipotecarios, lo que me permitió traducir reglas de negocio complejas (método francés, conversión de regímenes de capitalización, VAN, TIR y TCEA) en especificaciones directas para el modelado del motor de cálculo y el diseño preliminar de los bounded contexts de la plataforma CrediCasa.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> AV1:Investigué y actualicé de manera autónoma mis conocimientos en patrones de arquitectura orientados a microservicios y despliegue en la nube (Cloud Computing), evaluando su aplicabilidad específica para el entorno SaaS de CrediCasa. Además, me documenté sobre la integración segura de APIs financieras, lo cual fue clave para estructurar la comunicación entre el simulador de cuotas y el motor de cálculo, garantizando la correcta aplicación del método francés y los lineamientos de la SBS.<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1: Investigué y actualicé de manera autónoma conceptos avanzados de arquitectura empresarial y descomposición por microservicios basados en Domain-Driven Design (DDD). Asimismo, asimilé la normativa técnica y financiera de la SBS relativa a la transparencia en créditos hipotecarios, lo que me permitió traducir reglas de negocio complejas (método francés, conversión de regímenes de capitalización, VAN, TIR y TCEA) en especificaciones directas para el modelado del motor de cálculo y el diseño preliminar de los bounded contexts de la plataforma CrediCasa.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 		<tr>
 			<td>Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo::</strong><br> AV1:<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1: Reconocí la importancia de la autoformación continua al enfrentar la brecha entre los requerimientos funcionales del dominio inmobiliario-financiero y la definición de requerimientos de calidad arquitectónicos (ASRs). Comprendí que el rol de arquitecto de software exige investigar activamente estándares emergentes de la industria, metodologías de diseño como Attribute-Driven Design (ADD) y patrones cloud nativos para garantizar soluciones escalables, auditables y con alta mantenibilidad frente a entornos regulatorios dinámicos.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> AV1:<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> AV1:<br><strong><br>Pumahualcca Garcia, Diego Rodrigo::</strong><br> AV1:Comprendí que el desarrollo de soluciones dentro del ecosistema financiero y proptech exige una actualización tecnológica y regulatoria constante. Al enfrentarme a los cálculos de TCEA, VAN y TIR, reconocí que como ingeniero de software debo integrar proactivamente nuevas herramientas de la industria, arquitecturas escalables y estándares de seguridad para asegurar que la plataforma pueda adaptarse rápidamente a futuros cambios en el mercado inmobiliario y las normativas peruanas.<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> AV1: Reconocí la importancia de la autoformación continua al enfrentar la brecha entre los requerimientos funcionales del dominio inmobiliario-financiero y la definición de requerimientos de calidad arquitectónicos (ASRs). Comprendí que el rol de arquitecto de software exige investigar activamente estándares emergentes de la industria, metodologías de diseño como Attribute-Driven Design (ADD) y patrones cloud nativos para garantizar soluciones escalables, auditables y con alta mantenibilidad frente a entornos regulatorios dinámicos.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> AV1:</td>
 			<td>AV1:</td>
 		</tr>
 	</tbody>
@@ -145,13 +145,13 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
-			<td>Godoy Santillan, Jesus Andres</td>
-			<td>[Por completar]</td>
+			<td>Godoy Santillan, Jesus Andres - u20251c350</td>
+			<td>Soy Jesús, tengo 22 años, me gusta mucho programar desde pequeño haciendo pequeños proyectos en videojuegos hasta lo último que hice que fue un gran proyecto en un evento online con creadores de contenido, patrocinadores y premios. Actualmente no trabajo formalmente pero ayudo a mi padre y junto a mi hermano haciendo sistemas y programas de una empresa que tiene junto a su amigo relacionado con la agroindustria y con el conocimiento que tengo de tecnología y solución de problemas también asesoró o ayudó a amigos de mi padre que tienen problemas técnicos relacionados con la tecnología ya sea personales o de trabajo.</td>
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
 			<td>Pumahualcca Garcia, Diego Rodrigo</td>
-			<td>[Por completar]</td>
+			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con un conocimiento en el diseño de arquitectura de software y desarrollo backend. En el desarrollo de CrediCasa, mi objetivo principal es utilizar la tecnología para resolver un problema real y social: la falta de transparencia en los créditos hipotecarios.</td>
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
@@ -426,7 +426,7 @@ El énfasis en explicar el costo se sustenta en la orientación de la SBS: la TC
 
 **Objetivo general:** comprender cómo ambos segmentos buscan, elaboran, comparan y explican propuestas hipotecarias, identificando obstáculos y criterios de decisión antes de validar CrediCasa.
 
-Se realizarán entrevistas semiestructuradas de 30 a 40 minutos, presenciales o virtuales, mediante selección intencional. Se propone una muestra exploratoria inicial de seis compradores y seis profesionales de Inmobiliaria/Banca: tres asesores o responsables inmobiliarios y tres ejecutivos hipotecarios. No es una muestra representativa del mercado; se ampliará si aparecen necesidades sin explicar o diferencias relevantes entre roles.
+Se realizarán entrevistas semiestructuradas de 30 a 40 minutos, presenciales o virtuales, mediante selección intencional. La guía exige de tres a cinco entrevistas por segmento. Se planifican cuatro compradores y cuatro profesionales de Inmobiliaria/Banca: dos asesores o responsables inmobiliarios y dos ejecutivos hipotecarios. Esta distribución profesional es una propuesta de reclutamiento; Daniel representa al asesor inmobiliario y las respuestas de banca se analizarán por separado. La muestra es exploratoria y no representa estadísticamente al mercado.
 
 | Segmento | Criterios de selección | Variación buscada | Objetivo específico |
 |---|---|---|---|
@@ -435,11 +435,34 @@ Se realizarán entrevistas semiestructuradas de 30 a 40 minutos, presenciales o 
 
 **Procedimiento**
 
-1. Explicar el propósito académico y solicitar consentimiento para participar y, por separado, para grabar. Si no se autoriza grabación, utilizar notas con conformidad del participante.
-2. Registrar código, segmento, rol y contexto de experiencia. No solicitar claves ni documentos identificatorios para la entrevista.
+1. Explicar el propósito académico y solicitar consentimiento para participar, grabar y compartir la evidencia en YouTube para la entrega. Si no se autoriza, la conversación solo podrá utilizarse como exploración con permiso; no cubrirá el requisito de entrevista registrada en video.
+2. Registrar código, nombres, apellidos, edad, distrito, segmento, rol y contexto de experiencia, con autorización para incluirlos en el informe. No solicitar claves ni copias de documentos identificatorios.
 3. Preguntar primero por una experiencia reciente sin presentar la solución, para reducir respuestas inducidas.
 4. Presentar después el concepto o prototipo y observar una tarea breve. Separar opiniones de comportamientos observados.
 5. Cerrar con prioridades y dudas. Conservar evidencias anonimizadas con acceso controlado y publicar solo extractos autorizados.
+
+**Guion de conducción**
+
+| Momento | Duración orientativa | Intervención del entrevistador |
+|---|---|---|
+| Apertura y consentimiento | 3 minutos | «Somos estudiantes y buscamos comprender cómo se comparan o preparan propuestas hipotecarias. ¿Nos autorizas a grabar y compartir la entrevista como evidencia académica en YouTube?» Explicar previamente qué datos y fragmentos se incluirán. |
+| Contexto personal o profesional | 5 minutos | Recoger la ficha de contexto y la experiencia reciente que se reconstruirá. |
+| Experiencia real | 15–20 minutos | Seguir las preguntas del segmento y profundizar en ejemplos, herramientas, dificultades y decisiones. |
+| Concepto y tarea exploratoria | 5–8 minutos | Presentar CrediCasa después de explorar el problema. Usar material ficticio preparado por el equipo y registrar las reacciones espontáneas. |
+| Cierre | 2–4 minutos | «¿Qué dificultad sería más importante resolver? ¿Qué no te preguntamos y deberíamos conocer?» Confirmar qué evidencia se puede compartir. |
+
+El guion organiza las preguntas del entrevistador. Cada participante responderá desde su experiencia; los ensayos internos y las tareas con datos ficticios se identificarán como tales y se separarán de las entrevistas de investigación.
+
+**Ficha de contexto y preguntas complementarias para ambos segmentos**
+
+- ¿Qué edad tienes, en qué distrito resides y a qué te dedicas? ¿Cómo describirías tu experiencia con créditos hipotecarios?
+- Si deseas compartirlo: ¿con qué género te identificas, cuál es tu estado civil y con quiénes tomas decisiones de vivienda o de presupuesto familiar?
+- ¿Qué dispositivos y canales digitales utilizas para buscar, guardar y compartir información financiera?
+- ¿Qué herramientas o marcas consultas habitualmente y por qué? ¿Qué personas o fuentes influyen en tus decisiones?
+- ¿Cómo prefieres evaluar una alternativa: revisar detalles por tu cuenta, conversar con alguien o combinar ambas opciones? Cuéntanos un ejemplo.
+- Para profesionales: ¿cuánto tiempo llevas en tu rol y qué partes de una cotización dependen de ti o de otra persona?
+
+Se registrará «prefiere no responder» cuando corresponda, sin completar datos por suposición. Como repreguntas neutrales se usarán «¿qué ocurrió después?», «¿puedes dar un ejemplo reciente?», «¿cómo lo resolviste?» y «¿qué información te faltó?».
 
 **Preguntas para Comprador**
 
@@ -485,15 +508,15 @@ El registro de grabaciones, transcripciones y consentimientos se realizará dura
 
 | Códigos previstos | Segmento y rol | Sesiones | Estado | Evidencia |
 |---|---|---|---|---|
-| COM-01 a COM-06 | Comprador | 6 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
-| INM-01 a INM-03 | Inmobiliaria/Banca — asesor o responsable inmobiliario | 3 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
-| BAN-01 a BAN-03 | Inmobiliaria/Banca — ejecutivo hipotecario | 3 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
+| COM-01 a COM-04 | Comprador | 4 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
+| INM-01 a INM-02 | Inmobiliaria/Banca — asesor o responsable inmobiliario | 2 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
+| BAN-01 a BAN-02 | Inmobiliaria/Banca — ejecutivo hipotecario | 2 | Pendientes de reclutamiento y ejecución | Sin evidencia disponible. |
 
-Por sesión se registrarán código, fecha, entrevistador, duración, rol, consentimiento, enlace restringido a la evidencia, marcas de tiempo de extractos relevantes, observaciones y limitaciones. Los datos de contacto se mantendrán separados del informe público.
+Por sesión se registrarán código, nombres y apellidos autorizados, edad, distrito, fecha, entrevistador, duración, rol, consentimiento, captura de un cuadro del video, URL de YouTube y tiempo de inicio de la entrevista. También se redactará un resumen descriptivo de las principales respuestas y se conservarán marcas de tiempo para cada hallazgo. Los datos de contacto se mantendrán separados del informe público. Está disponible la [plantilla de registro y análisis](Resources/avance-1/plantilla-entrevistas.md) para completar con las sesiones reales.
 
 ### 2.2.3. Análisis de entrevistas
 
-Se aplicará codificación temática y agrupación por afinidad sobre notas y transcripciones. Cada hallazgo tendrá evidencia identificable, distinguirá declaraciones de conductas observadas e incluirá casos contradictorios. La recurrencia se expresará como número de participantes sobre el total entrevistado de cada rol, sin extrapolar al mercado.
+Se aplicará codificación temática y agrupación por afinidad sobre notas y transcripciones. Cada hallazgo tendrá evidencia identificable, distinguirá declaraciones de conductas observadas e incluirá casos contradictorios. La recurrencia se expresará como número de participantes y porcentaje sobre el total de respuestas válidas del segmento para esa pregunta: `porcentaje = participantes con la característica / participantes con respuesta válida × 100`. Se indicarán las no respuestas y, dentro de Inmobiliaria/Banca, los resultados por rol. Los porcentajes describirán únicamente la muestra entrevistada, sin extrapolar al mercado.
 
 **Comprador — hipótesis por contrastar**
 
@@ -519,7 +542,11 @@ Cada hallazgo posterior incluirá identificador, evidencia, rol, interpretación
 
 Los siguientes artefactos sintetizan el capítulo I como modelos preliminares. Los perfiles son ficticios y sus comportamientos, emociones y frecuencias deberán contrastarse mediante entrevistas.
 
+Las fichas y mapas gráficos disponibles en `Resources` se incorporan como borradores. Las frases en primera persona, rasgos y cifras que contienen son ilustraciones o supuestos de diseño; no constituyen testimonios ni mediciones. Falta validar su contenido y confirmar su elaboración en las herramientas exigidas: UXPressia para personas y empatía, Lucidchart/Miro para escenarios. La numeración actual conserva User Journey Mapping como sección adicional; Empathy Mapping y As-Is corresponden a los puntos 2.3.3 y 2.3.4 del cronograma.
+
 ### 2.3.1. User Personas
+
+Las fichas relacionan las necesidades candidatas HC-01 a HC-03 con el Comprador y HI-01 a HI-03 con el asesor inmobiliario. El análisis competitivo orienta la exploración de comparación y continuidad de cotizaciones. La relación con resultados de entrevistas se incorporará cuando existan evidencias; actualmente son proto-personas.
 
 #### Persona 1: Lucía Torres — Comprador
 
@@ -536,6 +563,10 @@ Los siguientes artefactos sintetizan el capítulo I como modelos preliminares. L
 
 **Frase ilustrativa creada para el perfil, no testimonio:** «Quiero entender cuánto pagaré y por qué cambia el resultado entre propuestas».
 
+**Ficha visual preliminar de Lucía:** la ocupación de analista de marketing y los rasgos representados son atributos ficticios para orientar el diseño.
+
+![Proto-persona preliminar: Lucía Torres, comprador](Resources/userpseg_1.png)
+
 #### Persona 2: Daniel Rojas — Inmobiliaria/Banca
 
 **Proto-persona ficticia:** Daniel tiene 38 años y es asesor comercial de una inmobiliaria de Lima Metropolitana. Atiende compradores y coordina con ejecutivos hipotecarios para dar continuidad a sus solicitudes.
@@ -551,13 +582,28 @@ Los siguientes artefactos sintetizan el capítulo I como modelos preliminares. L
 
 **Frase ilustrativa creada para el perfil, no testimonio:** «Necesito preparar una propuesta clara y saber con qué condiciones se calculó».
 
+**Ficha visual preliminar de Daniel:** las referencias a pérdidas y tiempos de espera son supuestos por contrastar, no resultados de entrevistas.
+
+![Proto-persona preliminar: Daniel Rojas, asesor inmobiliario](Resources/userpseg_2.png)
+
+**Atributos complementarios propuestos para las fichas**
+
+| Atributo | Lucía Torres | Daniel Rojas |
+|---|---|---|
+| Contexto y familia | Busca vivienda con su pareja; distrito concreto y composición familiar pendientes de investigación. | Atiende proyectos en Lima; distrito y contexto familiar pendientes de investigación. |
+| Motivación | Tomar una decisión de vivienda compatible con su presupuesto. | Preparar propuestas comprensibles y dar continuidad a sus oportunidades comerciales. |
+| Habilidades supuestas | Uso cotidiano de banca digital; requiere apoyo para interpretar condiciones hipotecarias. | Experiencia comercial y uso de hojas de cálculo; requiere verificar parámetros financieros. |
+| Dispositivos y canales | Teléfono para explorar; computadora para comparar; conversación con asesores. | Computadora para preparar propuestas; teléfono y correo para seguimiento. |
+| Influencias por investigar | Pareja, familiares, asesores y fuentes financieras consultadas. | Jefatura comercial, compradores y ejecutivos bancarios. |
+| Marcas y personalidad | Preferencias y rasgos de la ficha pendientes de contraste; no se asignan marcas favoritas sin evidencia. | Preferencias y rasgos de la ficha pendientes de contraste; no se asignan marcas favoritas sin evidencia. |
+
 **Cobertura de Banca:** Daniel representa la preparación comercial. El ejecutivo bancario del mismo segmento necesita revisar los datos recibidos, contrastarlos con condiciones de su entidad y comunicar el resultado de su evaluación. Las entrevistas podrán justificar una persona adicional para ese rol sin crear un tercer segmento objetivo.
 
 ### 2.3.2. User Task Matrix
 
-La frecuencia es una estimación durante la búsqueda activa del Comprador y la jornada habitual de Inmobiliaria/Banca: **alta**, varias veces en ese contexto; **media**, en determinados momentos; **baja**, ocasional. La importancia representa una prioridad inicial, pendiente de validación.
+La matriz compara a Lucía (Comprador) y Daniel (asesor inmobiliario del segmento Inmobiliaria/Banca). Las tareas describen objetivos que pueden realizarse con herramientas actuales, antes de CrediCasa. La frecuencia es una estimación durante la búsqueda activa de Lucía y la jornada habitual de Daniel: **alta**, varias veces en ese contexto; **media**, en determinados momentos; **baja**, ocasional. La importancia es **alta** cuando la tarea condiciona la comparación o preparación de la propuesta y **media** cuando apoya una decisión específica. Ambas escalas están pendientes de validación.
 
-| Tarea | Comprador: frecuencia | Comprador: importancia | Inmobiliaria/Banca: frecuencia | Inmobiliaria/Banca: importancia |
+| Tarea | Lucía: frecuencia | Lucía: importancia | Daniel: frecuencia | Daniel: importancia |
 |---|---|---|---|---|
 | Registrar datos de inmueble y financiamiento | Media | Alta | Alta | Alta |
 | Modificar inicial, moneda o plazo | Alta | Alta | Alta | Alta |
@@ -568,11 +614,13 @@ La frecuencia es una estimación durante la búsqueda activa del Comprador y la 
 | Explorar gracia, cuotas dobles o balón | Baja | Media | Media | Alta |
 | Consultar VAN y TIR | Baja | Media | Media | Media |
 | Guardar y recuperar propuestas | Media | Alta | Alta | Alta |
-| Exportar cotizaciones | Baja | Media | Alta | Alta |
+| Preparar y compartir una copia de la cotización | Baja | Media | Alta | Alta |
 | Derivar una propuesta para evaluación | Baja | Alta | Alta | Alta |
 | Revisar versiones y responsables | Baja | Media | Alta | Alta |
 
 La aprobación crediticia pertenece al proceso de la banca y no se considera una tarea automática de CrediCasa. La relevancia de VAN y TIR se comprobará: su inclusión en el alcance del capítulo I no demuestra que sean los indicadores principales del usuario.
+
+**Lectura preliminar:** comparar alternativas, ajustar el financiamiento e interpretar los pagos reúnen frecuencia e importancia altas para ambas personas. Daniel necesitaría registrar datos, recuperar propuestas y revisar responsables con mayor frecuencia por la atención a varios compradores. Lucía realizaría esas tareas de forma ocasional durante su búsqueda. La coincidencia orienta la comparación y explicación del costo; las diferencias orientan la continuidad del trabajo comercial. Esta interpretación se revisará con las entrevistas.
 
 ### 2.3.3. User Journey Mapping
 
@@ -600,35 +648,64 @@ Los recorridos describen la experiencia actual supuesta, previa a CrediCasa. Las
 
 ### 2.3.4. Empathy Mapping
 
+**Preparación del borrador:** se tomó cada proto-persona como centro, se organizaron las hipótesis de 2.2.3 en dimensiones de empatía y se relacionaron las frustraciones con los resultados esperados. Quedan pendientes la revisión del equipo, las observaciones de entrevistas y las capturas definitivas en UXPressia.
+
 **Mapa de empatía preliminar — Comprador**
 
 | Dimensión | Hipótesis sobre Lucía |
 |---|---|
+| Con quién se empatiza | Lucía, compradora que evalúa financiamiento para su primera vivienda. |
+| Qué necesita hacer | Comparar propuestas y decidir qué condiciones consultar antes de solicitar evaluación. |
 | Piensa y siente | Desea adquirir vivienda y teme asumir pagos que no comprende. |
 | Ve | Anuncios, simuladores y propuestas con diferentes formatos. |
 | Oye | Consejos familiares y explicaciones de asesores sobre tasas y cuotas. |
-| Dice y hace | Pregunta por el pago mensual, consulta alternativas y guarda resultados. |
+| Dice | Pregunta por el pago mensual y por los conceptos que incluye. |
+| Hace | Consulta alternativas, reúne cotizaciones y guarda resultados para compararlos. |
 | Esfuerzos y frustraciones | Interpretar conceptos y reconstruir comparaciones. |
 | Resultados esperados | Entender su cronograma y comparar con información suficiente. |
+| Qué podría convencerla | Poder explicar los costos y reconocer los supuestos de una propuesta por sí misma. |
 
 **Interpretación:** el diseño debe permitir pasar de una cuota resumida al detalle sin exigir conocimientos previos. Se comprobará si el participante puede explicar una propuesta con sus propias palabras.
+
+![Mapa de empatía preliminar de Lucía; frases hipotéticas](Resources/empa_m1.png)
 
 **Mapa de empatía preliminar — Inmobiliaria/Banca**
 
 | Dimensión | Hipótesis sobre el segmento |
 |---|---|
+| Con quién se empatiza | Daniel, asesor inmobiliario que prepara propuestas y coordina con la banca. |
+| Qué necesita hacer | Entregar una cotización comprensible y mantener su contexto durante el seguimiento. |
 | Piensa y siente | Busca responder rápido y evitar discrepancias en lo comunicado. |
 | Ve | Solicitudes, condiciones y propuestas en distintas etapas. |
 | Oye | Preguntas de compradores, metas comerciales y observaciones bancarias. |
-| Dice y hace | Solicita datos, calcula, explica, deriva y revisa. |
+| Dice | Solicita información al comprador y explica las condiciones de la propuesta. |
+| Hace | Recoge datos, calcula, contrasta parámetros, deriva y revisa el seguimiento. |
 | Esfuerzos y frustraciones | Reingresar datos, identificar versiones y aclarar diferencias. |
 | Resultados esperados | Propuestas rastreables, coordinación clara y menor retrabajo. |
+| Qué podría convencerlo | Recuperar una cotización con su fuente y versión, explicar sus pagos y actualizarla sin repetir toda la preparación. |
 
 **Interpretación:** la información compartida debe respetar responsabilidades diferenciadas. El asesor prepara y explica; el ejecutivo bancario revisa dentro de su proceso de evaluación. Las entrevistas precisarán qué necesita cada rol.
+
+![Mapa de empatía preliminar de Daniel; frases hipotéticas](Resources/empa_m2.png)
 
 ### 2.3.5. As-Is Scenario Mapping
 
 Los escenarios amplían los recorridos anteriores y mantienen su carácter hipotético hasta observar casos reales.
+
+Los gráficos existentes organizan las fases en columnas y las filas **Phases, Doing, Thinking y Feeling**. El de Lucía cubre explorar vivienda, buscar crédito, simular escenarios y comparar/decidir. El de Daniel cubre atender, preparar cotización, explicar y derivar al banco. Las frases representan pensamientos supuestos.
+
+![As-Is preliminar de Lucía: explorar, buscar, simular y comparar](Resources/asis_m1.png)
+
+![As-Is preliminar de Daniel: atender, preparar, explicar y derivar](Resources/asis_m2.png)
+
+**Áreas que se revisarán con el equipo y las entrevistas**
+
+| Persona | Áreas positivas supuestas | Áreas negativas supuestas | Blank areas: información por conocer |
+|---|---|---|---|
+| Lucía | Puede explorar viviendas y consultar varias alternativas. | Reingreso de datos y dificultad para entender si las propuestas son equivalentes. | Qué fuentes usa, qué costos reconoce y qué factores determinan su decisión. |
+| Daniel | Conoce el proyecto y puede orientar al comprador durante la visita. | Parámetros difíciles de rastrear, repetición de datos y pérdida de contexto al derivar. | Herramientas realmente utilizadas, tiempos por fase y requisitos de recepción de cada banco. |
+
+La preparación reúne hipótesis del capítulo I, proto-personas y recorridos de 2.3.3. En la siguiente revisión, cada integrante propondrá observaciones, se acordarán las fases y se etiquetarán las áreas positivas, negativas y desconocidas en Lucidchart/Miro. Esa sesión de trabajo y la validación de campo todavía están pendientes.
 
 | Elemento | Comprador | Inmobiliaria/Banca |
 |---|---|---|
@@ -724,11 +801,49 @@ La distinción entre tasa de interés y TCEA se apoya en la [orientación de la 
 
 <div style="page-break-after: always;"></div>
 
-# Capítulo III: Requirements Elicitation & Analysis
+# Capítulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
 
-[Describan la experiencia propuesta con CrediCasa para cada segmento.]
+Los escenarios proponen cómo Lucía y Daniel realizarían sus tareas con CrediCasa. Se elaboran a partir de los As-Is preliminares de 2.3.5 y las necesidades candidatas HC-01 a HC-03 e HI-01 a HI-03. Las acciones, pensamientos y emociones describen una experiencia deseada; todavía no son resultados de pruebas con usuarios.
+
+**Preparación y revisión:** se conservan las cuatro fases de cada As-Is para comparar el proceso actual supuesto con el propuesto. Para cada fase se especifica qué haría la persona, qué necesitaría comprender y cómo se espera que se sienta. La lluvia de ideas individual, el acuerdo de fases por el equipo y la revisión con participantes quedan pendientes. Los gráficos locales permiten revisar el contenido antes de elaborarlo en Lucidchart/Miro y adjuntar las capturas exigidas por la guía.
+
+### Escenario propuesto de Lucía — Comprador
+
+**Situación:** Lucía ha encontrado una vivienda y quiere comparar alternativas de financiamiento antes de solicitar una evaluación. El escenario termina con una alternativa guardada y las condiciones pendientes de confirmar identificadas.
+
+| Phases | Explorar vivienda | Buscar crédito | Simular escenarios | Comparar y decidir |
+|---|---|---|---|---|
+| Doing | Registra precio, moneda e inicial de la vivienda que está evaluando. | Revisa condiciones disponibles, fuente y fecha; identifica datos que debe confirmar con la entidad. | Ajusta plazo y condiciones; consulta cuota, seguros, gastos y cronograma. | Compara escenarios con sus diferencias visibles, guarda la alternativa y prepara sus consultas al asesor. |
+| Thinking | ¿Qué monto necesitaría financiar con mis ahorros? | ¿Estas condiciones corresponden a mi caso y siguen vigentes? | ¿Qué incluye el pago y cómo cambia si modifico el plazo o la gracia? | ¿Qué cambia entre las alternativas y qué falta confirmar antes de solicitar evaluación? |
+| Feeling | Orientación inicial al relacionar vivienda y presupuesto. | Cautela informada sobre el origen de las condiciones. | Mayor comprensión al revisar el detalle de los pagos. | Mayor claridad para decidir el siguiente paso. |
+
+![To-Be preliminar de Lucía Torres](Resources/avance-1/tobe-lucia.svg)
+
+### Escenario propuesto de Daniel — Asesor inmobiliario
+
+**Situación:** Daniel atiende a un comprador interesado en un inmueble y prepara una propuesta para explicarla y, si el comprador lo solicita, compartirla con el canal bancario acordado. La evaluación crediticia ocurre fuera del simulador.
+
+| Phases | Atender al cliente | Preparar cotización | Explicar propuesta | Derivar al banco |
+|---|---|---|---|---|
+| Doing | Reúne los datos necesarios del inmueble y del financiamiento; identifica información faltante. | Reutiliza los datos, verifica fuente y fecha de parámetros y genera un escenario con versión identificable. | Revisa con el comprador el desglose y las alternativas; conserva la versión elegida. | Obtiene autorización para compartir, entrega la cotización identificada y registra el envío; confirma recepción solo con evidencia. |
+| Thinking | ¿Tengo los datos suficientes para una propuesta referencial? | ¿Puedo explicar de dónde salen estas condiciones y reconstruir el cálculo? | ¿El comprador comprende los pagos y el carácter referencial de la propuesta? | ¿Qué envié, a quién y qué falta para que la entidad lo evalúe? |
+| Feeling | Mayor orden al iniciar la atención. | Confianza condicionada a parámetros verificables. | Claridad para explicar y responder preguntas. | Mayor control del seguimiento, sin anticipar la decisión bancaria. |
+
+![To-Be preliminar de Daniel Rojas](Resources/avance-1/tobe-daniel.svg)
+
+### Cambios propuestos frente al As-Is
+
+| Persona y fase | Dificultad supuesta en el As-Is | Cambio propuesto en el To-Be | Comprobación futura |
+|---|---|---|---|
+| Lucía: explorar y buscar | Consulta precio y condiciones por separado. | Relaciona precio, inicial y monto; revisa procedencia y vigencia de condiciones. | Observar si identifica monto y datos pendientes de confirmar. |
+| Lucía: simular | Desconoce qué costos incluye el resultado. | Accede al desglose y al efecto de modificar condiciones. | Pedir que explique los componentes de un pago con sus propias palabras. |
+| Lucía: comparar | Reconstruye diferencias desde capturas. | Compara escenarios guardados y reconoce supuestos distintos. | Observar si identifica diferencias de monto, plazo y gastos. |
+| Daniel: atender y preparar | Reingresa información y pierde referencia de parámetros. | Reutiliza datos y conserva fuente, fecha y versión. | Medir preparación y comprobar si recupera el contexto de la cotización. |
+| Daniel: explicar y derivar | Comunica un resultado aislado y comparte documentos dispersos. | Explica el detalle y comparte una versión identificada con autorización. | Revisar comprensión del comprador e integridad de la información compartida. |
+
+**Excepciones que deben contemplarse:** datos incompletos o incompatibles requieren corrección antes del cálculo; condiciones sin fecha o fuente se señalan como pendientes de confirmación; modificar un escenario guardado genera una nueva versión; un envío sin acuse no se presenta como recibido; ninguna simulación representa una aprobación bancaria. El canal de derivación y los parámetros financieros concretos requieren definición posterior con los responsables correspondientes.
 
 ## 3.2. User Stories
 
@@ -809,15 +924,60 @@ La distinción entre tasa de interés y TCEA se apoya en la [orientación de la 
 
 ## 3.3. Impact Map
 
-[Incluyan el Impact Map y expliquen la relación entre Business Goals, actores, impactos y entregables.]
+El mapa conecta objetivos de negocio, cambios deseados en el comportamiento de las proto-personas y entregables propuestos. Se basa en las hipótesis del capítulo I y los escenarios de 3.1. Las metas son propuestas para medir después del lanzamiento o piloto; no son resultados obtenidos ni compromisos cuya viabilidad ya esté demostrada.
 
-| Business Goal | Actor | Impacto | Entregable | User Stories |
+### Objetivos de negocio propuestos
+
+| ID | Objetivo medible y plazo | Medición propuesta | Relación con el capítulo I |
+|---|---|---|---|
+| BG-01 | Lograr que al menos el 25% de compradores que completen una simulación soliciten continuar con una evaluación durante el cuarto mes desde el lanzamiento. | Compradores únicos con simulación completa y solicitud de continuación / compradores únicos con simulación completa en ese mes × 100. Si no hay casos, informar «sin datos». | H1: conversión de simulación a solicitud. Solicitar evaluación no equivale a obtener crédito. |
+| BG-02 | Conseguir que al menos el 70% de compradores recurrentes compare dos o más escenarios durante el cuarto mes desde el lanzamiento. | Compradores recurrentes que comparan escenarios / compradores recurrentes del mes × 100. Se define recurrente como quien utiliza la plataforma en dos o más días distintos del mes. | H3: uso de comparación antes de decidir. El plazo y la definición operativa se proponen para esta medición. |
+| BG-03 | Alcanzar un tiempo mediano inferior a cinco minutos para preparar y emitir una cotización referencial completa al finalizar el tercer mes del piloto con asesores. | Medir desde que están disponibles los datos requeridos hasta emitir la cotización; reportar mediana, número de tareas, errores e intentos incompletos. La rapidez solo se considera junto con la revisión de integridad de la propuesta. | H2: agilizar cotizaciones. El plazo y la mediana son propuestas; la referencia de 45 minutos necesita una medición inicial real. |
+
+Las metas tienen actor, comportamiento, umbral y plazo definidos. Su factibilidad y los tamaños de muestra se revisarán con el equipo y el piloto. Los indicadores solo se calcularán a partir de observaciones o eventos reales.
+
+### Actores, impactos y entregables
+
+| Business Goal | Actor / Persona | Impacto: cambio esperado de comportamiento | Entregable propuesto | User Stories |
 |---|---|---|---|---|
-| BG-01 | [Por completar] | [Por completar] | [Por completar] | [Por completar] |
+| BG-01 | Lucía — Comprador | Comprende los pagos y distingue simulación de evaluación antes de solicitar el siguiente paso. | D-01: resumen explicable de cuota, seguros, gastos y cronograma; D-02: solicitud de continuación asociada al escenario elegido. | Vinculación pendiente con las historias definitivas de 3.2. |
+| BG-02 | Lucía — Comprador | Contrasta alternativas con supuestos visibles y recupera sus opciones antes de decidir. | D-03: comparación de monto, moneda, plazo y costos; D-04: conservación y recuperación de escenarios. | Vinculación pendiente con las historias definitivas de 3.2. |
+| BG-03 | Daniel — Asesor inmobiliario | Reutiliza información y revisa parámetros antes de emitir la cotización. | D-05: preparación de cotizaciones con reutilización de datos y procedencia de parámetros. | Vinculación pendiente con las historias definitivas de 3.2. |
+| BG-03 | Daniel — Asesor inmobiliario | Explica y comparte una versión reconocible para evitar reconstruir la propuesta. | D-06: cotización exportable con versión, autor, fecha y condiciones. | Vinculación pendiente con las historias definitivas de 3.2. |
+
+```mermaid
+flowchart LR
+    G1["BG-01: 25% solicita continuar en el mes 4"] --> A1["Lucía · Comprador"]
+    A1 --> I1["Comprende pagos y solicita el siguiente paso"]
+    I1 --> D1["D-01: resumen y cronograma explicables"]
+    I1 --> D2["D-02: solicitud ligada al escenario"]
+    G2["BG-02: 70% compara en el mes 4"] --> A2["Lucía · Comprador"]
+    A2 --> I2["Contrasta y recupera alternativas"]
+    I2 --> D3["D-03: comparación con supuestos visibles"]
+    I2 --> D4["D-04: escenarios guardados"]
+    G3["BG-03: mediana menor de 5 min al mes 3 del piloto"] --> A3["Daniel · Asesor inmobiliario"]
+    A3 --> I3["Reutiliza datos y verifica parámetros"]
+    A3 --> I4["Explica y comparte una versión identificada"]
+    I3 --> D5["D-05: preparación de cotizaciones"]
+    I4 --> D6["D-06: exportación identificada"]
+```
+
+**Estado del entregable:** la estructura anterior es un borrador local. Falta trasladar el mapa a UXPressia utilizando las fichas de personas, incorporar la captura y añadir los IDs y descripciones de User Stories en formato «Como… deseo… para…» cuando el trabajo de 3.2 esté disponible. Los identificadores D-01 a D-06 representan entregables del mapa y no sustituyen los IDs de historias.
 
 ## 3.4. Product Backlog
 
-Expliquen el método de priorización utilizado y documenten el estado de cada User Story.
+**Estado:** se prepara el método y la estructura del backlog. Las historias se están desarrollando en 3.2; la lista priorizada y sus estimaciones se incorporarán después de acordar ese catálogo.
+
+**Priorización propuesta:** ordenar las historias por el valor que aportan a BG-01, BG-02 y BG-03, considerando la tarea que resuelven, el alcance de su beneficio y sus dependencias. Primero se evaluará el flujo que permite obtener y comprender una simulación; luego su comparación, recuperación y uso en cotizaciones. Este orden de capacidades es preliminar y no asigna prioridad definitiva a historias aún no disponibles. Seguridad y autenticación se tratarán como requisitos transversales y dependencias técnicas; no se colocarán automáticamente al inicio solo por ser infraestructura, conforme a la guía.
+
+**Estimación propuesta:** el equipo estimará esfuerzo relativo con Story Points de la escala `1, 2, 3, 5, 8`, considerando complejidad, incertidumbre e integración. Se elegirá una historia entendida por todos como referencia, se compararán las demás y se dividirán las que excedan ocho puntos. Los puntos no equivalen a horas ni se asignarán hasta revisar los criterios de aceptación.
+
+**Estructura de la tabla exigida por la guía:**
+
+| # Orden | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
+|---|---|---|---|---|
+
+La tabla se completará con IDs y descripciones de 3.2, evitando duplicar o renombrar las historias de forma independiente. Para cada historia se comprobará su relación con un entregable del Impact Map, sus criterios de aceptación y las dependencias que condicionan su ejecución. El estado y el Sprint se podrán registrar como campos adicionales en la herramienta de gestión.
 
 | Orden | ID | User Story | Prioridad MoSCoW | Sprint |
 |---|---|---|---|---|

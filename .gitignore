@@ -1,0 +1,8 @@
+# Ignorar todo salvo los archivos y la carpeta permitidos.
+/*
+!/.gitignore
+!/README.md
+!/Resources/
+# Ignorar archivos locales incluso dentro de Resources.
+**/.idea/
+**/.DS_Store
