@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="690" viewBox="0 0 1420 690" role="img" aria-labelledby="title desc">
+<title id="title">To-Be de Lucía Torres</title>
+<desc id="desc">Escenario propuesto, pendiente de validación. Cuatro fases con acciones, pensamientos y emociones esperadas.</desc>
+<rect width="1420" height="690" fill="#f3f6fa"/>
+<rect width="1420" height="128" fill="#163347"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="16" fill="#7cd8ce" font-weight="700">CREDICASA  /  AVANCE 1</text>
+<text x="30" y="79" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" font-weight="700">To-Be · Lucía Torres</text>
+<text x="30" y="108" font-family="Arial, sans-serif" font-size="17" fill="#c9dce8" font-weight="400">Comprador · Propuesta preliminar, pendiente de validación</text>
+<rect x="30" y="160" width="140" height="88" fill="#126b69" stroke="#cfdae3"/>
+<text x="45" y="189" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700">Phases</text>
+<rect x="170" y="160" width="305" height="88" fill="#126b69" stroke="#cfdae3"/>
+<text x="185" y="189" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700">Explorar vivienda</text>
+<rect x="475" y="160" width="305" height="88" fill="#126b69" stroke="#cfdae3"/>
+<text x="490" y="189" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700">Buscar crédito</text>
+<rect x="780" y="160" width="305" height="88" fill="#126b69" stroke="#cfdae3"/>
+<text x="795" y="189" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700">Simular escenarios</text>
+<rect x="1085" y="160" width="305" height="88" fill="#126b69" stroke="#cfdae3"/>
+<text x="1100" y="189" font-family="Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700">Comparar y decidir</text>
+<rect x="30" y="248" width="140" height="132" fill="#e2edf2" stroke="#cfdae3"/>
+<text x="45" y="277" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="700">Doing</text>
+<rect x="170" y="248" width="305" height="132" fill="#ffffff" stroke="#cfdae3"/>
+<text x="185" y="277" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Registra precio, moneda e inicial</text>
+<text x="185" y="301" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">de la vivienda que está</text>
+<text x="185" y="325" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">evaluando.</text>
+<rect x="475" y="248" width="305" height="132" fill="#ffffff" stroke="#cfdae3"/>
+<text x="490" y="277" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Revisa condiciones disponibles,</text>
+<text x="490" y="301" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">fuente y fecha; identifica datos</text>
+<text x="490" y="325" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">que debe confirmar con la</text>
+<text x="490" y="349" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">entidad.</text>
+<rect x="780" y="248" width="305" height="132" fill="#ffffff" stroke="#cfdae3"/>
+<text x="795" y="277" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Ajusta plazo y condiciones;</text>
+<text x="795" y="301" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">consulta cuota, seguros, gastos y</text>
+<text x="795" y="325" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">cronograma.</text>
+<rect x="1085" y="248" width="305" height="132" fill="#ffffff" stroke="#cfdae3"/>
+<text x="1100" y="277" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Compara escenarios con sus</text>
+<text x="1100" y="301" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">diferencias visibles, guarda la</text>
+<text x="1100" y="325" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">alternativa y prepara sus</text>
+<text x="1100" y="349" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">consultas al asesor.</text>
+<rect x="30" y="380" width="140" height="132" fill="#e2edf2" stroke="#cfdae3"/>
+<text x="45" y="409" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="700">Thinking</text>
+<rect x="170" y="380" width="305" height="132" fill="#edf4f7" stroke="#cfdae3"/>
+<text x="185" y="409" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">¿Qué monto necesitaría financiar</text>
+<text x="185" y="433" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">con mis ahorros?</text>
+<rect x="475" y="380" width="305" height="132" fill="#edf4f7" stroke="#cfdae3"/>
+<text x="490" y="409" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">¿Estas condiciones corresponden a</text>
+<text x="490" y="433" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">mi caso y siguen vigentes?</text>
+<rect x="780" y="380" width="305" height="132" fill="#edf4f7" stroke="#cfdae3"/>
+<text x="795" y="409" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">¿Qué incluye el pago y cómo</text>
+<text x="795" y="433" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">cambia si modifico el plazo o la</text>
+<text x="795" y="457" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">gracia?</text>
+<rect x="1085" y="380" width="305" height="132" fill="#edf4f7" stroke="#cfdae3"/>
+<text x="1100" y="409" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">¿Qué cambia entre las</text>
+<text x="1100" y="433" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">alternativas y qué falta</text>
+<text x="1100" y="457" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">confirmar antes de solicitar</text>
+<text x="1100" y="481" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">evaluación?</text>
+<rect x="30" y="512" width="140" height="88" fill="#e2edf2" stroke="#cfdae3"/>
+<text x="45" y="541" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="700">Feeling</text>
+<rect x="170" y="512" width="305" height="88" fill="#ffffff" stroke="#cfdae3"/>
+<text x="185" y="541" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Orientación inicial al relacionar</text>
+<text x="185" y="565" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">vivienda y presupuesto.</text>
+<rect x="475" y="512" width="305" height="88" fill="#ffffff" stroke="#cfdae3"/>
+<text x="490" y="541" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Cautela informada sobre el origen</text>
+<text x="490" y="565" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">de las condiciones.</text>
+<rect x="780" y="512" width="305" height="88" fill="#ffffff" stroke="#cfdae3"/>
+<text x="795" y="541" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Mayor comprensión al revisar el</text>
+<text x="795" y="565" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">detalle de los pagos.</text>
+<rect x="1085" y="512" width="305" height="88" fill="#ffffff" stroke="#cfdae3"/>
+<text x="1100" y="541" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">Mayor claridad para decidir el</text>
+<text x="1100" y="565" font-family="Arial, sans-serif" font-size="17" fill="#183247" font-weight="400">siguiente paso.</text>
+<text x="30" y="635" font-family="Arial, sans-serif" font-size="16" fill="#526878" font-weight="400">Hipótesis de diseño: las acciones y emociones aún no se han observado con participantes.</text>
+<text x="30" y="661" font-family="Arial, sans-serif" font-size="16" fill="#526878" font-weight="400">Borrador local para revisar y trasladar a Lucidchart/Miro según la guía del curso.</text>
+</svg>
