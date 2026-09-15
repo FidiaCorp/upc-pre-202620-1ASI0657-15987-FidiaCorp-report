@@ -145,8 +145,8 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
-			<td>Godoy Santillan, Jesus Andres</td>
-			<td>[Por completar]</td>
+			<td>Godoy Santillan, Jesus Andres - u20251c350</td>
+			<td>Soy Jesús, tengo 22 años, me gusta mucho programar desde pequeño haciendo pequeños proyectos en videojuegos hasta lo último que hice que fue un gran proyecto en un evento online con creadores de contenido, patrocinadores y premios. Actualmente no trabajo formalmente pero ayudo a mi padre y junto a mi hermano haciendo sistemas y programas de una empresa que tiene junto a su amigo relacionado con la agroindustria y con el conocimiento que tengo de tecnología y solución de problemas también asesoró o ayudó a amigos de mi padre que tienen problemas técnicos relacionados con la tecnología ya sea personales o de trabajo.</td>
 			<td>[Por completar]</td>
 		</tr>
 		<tr>
