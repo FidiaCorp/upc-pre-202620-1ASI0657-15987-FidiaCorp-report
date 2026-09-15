@@ -819,9 +819,27 @@ La distinción entre tasa de interés y TCEA se apoya en la [orientación de la 
 
 Expliquen el método de priorización utilizado y documenten el estado de cada User Story.
 
-| Orden | ID | User Story | Prioridad MoSCoW | Estado | Sprint |
-|---|---|---|---|---|---|
-| 1 | US01 | [Por completar] | Must | Todo | [Por completar] |
+| Orden | ID | User Story | Prioridad MoSCoW | Sprint |
+|---|---|---|---|---|
+| 1 | US01 | Como usuario, quiero utilizar mi correo y contraseña, para ingresar a mi cuenta. | Must | Sprint 1 |
+| 2 | US05 | Como usuario, quiero seleccionar entre diversos procesadores de pago, para realizar la transacción con mi método preferido. | Must | Sprint 1 |
+| 3 | US07 | Como usuario, quiero registrar un bien inmobiliario, para guardarlo en mi cuenta y gestionar sus detalles. | Must | Sprint 1 |
+| 4 | US13 | Como usuario, quiero utilizar una barra de búsqueda en el aplicativo, para localizar inmuebles específicos de manera rápida. | Must | Sprint 1 |
+| 5 | US16 | Como usuario, quiero utilizar un sistema de mensajería integrado, para comunicarme directamente con los bancos o propietarios de los inmuebles. | Must | Sprint 1 |
+| 6 | US02 | Como usuario, quiero modificar los datos de mi perfil, para mantener mi información actualizada. | Should | Sprint 2 |
+| 7 | US03 | Como usuario, quiero habilitar la autenticación de dos pasos, para añadir una capa extra de seguridad a mi cuenta. | Should | Sprint 2 |
+| 8 | US04 | Como usuario, quiero cerrar mi sesión activa, para proteger mi cuenta al dejar de usar la plataforma. | Must | Sprint 2 |
+| 9 | US08 | Como usuario, quiero eliminar un bien inmobiliario ya registrado, para quitar de mi lista las propiedades que ya no poseo. | Should | Sprint 2 |
+| 10 | US10 | Como usuario, quiero recibir una notificación inmediata cuando un banco me ofrezca un crédito, para enterarme al instante de las oportunidades disponibles. | Should | Sprint 2 |
+| 11 | US11 | Como usuario, quiero visualizar el cronograma de pagos detallado del crédito ofrecido, para planificar mis finanzas con precisión. | Should | Sprint 2 |
+| 12 | US14 | Como usuario, quiero buscar inmuebles utilizando filtros por tags, para encontrar propiedades que se adapten a mis preferencias específicas. | Should | Sprint 2 |
+| 13 | US06 | Como usuario, quiero verificar el estado de mi pago, para confirmar que mi suscripción está activa. | Should | Sprint 3 |
+| 14 | US09 | Como usuario, quiero verificar la legitimidad de mi bien inmobiliario, para demostrar que es un inmueble genuino y legal. | Should | Sprint 3 |
+| 15 | US12 | Como usuario, quiero descargar el cronograma de pagos en un archivo .xlsx, para revisarlo sin conexión o compartirlo fácilmente. | Could | Sprint 3 |
+| 16 | US15 | Como usuario, quiero interactuar con una IA de apoyo en la búsqueda, para recibir recomendaciones personalizadas y resolver dudas sobre los inmuebles. | Could | Sprint 3 |
+| 17 | US17 | Como usuario, quiero tener la opción de bloquear a otros usuarios en la mensajería, para evitar comunicaciones no deseadas o molestas. | Could | Sprint 3 |
+| 18 | US18 | Como usuario, quiero descargar el historial de una conversación en un botón dedicado, para mantener un respaldo de los acuerdos o charlas sostenidas. | Could | Sprint 3 |
+
 
 <div style="page-break-after: always;"></div>
 
