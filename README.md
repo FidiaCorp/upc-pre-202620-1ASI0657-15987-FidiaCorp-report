@@ -24,7 +24,7 @@
 |---|---|
 | [Por completar] | Jonseck Choque, Oliver |
 | u20251c350 | Godoy Santillan, Jesus Andres |
-| [Por completar] | Pumahualcca Garcia, Diego Rodrigo |
+| u202219266 | Pumahualcca Garcia, Diego Rodrigo |
 | u202224130 | Ramos Hinostroza, Diego Antonio |
 | u202310349 | Rubio Otiz, Luis Sebastián |
 
