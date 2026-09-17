@@ -157,7 +157,7 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		<tr>
 			<td>Ramos Hinostroza, Diego Antonio - u202224130</td>
 			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuenta con dominio en diseño de arquitectura de software, desarrollo backend y consumo/integración de servicios web bajo estándares de la industria. Posee experiencia técnica en la construcción e integración de APIs REST utilizando Java (Spring Boot), C# y Python, así como en el diseño y modelado de bases de datos relacionales y NoSQL.</td>
-			<td>[Por completar]</td>
+			<td>  <img src="/Resources/Perfil_DiegoRamos.png" alt="Diego Ramos Profile"> </td>
 		</tr>
 		<tr>
 			<td>Rubio Ortiz, Luis Sebastián - u202310349</td>
@@ -833,6 +833,8 @@ Los escenarios proponen cómo Lucía y Daniel realizarían sus tareas con CrediC
 
 ![To-Be preliminar de Daniel Rojas](Resources/avance-1/tobe-daniel.svg)
 
+
+
 ### Cambios propuestos frente al As-Is
 
 | Persona y fase | Dificultad supuesta en el As-Is | Cambio propuesto en el To-Be | Comprobación futura |
@@ -1026,11 +1028,10 @@ La tabla se completará con IDs y descripciones de 3.2, evitando duplicar o reno
 
 # Anexos
 
+![CrediCasa Archi Model](Resources/avance-1/archi_model_AV1.png)
+
 ## Links
 
 | Descripción | Enlace |
 |---|---|
 | Repositorio del Reporte | [Abrir repositorio](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report) |
-| Tablero del Product Backlog | [Por completar] |
-| Evidencias de entrevistas | [Por completar] |
-| Prototipo o diseño UX/UI | [Por completar] |
