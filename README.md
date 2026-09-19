@@ -161,8 +161,8 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		</tr>
 		<tr>
 			<td>Rubio Ortiz, Luis Sebastián - u202310349</td>
-			<td>[Por completar]</td>
-			<td>[Por completar]</td>
+			<td>Soy Sebastián, soy estudiante de la carrera de ingenieria de software, tengo 20 años y me gusta lograr grandes cosas programando, suelo interesarme mucho por aprender cosas nuevas en el mundo de la programacián más que nada. Me gusta apoyar a mis compañeros para los trabajos, considero que soy de trabajar en equipo. Tengo conocimientos en C#, C++, JavaScript, Python y TypeScript.</td>
+			<td> <img src="/Resources/Perfil_Sebastian.jpeg" alt="Sebastián Rubio Profile"> </td>
 		</tr>
 	</tbody>
 </table>
