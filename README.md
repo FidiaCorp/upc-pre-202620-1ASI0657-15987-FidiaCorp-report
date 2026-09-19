@@ -142,7 +142,7 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		<tr>
 			<td>Jonseck Choque, Oliver - u202312912</td>
 			<td>Mi nombre es Oliver, poseo 21 años. Poseo mucho interés en la programación y llevo haciendo varios proyectos personales desde que ingrese a la universidad. No trabajo bajo contrato actualmente, pero trabajo cómo freelancer por periodos de tiempo</td>
-			<td>[Por completar]</td>
+			<td>  <img src="/Resources/Perfil_Oliver.jpeg" alt="Oliver Jonseck Profile"> </td>
 		</tr>
 		<tr>
 			<td>Godoy Santillan, Jesus Andres - u20251c350</td>
