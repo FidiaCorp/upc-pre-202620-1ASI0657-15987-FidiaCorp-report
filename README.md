@@ -110,6 +110,21 @@
 		- [5.1.2. Pattern Based Backend Application(s)](#512-pattern-based-backend-applications)
 		- [5.1.3. Pattern Based Custom Software Library](#513-pattern-based-custom-software-library)
 		- [5.1.4. Framework Pattern Driven Refactoring Report](#514-framework-pattern-driven-refactoring-report)
+	- [5.2. Software Configuration Management](#52-software-configuration-management)
+		- [5.2.1. Software Development Environment Configuration](#521-software-development-environment-configuration)
+		- [5.2.2. Source Code Management](#522-source-code-management)
+		- [5.2.3. Source Code Style Guide & Conventions](#523-source-code-style-guide--conventions)
+		- [5.2.4. Software Deployment Configuration](#524-software-deployment-configuration)
+	- [5.3. Microservices Implementation](#53-microservices-implementation)
+		- [5.3.1. Sprint 1](#531-sprint-1)
+			- [5.3.1.1. Sprint Backlog 1](#5311-sprint-backlog-1)
+			- [5.3.1.2. Development Evidence for Sprint Review](#5312-development-evidence-for-sprint-review)
+			- [5.3.1.3. Testing Suite Evidence for Sprint Review](#5313-testing-suite-evidence-for-sprint-review)
+			- [5.3.1.4. Execution Evidence for Sprint Review](#5314-execution-evidence-for-sprint-review)
+			- [5.3.1.5. Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
+			- [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
+			- [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
+			- [5.3.1.8. Kanban Board → TP1](#5318-kanban-board--tp1)
 - [Conclusiones](#conclusiones)
 - [Recomendaciones](#recomendaciones)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
@@ -2360,6 +2375,230 @@ Durante la fase de construcción y maduración del backend, el equipo ejecutó r
 - **RF-05: Optimización de Consultas JPA mediante Join Fetch para Erradicar $N+1$ Queries:**
   - *Problema previo:* Al recuperar una cotización que contenía 240 cuotas de amortización, la relación `@OneToMany` ejecutaba una consulta inicial para la cotización y posteriormente 240 consultas individuales en cascada para recuperar cada cuota (`N+1 Selects Problem`), degradando severamente el tiempo de respuesta.
   - *Refactorización aplicada:* Se diseñó la consulta personalizada `@Query("SELECT q FROM QuotationJpaEntity q LEFT JOIN FETCH q.installments WHERE q.id = :id")` en `QuotationJpaRepository`. Esto permite recuperar la cotización completa y sus 240 registros de amortización en un solo viaje de ida y vuelta a la base de datos (Single Query Round-Trip), reduciendo el tiempo de recuperación de base de datos a menos de 15 ms (ASR-PERF).
+
+---
+
+## 5.2. Software Configuration Management
+
+La gestión de configuración de CrediCasa comprende tres repositorios independientes: informe, backend y frontend. Este corte corresponde al 8 de octubre de 2026. Los archivos de construcción, configuración y pruebas se utilizan como evidencia de lo implementado; los diagramas del capítulo IV describen una arquitectura objetivo cuyo despliegue completo todavía no está acreditado.
+
+### 5.2.1. Software Development Environment Configuration
+
+| Componente | Configuración comprobada | Archivo de referencia |
+|---|---|---|
+| Backend | Java 21; Spring Boot 3.3.4; Maven; artefacto `com.fidiacorp:credicasa-backend:1.0.0-SNAPSHOT`. | `pom.xml` |
+| API y validación | Spring Web, Jakarta Validation, Spring Security y JJWT 0.12.6. | `pom.xml`, controladores REST y paquete `infrastructure/security` |
+| Persistencia | Spring Data JPA y PostgreSQL; H2 está declarado como dependencia, sin un perfil de pruebas H2 versionado en el corte. | `pom.xml`, `src/main/resources/application.yml` |
+| Pruebas | JUnit 5 mediante Spring Boot Test y ArchUnit 1.3.0. | `src/test/java` |
+| Documentación de API | Springdoc 2.6.0; OpenAPI en `/v3/api-docs` y Swagger UI en `/swagger-ui.html`. | `pom.xml`, `OpenApiConfig.java`, `application.yml` |
+| Contenedores | Construcción con Maven 3.9.9 y Temurin 21; ejecución con JRE 21; PostgreSQL 16 Alpine. | `Dockerfile`, `docker-compose.yml` |
+| Frontend | Vue 3.5, Vue Router 5.4, PrimeVue 5, Vite 8.3 y Tailwind CSS 4.3, según los rangos declarados. | `package.json`, `package-lock.json`, `vite.config.js` |
+
+**Preparación del backend.** Se requiere JDK 21 y Maven para compilar directamente. Desde la raíz del repositorio se ejecuta `mvn clean test` para la suite disponible y `mvn clean package` para producir el JAR. Para ejecutar sin contenedores se configura PostgreSQL y se utiliza `mvn spring-boot:run`. Estos comandos describen el procedimiento reproducible; la evidencia de ejecución existente se presenta en 5.3.1.3 y 5.3.1.4.
+
+**Preparación con contenedores.** El archivo Compose define PostgreSQL y el backend. `docker compose up --build` construye y levanta ambos servicios; `docker compose ps` permite revisar su estado y `docker compose logs credicasa-backend` permite consultar el arranque. PostgreSQL debe superar su comprobación de disponibilidad antes de iniciar el backend. No se ha adjuntado una captura de ejecución de Compose.
+
+**Preparación del frontend.** La instalación reproducible se realiza con `npm ci`; `npm run dev` inicia Vite, `npm run build` genera el artefacto y `npm run preview` permite revisar una construcción. El código actual incluye una vista inicial y un layout. La inspección de `src/main.js` detecta referencias a `router`, `PrimeVue` y `Material` sin sus importaciones; además, `Material` requiere resolver el preset correspondiente. En `layout.vue`, la lista del menú está en un bloque `<script>` sin exposición al template. Estas incidencias deben corregirse antes de declarar validada la ejecución del frontend. Su corrección queda fuera de esta actualización documental.
+
+### 5.2.2. Source Code Management
+
+| Entregable | Repositorio | Rama y revisión observadas |
+|---|---|---|
+| Informe | [FidiaCorp-report](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report) | Base `main` en `ca499d3`; `develop` local sincronizado con esa revisión antes de completar este documento. |
+| Backend | [FidiaCorp-backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend) | `main`, revisión `90e52b6`. |
+| Frontend | [FidiaCorp-FrontEnd](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd) | `develop`, revisión `c446221`. |
+
+Se adopta la convención `main` para versiones integradas, `develop` para integración del trabajo y `feature/<funcionalidad>` para cambios acotados. Las ramas existentes no acreditan por sí solas un proceso completo de revisión: la aprobación de pull requests, protección de ramas y ejecución de controles automáticos requiere evidencia adicional.
+
+Los cambios se agrupan por responsabilidad, se revisan mediante el diff y se acompañan de una descripción de su verificación. Los mensajes de commit deben identificar el alcance, por ejemplo `feat`, `fix`, `refactor` o `docs`, sin atribuir a un cambio funcionalidades ajenas. Los lockfiles y archivos de construcción se conservan para reproducibilidad. El informe permite versionar `README.md`, `.gitignore` y `Resources/`, excluyendo archivos locales de IDE y del sistema.
+
+**Sincronización de este avance.** Se consultó el remoto del informe y se comprobó que `origin/develop` era antecesor de `origin/main`. El avance rápido llevó `develop` local de `79d5f0a` a `ca499d3`, sin crear un commit de merge. Los cambios documentales posteriores quedan pendientes del commit y publicación del equipo; esto no significa que `origin/develop` ya haya sido actualizado.
+
+### 5.2.3. Source Code Style Guide & Conventions
+
+Las convenciones se documentan a partir de la organización presente en ambos proyectos y se aplicarán durante la revisión de futuros cambios.
+
+| Aspecto | Convención del proyecto |
+|---|---|
+| Paquetes Java | Minúsculas bajo `com.fidiacorp.credicasa`, organizados en `domain`, `application`, `infrastructure` e `interfaces`. |
+| Clases e interfaces | `PascalCase`, con nombres de responsabilidad: `FrenchAmortizationEngine`, `QuotationRepositoryPort`, `SimulationController`. |
+| Métodos y variables | `camelCase`; constantes en mayúsculas con guiones bajos. |
+| Inyección de dependencias | Constructores explícitos y dependencia de puertos para acceder a infraestructura desde aplicación. |
+| Contratos REST | DTOs de petición y respuesta separados; validación en la entrada; rutas bajo `/api/v1`; códigos HTTP según el resultado. |
+| Dominio | Mantener modelos y puertos independientes de infraestructura, aplicación y controladores; verificar las reglas existentes con ArchUnit. |
+| Importes y cálculo | Declarar escala y redondeo. El motor emplea `BigDecimal`; el calculador de métricas también utiliza `double` y `Math.pow` para conversiones y resolución numérica. No se presenta todo el cálculo como aritmética decimal exclusiva. |
+| Vue | Componentes por responsabilidad; scripts, templates y estilos separados dentro del SFC; nombres de archivos por función y rutas explícitas. |
+| JavaScript y CSS | Variables y funciones en `camelCase`, clases CSS descriptivas; evitar duplicaciones de reglas y referencias no importadas. |
+| Comentarios | Explicar decisiones, contratos y restricciones que no sean evidentes; mantenerlos coherentes con el comportamiento real. |
+
+El backend utiliza principalmente indentación de cuatro espacios; el frontend todavía combina estilos de una base inicial. La uniformidad del formato debe acordarse y aplicarse por cambios acotados. No se identificó una configuración versionada de Checkstyle, ESLint o Prettier ni una ejecución que permita afirmar cumplimiento automático de estas convenciones.
+
+### 5.2.4. Software Deployment Configuration
+
+**Configuración disponible.** El `Dockerfile` construye el JAR en una etapa Maven y lo copia a una imagen JRE 21. El proceso se ejecuta con un usuario sin privilegios de administrador. El servicio expone el puerto 8080 y define una comprobación sobre Swagger UI. La construcción del contenedor utiliza `-DskipTests`; por ello, la aprobación de pruebas debe verificarse por separado antes de publicar el artefacto.
+
+| Parámetro | Uso en la configuración |
+|---|---|
+| `SPRING_DATASOURCE_URL` | Dirección JDBC; Compose la dirige a `postgres:5432/credicasa_db`. |
+| `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD` | Credenciales de la base de datos. |
+| `DB_HOST`, `DB_PORT`, `DB_NAME` | Alternativas para construir la URL cuando no se proporciona `SPRING_DATASOURCE_URL`. |
+| `JWT_SECRET`, `JWT_EXPIRATION_MS` | Firma y duración del token; los valores de demostración deben sustituirse para un entorno publicado. |
+| `SERVER_PORT` | Puerto del backend; la imagen establece 8080. |
+| `JAVA_OPTS` | Opciones de memoria y ejecución de la JVM de la imagen. |
+
+Compose define una red compartida y un volumen `postgres_data`. El SQL `V1__init_schema.sql` se monta en el directorio de inicialización de PostgreSQL; ese mecanismo se ejecuta al inicializar una base vacía. La configuración usa `ddl-auto: update`; la existencia de la carpeta `db/migration` no acredita uso de Flyway, que no está declarado en el POM.
+
+**Alcance del despliegue.** Se dispone de configuración para un backend y PostgreSQL, junto con capturas de ejecución en `localhost:8080`. No se encontró un manifiesto de publicación del frontend ni un workflow CI/CD del backend. API Gateway, RabbitMQ, almacenamiento de exportaciones y los demás servicios del capítulo IV son parte del diseño objetivo, no contenedores desplegados por este Compose. El despliegue público de CrediCasa queda pendiente de URL, plataforma y evidencia de publicación propias del proyecto.
+
+## 5.3. Microservices Implementation
+
+El avance implementa un backend core ejecutable que reúne cálculo hipotecario, autenticación de demostración, consulta de ofertas simuladas y persistencia de cotizaciones. Aunque la arquitectura objetivo distribuye responsabilidades en varios servicios, el código examinado corresponde a una aplicación Spring Boot. No se contabilizan sus capas o adaptadores como microservicios independientes.
+
+### 5.3.1. Sprint 1
+
+La numeración de los apartados del sprint continúa bajo 5.3 para evitar colisiones con 5.1 y 5.2. Se presenta el alcance planificado en el backlog del capítulo III y se contrasta con el código y las capturas existentes. Para completar la planificación se propone el período del **28 de septiembre al 8 de octubre de 2026**. Estas fechas y las estimaciones siguientes son una reconstrucción propuesta para revisión del equipo; no proceden de un registro histórico del tablero ni acreditan aceptación del sprint.
+
+#### 5.3.1.1. Sprint Backlog 1
+
+**Planificación propuesta:**
+
+| Hito | Fecha propuesta | Objetivo |
+|---|---|---|
+| Inicio y revisión de alcance | 28/09/2026 | Revisar historias, dependencias y criterios de aceptación. |
+| Preparación y desarrollo | 29/09/2026–06/10/2026 | Preparar entorno, construir capacidades y reunir evidencias. |
+| Verificación y consolidación | 07/10/2026 | Revisar contratos, pruebas y trazabilidad documental. |
+| Sprint Review y cierre documental | 08/10/2026 | Presentar el incremento y registrar pendientes. |
+
+El incremento observado prioriza la base backend de cálculo y sus límites arquitectónicos. La siguiente estimación permite revisar el alcance funcional original; no constituye capacidad histórica ni velocidad medida:
+
+| Historia | Story Points propuestos | Consideración para el acuerdo del equipo |
+|---|---|---|
+| US01 | 3 | Autenticación, contrato y conexión con frontend. |
+| US05 | 5 | Selección de procesador y dependencias de integración de pagos. |
+| US07 | 5 | Registro y validación de información de inmuebles. |
+| US13 | 3 | Búsqueda y conexión con el catálogo. |
+| US16 | 5 | Mensajería, permisos y almacenamiento de conversaciones. |
+| **Total de alcance propuesto** | **21** | **Debe reestimarse y ajustarse antes de adoptarlo como compromiso.** |
+
+
+| User Story ID | Alcance asignado a Sprint 1 en 3.4 | Evidencia disponible | Estado de revisión |
+|---|---|---|---|
+| US01 | Ingresar mediante correo y contraseña. | `AuthController`, `CustomUserDetailsService`, `JwtTokenProvider` y `JwtAuthFilter`. | Backend implementado con usuarios en memoria; falta evidencia específica de login y flujo integrado en frontend. |
+| US05 | Seleccionar procesador de pago. | No se encontró módulo ni endpoint de pagos. | Pendiente. |
+| US07 | Registrar un bien inmobiliario. | Existe `PropertySnapshot` como dato de una simulación; no hay CRUD de inmuebles. | Pendiente como historia completa. |
+| US13 | Buscar inmuebles mediante una barra de búsqueda. | No hay vista de búsqueda ni endpoint de catálogo de inmuebles. | Pendiente. |
+| US16 | Mensajería con bancos o propietarios. | No hay implementación de mensajería en el corte. | Pendiente. |
+
+El desarrollo del motor financiero y las pruebas de arquitectura aporta una base técnica para el producto, pero no equivale a completar las cinco historias anteriores. El cronograma calculado se relaciona con US11, asignada a Sprint 2 en 3.4; se registra como capacidad adelantada del backend, sin cambiar esa asignación ni declarar terminada su visualización en frontend.
+
+**Trabajo técnico observado:** estructura hexagonal; motor francés con variantes; persistencia; seguridad JWT; adaptadores bancarios simulados; contratos REST/OpenAPI; cuatro pruebas financieras y cinco reglas de arquitectura; archivos de construcción y contenedores; base Vue con vista inicial. Se conservan los identificadores de 3.4. Las estimaciones anteriores son propuestas y requieren acuerdo del equipo; no se asigna velocidad histórica ni se inventa la aceptación de tareas.
+
+#### 5.3.1.2. Development Evidence for Sprint Review
+
+| Revisión | Entregable comprobable | Evidencia |
+|---|---|---|
+| Backend `46c2deb` | Incorporación inicial del servicio core de CrediCasa. | [Commit del backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend/commit/46c2deb) y estructura de paquetes. |
+| Backend `90e52b6` | Ajuste del almacenamiento de usuarios de autenticación y una regla ArchUnit. | [Commit del backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend/commit/90e52b6). |
+| Frontend `538fb73` | Archivos del layout y router. | [Commit del frontend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd/commit/538fb73). |
+| Frontend `c446221` | Vista inicial `home.vue`. | [Commit del frontend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd/commit/c446221). |
+
+<p align="center"><img src="Resources/capitulo-5/estructura_paquetes_hexagonal.png" alt="Estructura del backend por capas hexagonales" width="700"></p>
+
+La separación de paquetes muestra la asignación de responsabilidades. La evidencia del ajuste de saldo final y del mapeo bancario permite revisar dos decisiones concretas de implementación:
+
+<p align="center"><img src="Resources/capitulo-5/codigo_ajuste_saldo_cero_motor.png" alt="Código de ajuste del saldo final del cronograma" width="850"></p>
+
+<p align="center"><img src="Resources/capitulo-5/adaptador_bcp_banking_mapping.png" alt="Traducción del contrato simulado BCP al modelo del dominio" width="850"></p>
+
+Los adaptadores BCP, Interbank y SBS devuelven datos de demostración construidos en el código. Esta evidencia respalda la separación del contrato externo respecto al dominio; no demuestra consumo de APIs reales ni vigencia comercial de las tasas.
+
+#### 5.3.1.3. Testing Suite Evidence for Sprint Review
+
+En el repositorio se identificaron dos archivos de pruebas: `FrenchAmortizationEngineTest.java` y `HexagonalArchitectureTest.java`. La captura de Maven muestra **9 pruebas ejecutadas, 0 fallos, 0 errores y 0 omitidas**, con `BUILD SUCCESS`. Se conserva como evidencia aportada por el equipo; las pruebas no se volvieron a ejecutar durante esta actualización documental.
+
+| Suite | Casos o reglas presentes | Comportamiento cubierto |
+|---|---|---|
+| `FrenchAmortizationEngineTest` | 4 casos JUnit. | Crédito estándar de S/ 200 000 a 240 meses, gracia total, gracia parcial y cuota balón. |
+| `HexagonalArchitectureTest` | 5 reglas ArchUnit. | Dominio sin dependencias de infraestructura, aplicación o interfaces; aplicación sin dependencia de infraestructura; restricciones de acceso entre capas. |
+
+<p align="center"><img src="Resources/capitulo-5/ejecucion_french_amortization_tests.png" alt="Evidencia de pruebas del motor francés" width="850"></p>
+
+<p align="center"><img src="Resources/capitulo-5/ejecucion_archunit_hexagonal_tests.png" alt="Evidencia de reglas de arquitectura ArchUnit" width="850"></p>
+
+<p align="center"><img src="Resources/capitulo-5/reporte_surefire_mvn_test.png" alt="Resumen Maven: nueve pruebas, sin fallos ni errores" width="850"></p>
+
+**Límite de cobertura comprobada.** No se encontraron archivos `JwtTokenProviderTest`, pruebas MockMvc ni suites de integración de persistencia o adaptadores. Los escenarios adicionales descritos en 5.1 deben tratarse como cobertura por completar cuando no cuenten con código y resultados propios. Las nueve pruebas no acreditan validación integral de seguridad, ausencia de IDOR/BOLA, rendimiento bajo carga ni cumplimiento de todos los escenarios de calidad.
+
+#### 5.3.1.4. Execution Evidence for Sprint Review
+
+La captura de Postman documenta `POST http://localhost:8080/api/v1/simulations/calculate` con un préstamo de S/ 200 000, 240 meses, TEA 0.085 y moneda PEN. La respuesta es **201 Created** y la cuota 240 muestra `finalBalance: 0.00`. El tiempo mostrado es **126 ms** para esa solicitud; se registra como observación individual, no como percentil ni prueba de cumplimiento bajo carga.
+
+<p align="center"><img src="Resources/capitulo-5/post_simulation_calculate_response.png" alt="Ejecución local de la simulación: HTTP 201 y saldo final cero" width="850"></p>
+
+Para reproducir la revisión se requiere iniciar PostgreSQL y el backend, autenticar un usuario de demostración mediante `/api/v1/auth/login`, usar su token en `Authorization: Bearer` y enviar el contrato de `SimulationRequestDto`. La consulta posterior se realiza mediante `/api/v1/simulations/{id}`. Las respuestas de login, recuperación por ID y errores de autorización requieren capturas separadas; no se deducen de la captura del cálculo.
+
+El frontend contiene una pantalla inicial con texto provisional. No se adjunta evidencia de un flujo web integrado de login, simulación o consulta de cronograma. Las incidencias de arranque identificadas en 5.2.1 deben resolverse antes de registrar esa validación.
+
+#### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
+
+Springdoc publica el contrato del backend core. La captura disponible muestra Swagger UI y cinco operaciones:
+
+| Método | Ruta | Responsabilidad |
+|---|---|---|
+| POST | `/api/v1/auth/login` | Autenticar y emitir token. |
+| POST | `/api/v1/simulations/calculate` | Calcular y guardar una simulación. |
+| GET | `/api/v1/simulations/{id}` | Recuperar una simulación por UUID. |
+| GET | `/api/v1/banking/benchmarks` | Consultar tasas de referencia simuladas. |
+| GET | `/api/v1/banking/banks/{bankCode}/offer` | Obtener una oferta mediante el adaptador del banco. |
+
+<p align="center"><img src="Resources/capitulo-5/swagger_ui_openapi_endpoints.png" alt="Swagger UI del backend CrediCasa con contratos de autenticación, simulación y banca" width="850"></p>
+
+Los contratos, validaciones y mapeadores se encuentran en `application/dto` e `interfaces/rest`. `RestExceptionHandler` centraliza respuestas de error y `OpenApiConfig` describe el esquema Bearer. Se recomienda conservar una exportación de `/v3/api-docs` correspondiente a la versión revisada para acompañar la captura; dicho archivo aún no forma parte de los recursos entregados.
+
+#### 5.3.1.6. Software Deployment Evidence for Sprint Review
+
+**Evidencia disponible:** archivos `Dockerfile` y `docker-compose.yml`, configuración de PostgreSQL y capturas de Swagger/Postman que utilizan `localhost:8080`. Estas últimas respaldan ejecución local del backend, pero no permiten identificar si se realizó con JAR, IDE o contenedor.
+
+**Pendiente de acreditar:** construcción y arranque de contenedores, estado de PostgreSQL y backend, URL pública, versión publicada, plataforma de alojamiento y registros del despliegue. No se incluye una captura de un proveedor de nube ni un pipeline ejecutado de CrediCasa. La evidencia de Azure de otros cursos o productos no se utiliza para este proyecto.
+
+Para cerrar este apartado, el equipo debe incorporar la salida de `docker compose ps`, el registro de arranque y, si se publica en la nube, la captura del recurso y una respuesta de la API en su URL real. Las imágenes deben corresponder al mismo artefacto revisado y no deben mostrar contraseñas ni tokens.
+
+#### 5.3.1.7. Team Collaboration Insights during Sprint
+
+La colaboración se evidencia en los repositorios de código y en la incorporación de documentación y capturas al informe. El historial del backend registra dos commits del autor Git `Diego Ramos`; el frontend registra los commits iniciales, layout/router y vista Home del autor `Olizzy-upc`. La autoría de commits es evidencia de integración, pero no permite atribuir de manera exclusiva cada clase o prueba a una persona ni comprobar reuniones o revisiones entre pares.
+
+Las aportaciones declaradas por los integrantes en Student Outcome se conservan como descripción del equipo. Para acreditarlas en el sprint se requiere relacionarlas con tareas, pull requests o registros de revisión. No se inventan porcentajes de participación, horas trabajadas ni acuerdos de retrospectiva.
+
+**Organización propuesta para la revisión del equipo:**
+
+| Frente | Responsabilidad sugerida | Evidencia a entregar |
+|---|---|---|
+| Contratos e interfaces | Revisar DTOs, validaciones y OpenAPI. | Capturas y contrato de los endpoints revisados. |
+| Motor financiero y calidad | Revisar variantes, métricas y suite de dominio. | Código y resultados de pruebas por escenario. |
+| Seguridad y persistencia | Revisar login, permisos y recuperación de cotizaciones. | Pruebas de acceso y consulta por ID. |
+| Frontend e integración | Resolver el arranque y construir el flujo web priorizado. | Capturas y recorrido con backend. |
+| Configuración y documentación | Reproducir despliegue y mantener reporte/tablero. | Estado del entorno y enlaces de trazabilidad. |
+
+Se propone revisar avances durante el período 29/09–06/10, concentrar la verificación el 07/10 y presentar el cierre el 08/10. Esta organización no afirma que se hayan realizado reuniones en esas fechas ni sustituye registros de colaboración.
+
+**Hallazgos de revisión:** la separación por puertos facilita ubicar las responsabilidades del backend; el motor y ArchUnit cuentan con evidencia de pruebas concreta. El principal desajuste es la distancia entre el backlog funcional de Sprint 1 y las capacidades técnicas construidas. También deben resolverse los problemas de arranque del frontend antes de demostrar integración. Se propone revisar el alcance del sprint con el equipo, completar las pruebas faltantes y conservar evidencias por cada criterio de aceptación.
+
+<a id="5318-kanban-board--tp1"></a>
+
+#### 5.3.1.8. Kanban Board → TP1
+
+No se encontró un enlace ni una captura del tablero operativo de Sprint 1. El anexo `anexos_kanban_traceability.png` corresponde a trazabilidad y cierre de diseño del capítulo IV; no se presenta como historial real del sprint de implementación.
+
+**Tablero de revisión propuesto para TP1**, reconstruido desde el código y los recursos disponibles. Sus estados son una propuesta documental y deben trasladarse y confirmarse en la herramienta del equipo:
+
+| Por hacer | En desarrollo / validación | Con evidencia disponible |
+|---|---|---|
+| Procesadores de pago (US05). | Login backend (US01): falta verificación específica e integración web. | Código del motor francés y escenarios de prueba de dominio. |
+| Registro de inmuebles (US07). | Base frontend: corregir importaciones y exposición de navegación. | Cinco reglas de arquitectura y resumen de nueve pruebas aprobadas. |
+| Búsqueda de inmuebles (US13). | Configuración Docker: falta constancia de ejecución y publicación. | Swagger UI y cálculo local con HTTP 201. |
+| Mensajería (US16). | Trazabilidad entre responsables, tareas y criterios de aceptación. | Código de puertos, persistencia y adaptadores bancarios simulados. |
+
+El tablero definitivo debe incluir las historias US01, US05, US07, US13 y US16, tareas técnicas relacionadas, responsable acordado, criterios de aceptación y enlace a evidencia. Solo se moverá una historia a terminada cuando su comportamiento completo se haya demostrado. Quedan pendientes el enlace, captura final y confirmación de las fechas propuestas y de los estados por parte del equipo; no se calcula velocidad de Sprint 1 sin estimaciones y trabajo aceptado verificables.
 
 ---
 
