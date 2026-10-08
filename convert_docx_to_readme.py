@@ -1,4 +1,41 @@
-<div align="center">
+"""
+Script para convertir y sincronizar el contenido de AV1_GRUPO_3_CrediCasa_Final.docx
+hacia el archivo README.md en Markdown limpio.
+
+Prevalece la información del documento Word por ser la versión más reciente y actualizada.
+"""
+
+import os
+import shutil
+import docx
+
+def extract_media(docx_path, output_dir):
+    """Extrae las imágenes necesarias del documento docx a la carpeta de recursos."""
+    doc = docx.Document(docx_path)
+    rels = doc.part.rels
+    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "avance-1"), exist_ok=True)
+
+    for rel_id, rel in rels.items():
+        if "image" in rel.target_ref:
+            target_ref = rel.target_ref
+            data = rel.target_part.blob
+            if "image2" in target_ref:
+                with open(os.path.join(output_dir, "Perfil_Jesus.jpeg"), "wb") as f:
+                    f.write(data)
+            elif "image12" in target_ref:
+                with open(os.path.join(output_dir, "avance-1", "eventstorming_bigpicture.png"), "wb") as f:
+                    f.write(data)
+            elif "image15" in target_ref:
+                with open(os.path.join(output_dir, "avance-1", "impact_map.png"), "wb") as f:
+                    f.write(data)
+            elif "image16" in target_ref:
+                with open(os.path.join(output_dir, "avance-1", "archi_model_AV1.png"), "wb") as f:
+                    f.write(data)
+
+def generate_readme_markdown(docx_path):
+    """Construye el contenido completo de README.md basado en la información del archivo docx."""
+    content = """<div align="center">
 
   <img src="https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report/blob/main/Resources/UPC_logo.png?raw_true" alt="Logo-UPC" width="150">
 
@@ -947,3 +984,25 @@ La tabla se completará con IDs y descripciones de 3.2, evitando duplicar o reno
 | Repositorio del Reporte | [Abrir repositorio](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report) |
 
 </div>
+"""
+    return content
+
+def main():
+    docx_file = "AV1_GRUPO_3_CrediCasa_Final.docx"
+    readme_file = "README.md"
+    resources_dir = "Resources"
+    
+    print(f"Extrayendo recursos multimedia desde {docx_file}...")
+    extract_media(docx_file, resources_dir)
+    
+    print(f"Generando Markdown estructurado y limpio...")
+    md_content = generate_readme_markdown(docx_file)
+    
+    print(f"Escribiendo resultado en {readme_file}...")
+    with open(readme_file, "w", encoding="utf-8") as f:
+        f.write(md_content)
+        
+    print("README.md actualizado exitosamente con la información del documento Word.")
+
+if __name__ == "__main__":
+    main()
