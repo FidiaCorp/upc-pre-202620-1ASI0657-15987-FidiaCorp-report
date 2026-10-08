@@ -3,7 +3,6 @@
 !/.gitignore
 !/README.md
 !/Resources/
-!/convert_docx_to_readme.py
 # Ignorar archivos locales incluso dentro de Resources.
 **/.idea/
 **/.DS_Store
