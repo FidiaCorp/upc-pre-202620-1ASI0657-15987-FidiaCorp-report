@@ -43,6 +43,7 @@
 | 1.0.0.3 | 17/09/2026 | Grupo FidiaCorp | Se completó las últimas mejoras con formato y capítulos pendientes AV1 |
 | 1.0.0.4 | 22/09/2026 | Grupo FidiaCorp | Se completo las ultimas mejoras con formato e capitulos pendientes AV2. |
 | 1.0.0.5 | 08/10/2026 | Grupo FidiaCorp | Se completo las ultimas mejoras con formato e capitulos pendientes TP1. |
+| 1.0.0.6 | 25/10/2026 | Grupo FidiaCorp | Incorporación de la planificación del Sprint 2: objetivo, alcance, dependencias, criterios de aceptación y backlog propuesto para el Avance 3. |
 
 
 
@@ -125,6 +126,8 @@
 			- [5.3.1.6. Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
 			- [5.3.1.7. Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
 			- [5.3.1.8. Kanban Board → TP1](#5318-kanban-board--tp1)
+		- [5.3.2. Sprint 2](#532-sprint-2)
+			- [5.3.2.1. Sprint Backlog 2](#5321-sprint-backlog-2)
 - [Conclusiones](#conclusiones)
 - [Recomendaciones](#recomendaciones)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
@@ -2599,6 +2602,33 @@ No se encontró un enlace ni una captura del tablero operativo de Sprint 1. El a
 | Mensajería (US16). | Trazabilidad entre responsables, tareas y criterios de aceptación. | Código de puertos, persistencia y adaptadores bancarios simulados. |
 
 El tablero definitivo debe incluir las historias US01, US05, US07, US13 y US16, tareas técnicas relacionadas, responsable acordado, criterios de aceptación y enlace a evidencia. Solo se moverá una historia a terminada cuando su comportamiento completo se haya demostrado. Quedan pendientes el enlace, captura final y confirmación de las fechas propuestas y de los estados por parte del equipo; no se calcula velocidad de Sprint 1 sin estimaciones y trabajo aceptado verificables.
+
+### 5.3.2. Sprint 2
+
+El Sprint 2 comprende las historias US02, US03, US04, US08, US10, US11 y US14, según el Product Backlog de la sección 3.4. Esta planificación establece el incremento previsto para el Avance 3 y conserva los identificadores y la asignación original de las historias. Las capacidades descritas a continuación constituyen trabajo por realizar; su aceptación dependerá de las pruebas y evidencias del incremento.
+
+**Objetivo del sprint:** permitir que el usuario gestione su perfil y la seguridad de su acceso, consulte y filtre inmuebles, elimine propiedades propias y revise ofertas de crédito con sus notificaciones y cronogramas de pagos desde una interfaz conectada al backend.
+
+**Punto de partida y dependencias**
+
+| Dependencia | Situación al planificar | Tratamiento dentro del sprint |
+|---|---|---|
+| Acceso y usuarios — US01 | Existe autenticación JWT con usuarios de demostración en memoria; falta el flujo web integrado. | Incorporar persistencia de cuentas y conectar el acceso antes de desarrollar perfil, segundo factor y cierre de sesión. US01 conserva su asignación al Sprint 1 y se registra como dependencia pendiente. |
+| Registro de inmuebles — US07 | El backend incluye una instantánea del inmueble en la simulación, pero no un catálogo administrable. | Completar el registro y la consulta necesarios para eliminar y filtrar inmuebles. Mantener US07 como pendiente del Sprint 1 hasta verificar sus criterios. |
+| Búsqueda de inmuebles — US13 | No hay un flujo integrado de búsqueda sobre un catálogo persistido. | Incorporar la consulta y búsqueda base sobre la que operarán los filtros de US14, conservando la asignación original de US13. |
+| Ofertas y notificaciones — US10 | Los adaptadores bancarios devuelven datos de demostración; no existe un flujo de emisión y notificación de ofertas al usuario. | Definir el registro de ofertas, su destinatario y el mecanismo de notificación. Diferenciar una oferta de demostración de una aprobación bancaria real. |
+| Cronograma de pagos — US11 | Existen cálculo y recuperación de simulaciones en el backend; falta su visualización integrada. | Revisar permisos, fechas de vencimiento y asociación con la oferta antes de construir la vista del cronograma. Una simulación aislada no acredita la historia completa. |
+| Aplicación web | Hay importaciones y configuraciones pendientes que impiden completar el arranque. | Corregir la base del frontend antes de integrar los recorridos funcionales. |
+
+El orden de trabajo será: estabilización del frontend y cuentas; perfil y seguridad; catálogo y búsqueda; ofertas y notificaciones; cronograma e integración; verificación del incremento. Las dependencias recuperadas del Sprint 1 se identificarán por separado para no contabilizarlas como historias nuevas del Sprint 2.
+
+**Delimitación del alcance**
+
+Se incluyen las siete historias del Sprint 2 y las tareas necesarias para habilitarlas. Pagos y mensajería (US05 y US16) continúan como pendientes del Sprint 1, sin incorporarse a este incremento. Tampoco se adelantan la exportación XLSX, la verificación registral, la asistencia con IA ni las funciones adicionales de mensajería previstas para el Sprint 3. La arquitectura distribuida del capítulo IV se mantiene como referencia de diseño; esta planificación no acredita la existencia de microservicios independientes.
+
+La estimación inicial deberá contrastarse con la capacidad disponible antes de fijar fechas de inicio y cierre. Si el alcance excede esa capacidad, se documentará el ajuste y su efecto en el Product Backlog; no se considerarán terminadas historias por disponer únicamente de componentes parciales.
+
+#### 5.3.2.1. Sprint Backlog 2
 
 ---
 
