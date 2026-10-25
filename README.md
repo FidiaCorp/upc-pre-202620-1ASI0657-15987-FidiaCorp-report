@@ -2630,6 +2630,48 @@ La estimación inicial deberá contrastarse con la capacidad disponible antes de
 
 #### 5.3.2.1. Sprint Backlog 2
 
+La siguiente propuesta descompone el alcance en tareas de implementación, integración y verificación. Las horas representan esfuerzo inicial estimado, no duración calendario ni trabajo ejecutado. Todas las tareas parten del estado **To-do**. La asignación operativa queda pendiente de acuerdo del equipo y no se presume en esta planificación.
+
+**Criterios de aceptación del incremento**
+
+| Historia | Criterios verificables para la revisión |
+|---|---|
+| US02 — Editar perfil | El usuario autenticado consulta y actualiza sus datos; los cambios persisten al volver a ingresar. Los campos obligatorios o formatos inválidos impiden guardar. Un usuario no puede modificar el perfil de otro. |
+| US03 — Segundo factor | La activación exige un código válido; un código incorrecto o expirado no activa la función. Una cuenta con segundo factor habilitado requiere verificarlo antes de obtener acceso completo. La configuración pertenece al usuario autenticado. |
+| US04 — Cerrar sesión | Al cerrar sesión se elimina el acceso desde la interfaz y se redirige al ingreso. El token de la sesión cerrada no permite reutilizar los endpoints protegidos, incluso si se conserva una copia. |
+| US08 — Eliminar inmueble | El propietario confirma la eliminación y el inmueble deja de aparecer en las consultas activas; cancelar conserva los datos. Un tercero no puede eliminarlo. Las cotizaciones históricas conservan su instantánea del inmueble. |
+| US10 — Notificar ofertas | Una oferta registrada para un destinatario genera un aviso en la aplicación mientras este mantiene la sesión activa, sin recargar manualmente. El aviso permite consultar los datos de la oferta y solo es accesible para su destinatario. Se comprueba el intervalo de entrega definido para el mecanismo elegido. Los datos de demostración se identifican como tales. |
+| US11 — Consultar cronograma | Desde una oferta registrada, el usuario autorizado consulta fechas de vencimiento, amortización, intereses y saldo por cuota. Los valores coinciden con el cálculo persistido y el saldo final es 0.00. Los errores de consulta se muestran sin presentar resultados incompletos como válidos. |
+| US14 — Filtrar inmuebles | La selección de etiquetas devuelve únicamente inmuebles que cumplen los filtros aplicados. Retirar filtros actualiza los resultados; una búsqueda sin coincidencias muestra un estado vacío. La consulta se ejecuta sobre el catálogo persistido. |
+
+**Descomposición y estimación de tareas**
+
+| ID | Historia o dependencia | Tarea | Descripción | Estimación (horas) | Estado |
+|---|---|---|---|---:|---|
+| S2-T01 | Dependencia técnica | Estabilizar el frontend | Corregir importaciones, configuración y navegación; comprobar arranque y build. | 4 | To-do |
+| S2-T02 | US01 pendiente / US02 / US03 | Persistir cuentas e integrar acceso | Incorporar almacenamiento de usuarios, login web y protección de rutas. | 12 | To-do |
+| S2-T03 | US02 | Implementar edición de perfil | Desarrollar consulta, actualización, validaciones y vista de perfil con control de identidad. | 8 | To-do |
+| S2-T04 | US03 | Implementar segundo factor | Definir el método de verificación y desarrollar configuración, comprobación y flujo de ingreso. | 16 | To-do |
+| S2-T05 | US04 | Implementar cierre de sesión | Invalidar el token de la sesión cerrada y limpiar el acceso en la aplicación web. | 8 | To-do |
+| S2-T06 | US07 pendiente / US08 / US14 | Implementar catálogo persistido | Incorporar registro, listado y consulta de inmuebles con propietario y etiquetas. | 16 | To-do |
+| S2-T07 | US08 | Implementar eliminación autorizada | Resolver confirmación y cancelación en la interfaz, permisos y conservación de instantáneas históricas. | 8 | To-do |
+| S2-T08 | US13 pendiente / US14 | Implementar búsqueda y filtros | Integrar búsqueda base, selección de etiquetas y estados de resultados. | 12 | To-do |
+| S2-T09 | US10 / US11 | Registrar ofertas por destinatario | Definir contrato, persistencia, origen de demostración y relación entre oferta y simulación. | 12 | To-do |
+| S2-T10 | US10 | Implementar notificaciones | Definir mecanismo e intervalo de entrega; integrar avisos, consulta y lectura por destinatario. | 12 | To-do |
+| S2-T11 | US11 | Integrar cronograma de pagos | Revisar contrato, fechas y permisos; construir la vista del cronograma asociado a la oferta. | 12 | To-do |
+| S2-T12 | Todas las historias | Verificar el incremento | Implementar escenarios Gherkin y pruebas de integración y aceptación, incluyendo errores y acceso a datos ajenos. | 20 | To-do |
+| S2-T13 | Transversal | Documentar API y puesta en marcha | Actualizar OpenAPI, configuración por entorno e instrucciones; comprobar construcción y arranque reproducibles. | 8 | To-do |
+| S2-T14 | Transversal | Consolidar evidencia documental | Registrar commits, resultados de pruebas, comandos y trazabilidad entre historias, tareas y evidencias. | 6 | To-do |
+| **Total** | | | **Esfuerzo preliminar del alcance y sus dependencias.** | **154** | |
+
+La estimación incluye trabajo recuperado del Sprint 1 y deberá revisarse después de definir el método del segundo factor, el mecanismo de notificaciones y el tratamiento de ofertas. No se convierte este total a Story Points ni se utiliza como velocidad del equipo.
+
+**Condiciones de finalización**
+
+Una historia se considerará terminada cuando estén implementados su comportamiento en backend y frontend, las validaciones y permisos correspondientes, y sus criterios de aceptación cuenten con pruebas aprobadas y evidencia reproducible. Los contratos e instrucciones afectados deberán estar actualizados. La existencia de código, una respuesta aislada del servicio o una prueba de dominio no sustituye la revisión del recorrido completo.
+
+La secuencia de estados prevista es **To-do → In-Process → To-Review → Done**. Las tareas con dependencias pendientes permanecerán identificadas hasta disponer de los componentes necesarios. Este backlog documental no sustituye los registros del tablero operativo; su enlace, capturas y demás evidencias externas no se incorporan en esta etapa.
+
 ---
 
 <div style="page-break-after: always;"></div>
