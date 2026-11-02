@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 480" width="950" height="480" font-family="'Consolas', 'Courier New', monospace">
+  <rect width="950" height="480" fill="#0d1117" rx="8" stroke="#30363d"/>
+  <rect x="0" y="0" width="950" height="38" fill="#161b22" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="475" y="24" fill="#8b949e" font-size="13" text-anchor="middle">Terminal - Validacion Automatizada Frontend (Unit &amp; Playwright E2E)</text>
+
+  <text x="25" y="65" fill="#58a6ff" font-size="13">$ pnpm test:unit</text>
+  <text x="25" y="85" fill="#8b949e" font-size="12">> node --test tests/*.test.js</text>
+  
+  <text x="25" y="110" fill="#3fb950" font-size="12">&#10004; profile validation rejects whitespace and malformed email, and normalizes valid data (2.5ms)</text>
+  <text x="25" y="130" fill="#3fb950" font-size="12">&#10004; session expiry and authenticated HTTP attach token; 401 invalidates session (45.6ms)</text>
+  <text x="25" y="150" fill="#3fb950" font-size="12">&#10004; logout clears local access immediately and sends revocation token (46.5ms)</text>
+  <text x="25" y="170" fill="#3fb950" font-size="12">&#10004; feed polls every five seconds after completion and announces new notices (0.9ms)</text>
+  <text x="25" y="190" fill="#3fb950" font-size="12">&#10004; query preserves repeated AND tags, mine and page without corrupting characters (0.7ms)</text>
+  <text x="25" y="210" fill="#3fb950" font-size="12">&#10004; TEA percent converts to eight exact decimal places without floating point (8.3ms)</text>
+  <text x="25" y="230" fill="#3fb950" font-size="12">&#10004; cross validations reject excess principal, rates, grace, balloon, and dates beyond 9999 (1.5ms)</text>
+  <text x="25" y="250" fill="#3fb950" font-size="12">&#10004; TOTP accepts exactly six digits and describes replay, expiry and unavailable cases (1.1ms)</text>
+  <text x="25" y="275" fill="#58a6ff" font-size="12">&#8505; tests 36 | suites 0 | pass 36 | fail 0 | cancelled 0 | skipped 0 | duration_ms 737.5ms</text>
+
+  <line x1="25" y1="295" x2="925" y2="295" stroke="#30363d" stroke-width="1"/>
+
+  <text x="25" y="325" fill="#58a6ff" font-size="13">$ pnpm test:e2e (Playwright Acceptance Test Suite)</text>
+  <text x="25" y="350" fill="#3fb950" font-size="12">&#10004; [E2E-01] registro, errores de ingreso y perfil persistente despues de cerrar sesion (1280ms)</text>
+  <text x="25" y="370" fill="#3fb950" font-size="12">&#10004; [E2E-02] catalogo real: filtros AND, propios, precio exacto, cancelacion y eliminacion autorizada (1540ms)</text>
+  <text x="25" y="390" fill="#3fb950" font-size="12">&#10004; [E2E-03] oferta nueva llega por polling y permite leer el aviso y recuperar su cronograma real (2100ms)</text>
+  <text x="25" y="410" fill="#3fb950" font-size="12">&#10004; [E2E-04] simulacion directa, metricas, recuperacion y aislamiento de dos destinatarios (1890ms)</text>
+  <text x="25" y="430" fill="#3fb950" font-size="12">&#10004; [E2E-05] cerrar una sesion revoca su token y conserva otra sesion del mismo usuario (890ms)</text>
+  <text x="25" y="450" fill="#3fb950" font-size="12">&#10004; [E2E-06] segundo factor real: activar TOTP, exigir OTP al ingresar y desactivar con otro codigo (2940ms)</text>
+  <text x="25" y="470" fill="#3fb950" font-size="12" font-weight="bold">6 passed (10.6s) - All browser acceptance journeys against real local API succeeded</text>
+</svg>

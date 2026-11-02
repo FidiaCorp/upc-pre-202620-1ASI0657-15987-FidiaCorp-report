@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1000" height="650" fill="#1b1b1b" rx="8"/>
+  <rect x="0" y="0" width="1000" height="48" fill="#2d3748" rx="8"/>
+  <circle cx="24" cy="24" r="6" fill="#e53e3e"/>
+  <circle cx="44" cy="24" r="6" fill="#dd6b20"/>
+  <circle cx="64" cy="24" r="6" fill="#38a169"/>
+  <text x="500" y="30" fill="#e2e8f0" font-size="14" font-weight="bold" text-anchor="middle">CrediCasa Core Banking API - OpenAPI 3.0 / Swagger UI (v1.0.0)</text>
+  
+  <!-- Info Box -->
+  <rect x="20" y="60" width="960" height="70" fill="#24292e" rx="4" stroke="#4a5568"/>
+  <text x="35" y="85" fill="#63b3ed" font-size="18" font-weight="bold">CrediCasa API - Endpoints de Sprint 2</text>
+  <text x="35" y="105" fill="#a0aec0" font-size="12">Base URL: /api/v1 | Protocol: HTTPS/REST | Autenticacion: Bearer JWT + TOTP RFC 6238</text>
+  <text x="35" y="120" fill="#48bb78" font-size="11">[24 endpoints documentados y validados mediante ApiContractDocumentation.java y OpenApiContractTest]</text>
+
+  <!-- Group 1: Acceso y Seguridad -->
+  <rect x="20" y="140" width="960" height="36" fill="#2d3748" rx="4"/>
+  <text x="35" y="163" fill="#ffffff" font-size="13" font-weight="bold">Acceso &amp; Seguridad (Auth, Perfil, TOTP 2FA)</text>
+  
+  <rect x="25" y="185" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="200" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="201" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/auth/register</text>
+  <text x="450" y="201" fill="#a0aec0" font-size="11">Registrar cuenta CLIENT (valida email unico y password 12-72 bytes)</text>
+  <text x="900" y="201" fill="#68d391" font-size="11" font-weight="bold">201 Created</text>
+
+  <rect x="25" y="215" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="230" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="231" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/auth/login</text>
+  <text x="450" y="231" fill="#a0aec0" font-size="11">Ingreso con credenciales y codigo OTP (si 2FA activo, emite JWT)</text>
+  <text x="900" y="231" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="245" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="260" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="261" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/auth/logout</text>
+  <text x="450" y="261" fill="#a0aec0" font-size="11">Revocacion persistente de token JWT Bearer presentado (SHA-256)</text>
+  <text x="900" y="261" fill="#68d391" font-size="11" font-weight="bold">204 No Content</text>
+
+  <rect x="25" y="275" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="290" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="291" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/users/me</text>
+  <text x="450" y="291" fill="#a0aec0" font-size="11">Consulta de perfil propio autenticado (UUID derivado de claims JWT)</text>
+  <text x="900" y="291" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="305" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="320" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="321" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/users/me/two-factor/setup</text>
+  <text x="450" y="321" fill="#a0aec0" font-size="11">Genera clave TOTP pendiente y URI otpauth:// (cifrado AES-256-GCM)</text>
+  <text x="900" y="321" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <!-- Group 2: Inmuebles & Catalogo -->
+  <rect x="20" y="340" width="960" height="36" fill="#2d3748" rx="4"/>
+  <text x="35" y="363" fill="#ffffff" font-size="13" font-weight="bold">Inmuebles &amp; Catálogo (US07, US08, US14)</text>
+
+  <rect x="25" y="385" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="400" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="401" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/properties</text>
+  <text x="450" y="401" fill="#a0aec0" font-size="11">Catalogo compartido con busqueda textual, etiquetas AND y mine=true</text>
+  <text x="900" y="401" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="415" width="55" height="22" fill="#e53e3e" rx="3"/><text x="52" y="430" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">DELETE</text>
+  <text x="90" y="431" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/properties/{id}</text>
+  <text x="450" y="431" fill="#a0aec0" font-size="11">Eliminacion logica autorizada (solo propietario; preserva snapshots)</text>
+  <text x="900" y="431" fill="#68d391" font-size="11" font-weight="bold">204 No Content</text>
+
+  <!-- Group 3: Ofertas, Notificaciones & Cronogramas -->
+  <rect x="20" y="450" width="960" height="36" fill="#2d3748" rx="4"/>
+  <text x="35" y="473" fill="#ffffff" font-size="13" font-weight="bold">Ofertas DEMO, Avisos &amp; Cronogramas de Pagos (US10, US11)</text>
+
+  <rect x="25" y="495" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="510" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="511" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/offers</text>
+  <text x="450" y="511" fill="#a0aec0" font-size="11">Emision atomica de oferta DEMO y notificacion privada a cliente</text>
+  <text x="900" y="511" fill="#68d391" font-size="11" font-weight="bold">201 Created</text>
+
+  <rect x="25" y="525" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="540" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="541" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/notifications</text>
+  <text x="450" y="541" fill="#a0aec0" font-size="11">Consulta de avisos propios y unreadCount (polling 5s en frontend)</text>
+  <text x="900" y="541" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="555" width="55" height="22" fill="#d69e2e" rx="3"/><text x="52" y="570" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">PATCH</text>
+  <text x="90" y="571" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/notifications/{id}/read</text>
+  <text x="450" y="571" fill="#a0aec0" font-size="11">Marca aviso como leido de forma idempotente (readAt)</text>
+  <text x="900" y="571" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="585" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="600" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="601" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/offers/{offerId}/schedule</text>
+  <text x="450" y="601" fill="#a0aec0" font-size="11">Generacion u obtencion idempotente de cronograma (saldo final 0.00)</text>
+  <text x="900" y="601" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="615" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="630" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="631" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/simulations/{id}</text>
+  <text x="450" y="631" fill="#a0aec0" font-size="11">Recuperacion de cotizacion persistida por UUID (control de propiedad)</text>
+  <text x="900" y="631" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+</svg>
