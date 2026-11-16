@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 560" width="950" height="560" font-family="'Consolas', 'Courier New', monospace">
+  <rect width="950" height="560" fill="#0d1117" rx="8" stroke="#30363d"/>
+  <rect x="0" y="0" width="950" height="38" fill="#161b22" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="475" y="24" fill="#8b949e" font-size="13" text-anchor="middle">Cucumber BDD Execution - sprint3.feature (Sprint3AcceptanceTest.java)</text>
+
+  <text x="25" y="65" fill="#f0883e" font-size="13">Feature: Sprint 3 financial verification, registry legitimacy, AI advisor, and messaging security</text>
+  <text x="45" y="85" fill="#8b949e" font-size="12">All operations enforce authenticated access, SBS compliance, and data privacy.</text>
+
+  <text x="45" y="115" fill="#3fb950" font-size="12">&#10004; Scenario: Un cliente consulta el estado de su suscripción y verifica un pago para activarla [@US06]</text>
+  <text x="45" y="145" fill="#3fb950" font-size="12">&#10004; Scenario: Un pago con monto o plan inválido no activa la suscripción [@US06]</text>
+  <text x="45" y="175" fill="#3fb950" font-size="12">&#10004; Scenario: El propietario valida la autenticidad registral del inmueble mediante SUNARP [@US09]</text>
+  <text x="45" y="205" fill="#3fb950" font-size="12">&#10004; Scenario: Una consulta registral sobre un inmueble inexistente o datos fraudulentos es observada [@US09]</text>
+  <text x="45" y="235" fill="#3fb950" font-size="12">&#10004; Scenario: El usuario descarga el cronograma de pagos de una simulación en formato XLSX [@US12]</text>
+  <text x="45" y="265" fill="#3fb950" font-size="12">&#10004; Scenario: Un usuario no puede descargar el cronograma en XLSX de una oferta que no le pertenece [@US12]</text>
+  <text x="45" y="295" fill="#3fb950" font-size="12">&#10004; Scenario: El asistente hipotecario IA evalúa el ingreso mensual y recomienda inmuebles (35% SBS) [@US15]</text>
+  <text x="45" y="325" fill="#3fb950" font-size="12">&#10004; Scenario: El asistente hipotecario IA filtra por distrito y etiquetas preferidas asignando un score [@US15]</text>
+  <text x="45" y="355" fill="#3fb950" font-size="12">&#10004; Scenario: Un usuario bloquea a otro usuario indeseado para evitar mensajes directos [@US17]</text>
+  <text x="45" y="385" fill="#3fb950" font-size="12">&#10004; Scenario: Un usuario bloqueado no puede enviar mensajes al usuario que lo bloqueó [@US17]</text>
+  <text x="45" y="415" fill="#3fb950" font-size="12">&#10004; Scenario: Un usuario descarga el historial completo de una conversación en formato texto [@US18]</text>
+  <text x="45" y="445" fill="#3fb950" font-size="12">&#10004; Scenario: Un usuario descarga el historial de conversación en formato estructurado JSON [@US18]</text>
+
+  <line x1="25" y1="475" x2="925" y2="475" stroke="#30363d" stroke-width="1"/>
+
+  <text x="25" y="505" fill="#3fb950" font-size="13" font-weight="bold">12 Scenarios (12 passed) - 0 failed</text>
+  <text x="25" y="525" fill="#3fb950" font-size="13">38 Steps (38 passed) - [INFO] BUILD SUCCESS</text>
+  <text x="25" y="545" fill="#8b949e" font-size="12">Total time: 13.58 s | JUnit Platform Engine + Cucumber JVM + Spring Boot TestContext</text>
+</svg>

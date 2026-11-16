@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 780" width="1000" height="780" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1000" height="780" fill="#1b1b1b" rx="8"/>
+  <rect x="0" y="0" width="1000" height="48" fill="#2d3748" rx="8"/>
+  <circle cx="24" cy="24" r="6" fill="#e53e3e"/>
+  <circle cx="44" cy="24" r="6" fill="#dd6b20"/>
+  <circle cx="64" cy="24" r="6" fill="#38a169"/>
+  <text x="500" y="30" fill="#e2e8f0" font-size="14" font-weight="bold" text-anchor="middle">CrediCasa Core Banking API - OpenAPI 3.0 / Swagger UI (v1.3.0 - Sprint 3)</text>
+  
+  <!-- Info Box -->
+  <rect x="20" y="60" width="960" height="72" fill="#24292e" rx="4" stroke="#4a5568"/>
+  <text x="35" y="85" fill="#63b3ed" font-size="18" font-weight="bold">CrediCasa API - Endpoints de Sprint 3 (Avance 4)</text>
+  <text x="35" y="105" fill="#a0aec0" font-size="12">Base URL: /api/v1 | Protocol: HTTPS/REST | Autenticacion: Bearer JWT + TOTP | Normativa: SBS 35% DTI</text>
+  <text x="35" y="122" fill="#48bb78" font-size="11">[37 operaciones documentadas y validadas mediante ApiContractDocumentation.java y OpenApiContractTest]</text>
+
+  <!-- Group 1: Suscripciones y Pagos (US06) -->
+  <rect x="20" y="145" width="960" height="34" fill="#2d3748" rx="4"/>
+  <text x="35" y="167" fill="#ffffff" font-size="13" font-weight="bold">Suscripciones y Verificación de Pagos (US06)</text>
+
+  <rect x="25" y="188" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="203" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="204" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/subscriptions/status</text>
+  <text x="450" y="204" fill="#a0aec0" font-size="11">Consulta estado, plan (BASIC, PREMIUM, PRO) y vigencia de la suscripción</text>
+  <text x="900" y="204" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="218" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="233" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="234" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/payments/verify</text>
+  <text x="450" y="234" fill="#a0aec0" font-size="11">Verifica referencia bancaria y confirma activación de suscripción (Flyway V8)</text>
+  <text x="900" y="234" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <!-- Group 2: Legitimidad Registral SUNARP (US09) -->
+  <rect x="20" y="252" width="960" height="34" fill="#2d3748" rx="4"/>
+  <text x="35" y="274" fill="#ffffff" font-size="13" font-weight="bold">Legitimidad Registral e Inmobiliaria SUNARP (US09)</text>
+
+  <rect x="25" y="295" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="310" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="311" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/properties/{id}/verify-registry</text>
+  <text x="450" y="311" fill="#a0aec0" font-size="11">Consulta partida electrónica en base SUNARP y emite reporte de legitimidad</text>
+  <text x="900" y="311" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="325" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="340" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="341" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/properties/{id}/legitimacy</text>
+  <text x="450" y="341" fill="#a0aec0" font-size="11">Obtiene estado registral verificado (VERIFIED_GENUINE) y notas registrales</text>
+  <text x="900" y="341" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <!-- Group 3: Exportación OpenXML XLSX (US12) -->
+  <rect x="20" y="360" width="960" height="34" fill="#2d3748" rx="4"/>
+  <text x="35" y="382" fill="#ffffff" font-size="13" font-weight="bold">Exportación de Cronogramas de Pagos en Formato XLSX (US12)</text>
+
+  <rect x="25" y="403" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="418" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="419" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/simulations/{id}/export/xlsx</text>
+  <text x="450" y="419" fill="#a0aec0" font-size="11">Genera archivo Excel (.xlsx) nativo OpenXML con cuotas y métricas financieras</text>
+  <text x="900" y="419" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="433" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="448" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="449" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/offers/{offerId}/schedule/export/xlsx</text>
+  <text x="450" y="449" fill="#a0aec0" font-size="11">Descarga el cronograma oficial de la oferta bancaria en hoja de cálculo Excel</text>
+  <text x="900" y="449" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <!-- Group 4: Asistente Hipotecario IA SBS (US15) -->
+  <rect x="20" y="468" width="960" height="34" fill="#2d3748" rx="4"/>
+  <text x="35" y="490" fill="#ffffff" font-size="13" font-weight="bold">Asistente Hipotecario Inteligente &amp; Recomendaciones IA (US15)</text>
+
+  <rect x="25" y="511" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="526" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="527" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/ai/recommendations</text>
+  <text x="450" y="527" fill="#a0aec0" font-size="11">Motor heurístico determinista SBS: evalúa ratio 35%, distrito, tags y scoring</text>
+  <text x="900" y="527" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <!-- Group 5: Mensajería & Controles de Privacidad (US17, US18) -->
+  <rect x="20" y="546" width="960" height="34" fill="#2d3748" rx="4"/>
+  <text x="35" y="568" fill="#ffffff" font-size="13" font-weight="bold">Mensajería, Bloqueo de Contactos &amp; Exportación de Historial (US17, US18)</text>
+
+  <rect x="25" y="589" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="604" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="605" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages/blocks/{targetUserId}</text>
+  <text x="450" y="605" fill="#a0aec0" font-size="11">Bloquea usuario indeseado para impedir recepción y envío de mensajes (US17)</text>
+  <text x="900" y="605" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="619" width="55" height="22" fill="#e53e3e" rx="3"/><text x="52" y="634" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">DELETE</text>
+  <text x="90" y="635" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages/blocks/{targetUserId}</text>
+  <text x="450" y="635" fill="#a0aec0" font-size="11">Desbloquea a un usuario previamente restringido</text>
+  <text x="900" y="635" fill="#68d391" font-size="11" font-weight="bold">204 No Content</text>
+
+  <rect x="25" y="649" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="664" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="665" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages/blocks</text>
+  <text x="450" y="665" fill="#a0aec0" font-size="11">Lista usuarios bloqueados por la cuenta del solicitante</text>
+  <text x="900" y="665" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="679" width="55" height="22" fill="#38a169" rx="3"/><text x="52" y="694" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">POST</text>
+  <text x="90" y="695" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages</text>
+  <text x="450" y="695" fill="#a0aec0" font-size="11">Envío de mensaje directo (valida bloqueos cruzados y responde 409 si bloqueado)</text>
+  <text x="900" y="695" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="709" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="724" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="725" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages/conversations/{id}/export</text>
+  <text x="450" y="725" fill="#a0aec0" font-size="11">Descarga historial completo de conversación en archivo de texto plano .txt (US18)</text>
+  <text x="900" y="725" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+
+  <rect x="25" y="739" width="55" height="22" fill="#3182ce" rx="3"/><text x="52" y="754" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">GET</text>
+  <text x="90" y="755" fill="#cbd5e0" font-size="12" font-family="monospace">/api/v1/messages/conversations/{id}/export/json</text>
+  <text x="450" y="755" fill="#a0aec0" font-size="11">Exporta historial de conversación en formato estructurado JSON (US18)</text>
+  <text x="900" y="755" fill="#68d391" font-size="11" font-weight="bold">200 OK</text>
+</svg>

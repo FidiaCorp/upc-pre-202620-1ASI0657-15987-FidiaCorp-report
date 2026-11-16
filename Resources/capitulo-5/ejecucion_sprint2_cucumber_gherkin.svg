@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 420" width="950" height="420" font-family="'Consolas', 'Courier New', monospace">
+  <rect width="950" height="420" fill="#0d1117" rx="8" stroke="#30363d"/>
+  <rect x="0" y="0" width="950" height="38" fill="#161b22" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="475" y="24" fill="#8b949e" font-size="13" text-anchor="middle">Cucumber BDD Execution - sprint2.feature (Sprint2AcceptanceTest.java)</text>
+
+  <text x="25" y="65" fill="#f0883e" font-size="13">Feature: Sprint 2 authenticated housing credit journeys</text>
+  <text x="45" y="85" fill="#8b949e" font-size="12">All bank proposals are DEMO; users can only read their own private resources.</text>
+
+  <text x="45" y="115" fill="#3fb950" font-size="12">&#10004; Scenario: Profile changes survive a new login and invalid changes do not persist [@US02]</text>
+  <text x="45" y="145" fill="#3fb950" font-size="12">&#10004; Scenario: Only a valid authenticator code enables the second factor [@US03]</text>
+  <text x="45" y="175" fill="#3fb950" font-size="12">&#10004; Scenario: Logout revokes the presented token without revoking a second session [@US04]</text>
+  <text x="45" y="205" fill="#3fb950" font-size="12">&#10004; Scenario: Only the property owner can remove a registered property [@US08 @US07-dependency]</text>
+  <text x="45" y="235" fill="#3fb950" font-size="12">&#10004; Scenario: An issued DEMO offer creates a private notification that can be read twice [@US10]</text>
+  <text x="45" y="265" fill="#3fb950" font-size="12">&#10004; Scenario: A received offer keeps one persisted schedule after catalogue deletion [@US11]</text>
+  <text x="45" y="295" fill="#3fb950" font-size="12">&#10004; Scenario: Normalized tags combine with text and ownership using AND [@US14]</text>
+
+  <line x1="25" y1="325" x2="925" y2="325" stroke="#30363d" stroke-width="1"/>
+
+  <text x="25" y="355" fill="#3fb950" font-size="13" font-weight="bold">7 Scenarios (7 passed)</text>
+  <text x="25" y="380" fill="#3fb950" font-size="13">28 Steps (28 passed)</text>
+  <text x="25" y="405" fill="#8b949e" font-size="12">Executed in 3.42s with Cucumber JVM &amp; Spring Boot Test TestContext</text>
+</svg>

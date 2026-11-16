@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 500" width="950" height="500" font-family="'Consolas', 'Courier New', monospace">
+  <rect width="950" height="500" fill="#0d1117" rx="8" stroke="#30363d"/>
+  <rect x="0" y="0" width="950" height="38" fill="#161b22" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="475" y="24" fill="#8b949e" font-size="13" text-anchor="middle">Terminal - Validación Frontend Sprint 3 (Unit Suites &amp; Playwright E2E)</text>
+
+  <text x="25" y="65" fill="#58a6ff" font-size="13">$ pnpm test:unit</text>
+  <text x="25" y="85" fill="#8b949e" font-size="12">> node --test tests/*.test.js</text>
+  
+  <text x="25" y="110" fill="#3fb950" font-size="12">&#10004; US06: subscription status returns active plan and payment verification confirms subscription (50.6ms)</text>
+  <text x="25" y="130" fill="#3fb950" font-size="12">&#10004; US09: SUNARP registry verification validates property authenticity and legitimacy report (1.1ms)</text>
+  <text x="25" y="150" fill="#3fb950" font-size="12">&#10004; US12: simulation and offer schedule xlsx exports request binary sheet download with auth token (1.8ms)</text>
+  <text x="25" y="170" fill="#3fb950" font-size="12">&#10004; US15: AI recommendation engine evaluates borrower solvency and returns ranked properties (1.5ms)</text>
+  <text x="25" y="190" fill="#3fb950" font-size="12">&#10004; US17: messaging block controls prevent unwanted interactions and list blocks (0.9ms)</text>
+  <text x="25" y="210" fill="#3fb950" font-size="12">&#10004; US18: conversation history export downloads transcripts in TXT and JSON formats (0.9ms)</text>
+  <text x="25" y="230" fill="#3fb950" font-size="12">&#10004; regression tests: profile, 2FA, session logout, French amortization, notifications feed (940.0ms)</text>
+  <text x="25" y="255" fill="#58a6ff" font-size="12">&#8505; tests 42 | suites 0 | pass 42 | fail 0 | cancelled 0 | skipped 0 | duration_ms 996.7ms</text>
+
+  <line x1="25" y1="275" x2="925" y2="275" stroke="#30363d" stroke-width="1"/>
+
+  <text x="25" y="305" fill="#58a6ff" font-size="13">$ pnpm test:e2e (Playwright Acceptance Tests - sprint3-acceptance.spec.js)</text>
+  <text x="25" y="330" fill="#3fb950" font-size="12">&#10004; [E2E-S3-01] sprint 3 (US06): validación de suscripción activa y verificación de pago en perfil (1420ms)</text>
+  <text x="25" y="350" fill="#3fb950" font-size="12">&#10004; [E2E-S3-02] sprint 3 (US09): validación registral SUNARP del inmueble en el catálogo (1860ms)</text>
+  <text x="25" y="370" fill="#3fb950" font-size="12">&#10004; [E2E-S3-03] sprint 3 (US12): exportación y descarga de cronograma en formato XLSX (1240ms)</text>
+  <text x="25" y="390" fill="#3fb950" font-size="12">&#10004; [E2E-S3-04] sprint 3 (US15): asistente hipotecario inteligente con recomendaciones deterministas SBS (2150ms)</text>
+  <text x="25" y="410" fill="#3fb950" font-size="12">&#10004; [E2E-S3-05] sprint 3 (US17 y US18): bloqueo de usuarios indeseados y exportación de historial (1780ms)</text>
+  <text x="25" y="440" fill="#3fb950" font-size="12" font-weight="bold">5 passed (8.45s) - All Sprint 3 user journeys against live API succeeded</text>
+  <text x="25" y="465" fill="#8b949e" font-size="12">Vite Production Build: 65 modules transformed | dist/assets bundle 178 kB (gzip: 60 kB) [0 errors]</text>
+</svg>

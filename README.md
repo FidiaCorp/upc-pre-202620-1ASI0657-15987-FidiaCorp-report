@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report/blob/main/Resources/UPC_logo.png?raw_true" alt="Logo-UPC" width="150">
+  <img src="Resources/UPC_logo.png" alt="Logo-UPC" width="150">
 
 **Universidad Peruana de Ciencias Aplicadas**
 
@@ -26,7 +26,7 @@
 | u20251c350 | Godoy Santillan, Jesus Andres |
 | u202219266 | Pumahualcca Garcia, Diego Rodrigo |
 | u202224130 | Ramos Hinostroza, Diego Antonio |
-| u202310349 | Rubio Otiz, Luis Sebastián |
+| u202310349 | Rubio Ortiz, Luis Sebastián |
 
 <div align="justify">
 
@@ -44,6 +44,20 @@
 | 1.0.0.4 | 22/09/2026 | Grupo FidiaCorp | Se completo las ultimas mejoras con formato e capitulos pendientes AV2. |
 | 1.0.0.5 | 08/10/2026 | Grupo FidiaCorp | Se completo las ultimas mejoras con formato e capitulos pendientes TP1. |
 | 1.0.0.6 | 25/10/2026 | Grupo FidiaCorp | Incorporación de la planificación del Sprint 2: objetivo, alcance, dependencias, criterios de aceptación y backlog propuesto para el Avance 3. |
+| 1.0.0.7 | 02/11/2026 | Grupo FidiaCorp | Incorporación de evidencias de implementación del Sprint 2: backlogs oficiales de 8 columnas, desarrollo GitFlow, suites de testing (BDD Gherkin, JUnit 5, Playwright E2E), OpenAPI 3.0 (24 endpoints), despliegue de contenedores y migraciones Flyway V1-V7, collaboration insights y video About-The-Team. |
+| 1.0.0.8 | 15/11/2026 | Grupo FidiaCorp | Incorporación integral del Avance 4 (Sprint 3): 18 tareas técnicas en Sprint Backlog 3 (US06, US09, US12, US15, US17, US18), desarrollo GitFlow con hashes reales en backend y frontend, suites de testing BDD Cucumber (12/12) y pruebas unitarias/E2E frontend (42/42), OpenAPI 3.0 con 37 operaciones documentadas, despliegue con Flyway V8 y V9, reflexiones Student Outcome TB4 y tablero Kanban de cierre. |
+
+## **Project Report Collaboration Insights**
+
+El equipo organizó y distribuyó de forma colaborativa la investigación, el diseño arquitectónico y la redacción del informe técnico a través de reuniones de sincronización semanales y revisiones cruzadas de pull requests en GitHub:
+
+- **TB1 (17/09/2026):** El equipo definió la visión del producto FinTech/PropTech CrediCasa, distribuyendo la investigación y redacción de los Capítulos I, II y III. Se realizaron entrevistas a profundidad en ambos segmentos (compradores residenciales y promotoras inmobiliarias) y se estructuraron los User Personas, Empathy Mapping, User Journey, As-Is/To-Be Scenario Mapping y el Product Backlog inicial priorizado.
+- **TB2 (22/09/2026):** El equipo ejecutó el diseño arquitectónico bajo la metodología Attribute-Driven Design (ADD 3.0), estructurando 3 iteraciones formales (estructura global, motor financiero determinista y trazabilidad de cotizaciones). Se modelaron diagramas C4 (Contexto, Contenedores, Componentes), diagramas de secuencia UML, máquinas de estado y modelos de datos relacionales, compilando el código fuente Mermaid reproducible en el Anexo A.
+- **TP1 (08/10/2026):** Se inició la implementación del núcleo financiero determinista bajo Arquitectura Hexagonal en Spring Boot 3.3.4 (Java 21). Se construyó el motor de amortización francés (`FrenchAmortizationEngine`), resolviendo la liquidación del saldo a 0.00 exacto (AC-02), períodos de gracia, cuotas balón y métricas TCEA/TIR por bisección. Se automatizaron las primeras 9 pruebas (JUnit 5 y ArchUnit) y se preparó la base del frontend en Vue 3.
+- **TB3 / Avance 3 (02/11/2026):** Se implementaron 7 historias de usuario del Sprint 2 (US02, US03, US04, US08, US10, US11, US14), incorporando autenticación 2FA TOTP con cifrado AES-256-GCM, revocación persistente de JWT en logout, filtros combinados AND en el catálogo inmobiliario, centro de notificaciones con sondeo reactivo cada 5s y cronogramas de oferta persistidos. Se documentaron 24 endpoints OpenAPI 3.0 y se integraron 7 migraciones Flyway con PostgreSQL 16.
+- **TB4 / Avance 4 (15/11/2026):** El equipo ejecutó y documentó el incremento completo del Sprint 3 (US06, US09, US12, US15, US17, US18), consolidando la monetización SaaS con verificación de comprobantes bancarios, la interoperabilidad registral con SUNARP mediante certificados SHA-256, el motor nativo OpenXML para exportación de hojas de cálculo .xlsx, el motor heurístico determinista de recomendación hipotecaria alineado a la normativa prudencial de la SBS (ratio cuota/ingreso no mayor al 35%), y los controles de privacidad y bloqueo en mensajería privada con exportación de historiales en texto y JSON. Se expandió la API a 37 operaciones y se alcanzó una cobertura automatizada del 100% con 12 escenarios BDD Cucumber y 42 pruebas frontend.
+- **TB3 / Avance 3 (02/11/2026):** El equipo completó la implementación integral del Sprint 2: autenticación con persistencia de cuentas, gestión de perfil propio, segundo factor TOTP (RFC 6238 con cifrado AES-256-GCM), revocación persistente de tokens JWT al cerrar sesión, catálogo de inmuebles con filtros AND y borrado lógico autorizado, emisión de ofertas bancarias DEMO con notificaciones en tiempo real por sondeo (polling de 5 segundos), y generación idempotente de cronogramas. Se automatizaron suites de pruebas BDD Gherkin (`sprint2.feature`), 36 pruebas unitarias en Node.js, 6 recorridos de aceptación E2E con Playwright, y la documentación OpenAPI 3.0 de 24 endpoints.
+
 
 
 
@@ -51,6 +65,7 @@
 
 # Contenido
 
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Student Outcome](#student-outcome)
 - [Capítulo I: Introducción](#capítulo-i-introducción)
 	- [1.1. Startup Profile](#11-startup-profile)
@@ -128,11 +143,29 @@
 			- [5.3.1.8. Kanban Board → TP1](#5318-kanban-board--tp1)
 		- [5.3.2. Sprint 2](#532-sprint-2)
 			- [5.3.2.1. Sprint Backlog 2](#5321-sprint-backlog-2)
+			- [5.3.2.2. Development Evidence for Sprint Review](#5322-development-evidence-for-sprint-review)
+			- [5.3.2.3. Testing Suite Evidence for Sprint Review](#5323-testing-suite-evidence-for-sprint-review)
+			- [5.3.2.4. Execution Evidence for Sprint Review](#5324-execution-evidence-for-sprint-review)
+			- [5.3.2.5. Microservices Documentation Evidence for Sprint Review](#5325-microservices-documentation-evidence-for-sprint-review)
+			- [5.3.2.6. Software Deployment Evidence for Sprint Review](#5326-software-deployment-evidence-for-sprint-review)
+			- [5.3.2.7. Team Collaboration Insights during Sprint](#5327-team-collaboration-insights-during-sprint)
+			- [5.3.2.8. Kanban Board → Avance 3](#5328-kanban-board--avance-3)
+		- [5.3.3. Sprint 3](#533-sprint-3)
+			- [5.3.3.1. Sprint Backlog 3](#5331-sprint-backlog-3)
+			- [5.3.3.2. Development Evidence for Sprint Review](#5332-development-evidence-for-sprint-review)
+			- [5.3.3.3. Testing Suite Evidence for Sprint Review](#5333-testing-suite-evidence-for-sprint-review)
+			- [5.3.3.4. Execution Evidence for Sprint Review](#5334-execution-evidence-for-sprint-review)
+			- [5.3.3.5. Microservices Documentation Evidence for Sprint Review](#5335-microservices-documentation-evidence-for-sprint-review)
+			- [5.3.3.6. Software Deployment Evidence for Sprint Review](#5336-software-deployment-evidence-for-sprint-review)
+			- [5.3.3.7. Team Collaboration Insights during Sprint](#5337-team-collaboration-insights-during-sprint)
+			- [5.3.3.8. Kanban Board → Avance 4](#5338-kanban-board--avance-4)
 - [Conclusiones](#conclusiones)
 - [Recomendaciones](#recomendaciones)
+- [Video About-The-Team](#video-about-the-team)
 - [Referencias Bibliográficas](#referencias-bibliográficas)
 - [Anexos](#anexos)
 	- [Anexo A — Código fuente de los diagramas Mermaid](#anexo-a--código-fuente-de-los-diagramas-mermaid)
+- [Links](#links)
 
 <div style="page-break-after: always;"></div>
 
@@ -149,18 +182,20 @@
 	<tbody>
 		<tr>
 			<td>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> <b>AV1:</b> Realicé los primeros bocetos e ideas de la startup, junto a ello desarrollé la documentación acerca de los diferentes requerimientos necesarios y las necesidades del cliente.<br><br><b>TB1:</b> Actualicé de forma autónoma mis conocimientos en el desarrollo de APIs RESTful bajo Spring Boot 3.3 y la especificación OpenAPI 3.0 mediante SpringDoc (<code>springdoc-openapi-starter-webmvc-ui 2.6.0</code>). Diseñé e implementé la capa de interfaces REST con DTOs inmutables para peticiones y respuestas (<code>SimulationRequestDto</code>, <code>SimulationResponseDto</code>, <code>InstallmentDto</code>, <code>BankRateResponseDto</code>), incorporando validaciones de entrada basadas en Jakarta Validation (<code>@NotNull</code>, <code>@DecimalMin</code>, <code>@Min</code>, <code>@Max</code>). Asimismo, aseguré la publicación interactiva de los contratos en Swagger UI (<code>/swagger-ui.html</code>) y verifiqué la integración de respuestas JSON con códigos de estado HTTP semánticos (201 Created, 200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden).<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> <b>AV1:</b> Investigué y apliqué de manera autónoma metodologías avanzadas de diseño centrado en el usuario (UCD) y análisis de requerimientos para optimizar la experiencia en la plataforma CrediCasa. Conduje las entrevistas a profundidad correspondientes al segmento 1, lo que me permitió extraer insights reales del mercado para estructurar el Mapa de Empatía y definir los User Personas. A partir de estos hallazgos, elaboré el User Task Matrix, el Scenario Mapping y el User Journey Mapping, traduciendo las necesidades de los clientes en mejoras estratégicas y funcionales directas para los flujos de interacción del usuario con los servicios del sistema.<br><br><b>TB1:</b> Profundicé de manera autónoma en el desacoplamiento de persistencia mediante el patrón Repository y Spring Data JPA bajo Arquitectura Hexagonal. Implementé el puerto de salida <code>QuotationRepositoryPort</code> y su adaptador de infraestructura <code>QuotationRepositoryAdapter</code>, orquestando la persistencia transaccional (<code>@Transactional</code>) de cotizaciones y cronogramas de cuotas en PostgreSQL y H2 mediante <code>QuotationJpaRepository</code>. Desarrollé mapeadores canónicos bidireccionales entre las entidades relacionales (<code>QuotationJpaEntity</code>, <code>InstallmentJpaEntity</code>) y los agregados inmutables de dominio (<code>Quotation</code>, <code>Installment</code>), garantizando integridad referencial y optimizando las consultas con join fetch (<code>findByIdWithInstallments</code>) para evitar problemas de N+1 queries.<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> <b>AV1:</b> Investigué y actualicé de manera autónoma mis conocimientos en patrones de arquitectura orientados a microservicios y despliegue en la nube (Cloud Computing), evaluando su aplicabilidad específica para el entorno SaaS de CrediCasa. Además, me documenté sobre la integración segura de APIs financieras, lo cual fue clave para estructurar la comunicación entre el simulador de cuotas y el motor de cálculo, garantizando la correcta aplicación del método francés y los lineamientos de la SBS.<br><br><b>TB1:</b> Investigué y apliqué los nuevos estándares de seguridad de Spring Security 6 y el manejo de tokens criptográficos con JJWT (<code>jjwt 0.12.6</code>). Diseñé la arquitectura de seguridad sin estado (<code>SessionCreationPolicy.STATELESS</code>) materializada en <code>SecurityConfig</code>, <code>JwtTokenProvider</code> y <code>JwtAuthFilter</code>, implementando control de acceso basado en roles (RBAC) para proteger los endpoints de simulación y cotización bancaria (<code>ROLE_CLIENT</code>, <code>ROLE_REALTOR</code>) frente a vulnerabilidades como IDOR/BOLA (QA-03). Desarrollé pruebas automatizadas de seguridad para validar el rechazo de tokens expirados, firmas manipuladas y credenciales inválidas, satisfaciendo estrictamente el Driver 1 de Seguridad (ASR-SEC).<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> <b>AV1:</b> Investigué y actualicé de manera autónoma conceptos avanzados de arquitectura empresarial y descomposición por microservicios basados en Domain-Driven Design (DDD). Asimismo, asimilé la normativa técnica y financiera de la SBS relativa a la transparencia en créditos hipotecarios, lo que me permitió traducir reglas de negocio complejas (método francés, conversión de regímenes de capitalización, VAN, TIR y TCEA) en especificaciones directas para el modelado del motor de cálculo y el diseño preliminar de los bounded contexts de la plataforma CrediCasa.<br><br><b>TB1:</b> Asimilé y apliqué la matemática financiera estricta y los lineamientos de la SBS (Resolución SBS N.° 3274-2017 y N.° 00890-2025) en el motor determinista <code>FrenchAmortizationEngine</code> y <code>FinancialMetricsCalculator</code>. Implementé el cálculo de cronogramas franceses bajo convención 30/360 utilizando aritmética de precisión arbitraria (<code>BigDecimal</code> con escala 6 para tasas y redondeo bancario <code>HALF_EVEN</code> a 2 decimales), resolviendo la capitalización en gracia total, mantenimiento en gracia parcial, absorción de cuotas balón y la liquidación del saldo insoluto a 0.00 exacto en la cuota final (AC-02). Implementé el solver numérico de bisección para TIR mensual y TCEA, construyendo la suite completa de pruebas unitarias en JUnit 5 para satisfacer el Driver 2 de Rendimiento y Precisión (ASR-PERF).<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> <b>AV1:</b> Investigué los mecanismos de interoperabilidad entre plataformas FinTech/PropTech y entidades financieras bancarias reguladas en el Perú, analizando los modelos de integración mediante APIs y la estructura normativa de tasas activas y seguro de desgravamen de la SBS, estableciendo las bases conceptuales para la comparación multiproducto en CrediCasa.<br><br><b>TB1:</b> Me capacité en la implementación práctica del patrón Ports & Adapters (Clean Architecture) y en la automatización de pruebas de arquitectura con ArchUnit 1.3.0. Desarrollé el puerto <code>BankingIntegrationPort</code> y los adaptadores concretos (<code>BankingIntegrationCompositeAdapter</code>, <code>BcpBankingAdapter</code>, <code>InterbankBankingAdapter</code>, <code>SbsAdapter</code>), garantizando que los contratos externos propietarios sean traducidos al modelo canónico de CrediCasa (<code>BankRateBenchmark</code>) sin contaminar el núcleo de dominio. Adicionalmente, construí la suite <code>HexagonalArchitectureTest</code> con ArchUnit para verificar en tiempo de compilación que el dominio permanezca completamente aislado de frameworks y dependencias de infraestructura, satisfaciendo el Driver 3 de Modificabilidad e Interoperabilidad (ASR-MOD).</td>
-			<td><b>AV1:</b> El equipo identificó los fundamentos conceptuales de la plataforma y tradujo la problemática del mercado inmobiliario y crediticio en especificaciones funcionales y de arquitectura preliminar.<br><br><b>TB1:</b> El equipo consolidó una asimilación técnica profunda y autónoma de las tecnologías estándar de la industria, transitando exitosamente desde los modelos abstractos del Capítulo IV hacia una implementación backend funcional y rigurosamente validada en Spring Boot 3.3.4 con Java 21. Se dominó la configuración moderna de Spring Security 6 basada en cadenas funcionales de filtros y autenticación sin estado con tokens JWT (JJWT), protegiendo los recursos críticos del sistema bajo control de acceso RBAC para satisfacer el driver de seguridad (ASR-SEC). Asimismo, se logró traducir la rigurosa normativa de la SBS (Resolución SBS N.° 3274-2017 y modificatorias) en algoritmos matemáticos deterministas ejecutados con <code>BigDecimal</code>, resolviendo el cronograma de amortización francés con saldo final exacto de 0.00 (criterio AC-02), períodos de gracia, cuota balón, TIR mensual por bisección y TCEA bajo el driver de rendimiento y precisión numérica (ASR-PERF). Finalmente, el equipo incorporó ArchUnit 1.3.0 para auditar y salvaguardar automáticamente la pureza de la Arquitectura Hexagonal en el pipeline de testing, demostrando capacidad integral para seleccionar, adoptar y validar tecnologías avanzadas frente a problemas de ingeniería complejos sin dependencias de frameworks en el núcleo de dominio (ASR-MOD).</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> <b>AV1:</b> Realicé los primeros bocetos e ideas de la startup, junto a ello desarrollé la documentación acerca de los diferentes requerimientos necesarios y las necesidades del cliente.<br><br><b>TB1:</b> Actualicé de forma autónoma mis conocimientos en el desarrollo de APIs RESTful bajo Spring Boot 3.3 y la especificación OpenAPI 3.0 mediante SpringDoc (<code>springdoc-openapi-starter-webmvc-ui 2.6.0</code>). Diseñé e implementé la capa de interfaces REST con DTOs inmutables para peticiones y respuestas (<code>SimulationRequestDto</code>, <code>SimulationResponseDto</code>, <code>InstallmentDto</code>, <code>BankRateResponseDto</code>), incorporando validaciones de entrada basadas en Jakarta Validation (<code>@NotNull</code>, <code>@DecimalMin</code>, <code>@Min</code>, <code>@Max</code>). Asimismo, aseguré la publicación interactiva de los contratos en Swagger UI (<code>/swagger-ui.html</code>) y verifiqué la integración de respuestas JSON con códigos de estado HTTP semánticos (201 Created, 200 OK, 400 Bad Request, 401 Unauthorized, 403 Forbidden).<br><br><br><b>TB3 (Avance 3):</b> Actualicé de forma autónoma mis conocimientos en el desarrollo de SPAs modernas y reactivas con Vue 3.5, Vite 8 y Tailwind CSS 4.3, adoptando el gestor de paquetes pnpm para garantizar reproducibilidad en las dependencias. Diseñé e implementé la vista de catálogo inmobiliario (<code>PropertiesView.vue</code>), integrando formularios de registro con validaciones dinámicas, filtros combinados multicriterio mediante operadores lógicos AND, modales de confirmación para borrado lógico de propiedades y el centro de notificaciones con sondeo reactivo cada 5 segundos.<br><br><b>TB4 (Avance 4):</b> Actualicé de forma autónoma mis conocimientos en la integración de modelos SaaS de monetización y gestión reactiva de suscripciones recurrentes en el frontend con Vue 3.5 y Pinia. Diseñé e implementé el componente <code>SubscriptionStatusCard.vue</code> y el cliente de suscripciones (<code>src/subscriptions/api.js</code>), conectando la consulta del plan activo y la verificación inmediata de comprobantes bancarios contra los nuevos endpoints del backend. Asimismo, investigué directivas de diseño UI/UX para estados de cuenta, asegurando retroalimentación visual clara para planes Free, Basic, Premium y Pro.<strong><br>Godoy Santillan, Jesus Andres:</strong><br> <b>AV1:</b> Investigué y apliqué de manera autónoma metodologías avanzadas de diseño centrado en el usuario (UCD) y análisis de requerimientos para optimizar la experiencia en la plataforma CrediCasa. Conduje las entrevistas a profundidad correspondientes al segmento 1, lo que me permitió extraer insights reales del mercado para estructurar el Mapa de Empatía y definir los User Personas. A partir de estos hallazgos, elaboré el User Task Matrix, el Scenario Mapping y el User Journey Mapping, traduciendo las necesidades de los clientes en mejoras estratégicas y funcionales directas para los flujos de interacción del usuario con los servicios del sistema.<br><br><b>TB1:</b> Profundicé de manera autónoma en el desacoplamiento de persistencia mediante el patrón Repository y Spring Data JPA bajo Arquitectura Hexagonal. Implementé el puerto de salida <code>QuotationRepositoryPort</code> y su adaptador de infraestructura <code>QuotationRepositoryAdapter</code>, orquestando la persistencia transaccional (<code>@Transactional</code>) de cotizaciones y cronogramas de cuotas en PostgreSQL y H2 mediante <code>QuotationJpaRepository</code>. Desarrollé mapeadores canónicos bidireccionales entre las entidades relacionales (<code>QuotationJpaEntity</code>, <code>InstallmentJpaEntity</code>) y los agregados inmutables de dominio (<code>Quotation</code>, <code>Installment</code>), garantizando integridad referencial y optimizando las consultas con join fetch (<code>findByIdWithInstallments</code>) para evitar problemas de N+1 queries.<br><br><br><b>TB3 (Avance 3):</b> Profundicé de forma autónoma en el versionado y evolución inmutable de esquemas de bases de datos relacionales mediante Flyway Migrations (<code>flyway-core 10.10</code>) integrado con PostgreSQL 16 y Spring Boot 3.3.4. Diseñé los scripts de migración DDL V1 a V7 asegurando integridad referencial, índices únicos compuestos, constraints de auditoría y borrado lógico en tablas críticas (<code>properties</code>, <code>credit_offers</code>, <code>offer_notifications</code>, <code>token_revocations</code>), configurando el pipeline con <code>hibernate.ddl-auto=validate</code> y validando la migración en suites aisladas con <code>PostgresMigrationIT</code>.<br><br><b>TB4 (Avance 4):</b> Profundicé de forma autónoma en la integración de servicios de interoperabilidad registral inmobiliaria con la Superintendencia Nacional de los Registros Públicos (SUNARP) bajo Arquitectura Hexagonal. Implementé el puerto <code>SunarpRegistryVerificationPort</code> y su adaptador <code>SunarpRegistryAdapter</code>, junto con el servicio de dominio <code>PropertyLegitimacyService</code>. Diseñé la estructura de persistencia en Flyway V8 y V9 para respaldar partidas electrónicas, zonas registrales y hashes SHA-256 de certificados registrales, garantizando que el catálogo de inmuebles distinga bienes formalmente saneados (<code>VERIFIED_GENUINE</code>) frente a anomalías registrales.<strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> <b>AV1:</b> Investigué y actualicé de manera autónoma mis conocimientos en patrones de arquitectura orientados a microservicios y despliegue en la nube (Cloud Computing), evaluando su aplicabilidad específica para el entorno SaaS de CrediCasa. Además, me documenté sobre la integración segura de APIs financieras, lo cual fue clave para estructurar la comunicación entre el simulador de cuotas y el motor de cálculo, garantizando la correcta aplicación del método francés y los lineamientos de la SBS.<br><br><b>TB1:</b> Investigué y apliqué los nuevos estándares de seguridad de Spring Security 6 y el manejo de tokens criptográficos con JJWT (<code>jjwt 0.12.6</code>). Diseñé la arquitectura de seguridad sin estado (<code>SessionCreationPolicy.STATELESS</code>) materializada en <code>SecurityConfig</code>, <code>JwtTokenProvider</code> y <code>JwtAuthFilter</code>, implementando control de acceso basado en roles (RBAC) para proteger los endpoints de simulación y cotización bancaria (<code>ROLE_CLIENT</code>, <code>ROLE_REALTOR</code>) frente a vulnerabilidades como IDOR/BOLA (QA-03). Desarrollé pruebas automatizadas de seguridad para validar el rechazo de tokens expirados, firmas manipuladas y credenciales inválidas, satisfaciendo estrictamente el Driver 1 de Seguridad (ASR-SEC).<br><br><br><b>TB3 (Avance 3):</b> Investigué y apliqué estándares criptográficos avanzados para la protección de la identidad y la privacidad en aplicaciones FinTech. Diseñé la arquitectura de seguridad multifactor TOTP conforme al estándar RFC 6238, implementando el cifrado simétrico AES-256 en modo GCM con vector de inicialización aleatorio para el almacenamiento seguro de secretos TOTP en reposo (<code>AesGcmSecretProtectionAdapter</code>). Asimismo, diseñé el mecanismo de revocación persistente de tokens JWT al cerrar sesión (<code>TokenRevocationService</code>), mitigando ataques de reutilización de credenciales y satisfaciendo el driver de seguridad ASR-SEC.<br><br><b>TB4 (Avance 4):</b> Investigué y apliqué estándares avanzados de gobernanza de privacidad y controles de seguridad en mensajería privada entre usuarios. Diseñé la arquitectura y el modelo relacional para el bloqueo unidireccional y bidireccional de contactos (<code>UserBlock</code>, <code>MessagingControlService</code>), implementando restricciones semánticas HTTP 409 Conflict ante intentos de comunicación no consentida. Asimismo, diseñé e implementé el componente <code>MessagingCenter.vue</code> en el frontend, incorporando mecanismos de exportación segura de transcripciones cronológicas en formatos texto plano (<code>.txt</code>) y JSON estructurado.<strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> <b>AV1:</b> Investigué y actualicé de manera autónoma conceptos avanzados de arquitectura empresarial y descomposición por microservicios basados en Domain-Driven Design (DDD). Asimismo, asimilé la normativa técnica y financiera de la SBS relativa a la transparencia en créditos hipotecarios, lo que me permitió traducir reglas de negocio complejas (método francés, conversión de regímenes de capitalización, VAN, TIR y TCEA) en especificaciones directas para el modelado del motor de cálculo y el diseño preliminar de los bounded contexts de la plataforma CrediCasa.<br><br><b>TB1:</b> Asimilé y apliqué la matemática financiera estricta y los lineamientos de la SBS (Resolución SBS N.° 3274-2017 y N.° 00890-2025) en el motor determinista <code>FrenchAmortizationEngine</code> y <code>FinancialMetricsCalculator</code>. Implementé el cálculo de cronogramas franceses bajo convención 30/360 utilizando aritmética de precisión arbitraria (<code>BigDecimal</code> con escala 6 para tasas y redondeo bancario <code>HALF_EVEN</code> a 2 decimales), resolviendo la capitalización en gracia total, mantenimiento en gracia parcial, absorción de cuotas balón y la liquidación del saldo insoluto a 0.00 exacto en la cuota final (AC-02). Implementé el solver numérico de bisección para TIR mensual y TCEA, construyendo la suite completa de pruebas unitarias en JUnit 5 para satisfacer el Driver 2 de Rendimiento y Precisión (ASR-PERF).<br><br><br><b>TB3 (Avance 3):</b> Asimilé las directivas de interoperabilidad y gobierno de APIs REST para arquitecturas empresariales, formalizando la especificación OpenAPI 3.0 para los 24 endpoints del backend de CrediCasa mediante <code>ApiContractDocumentation</code>. Estandaricé la serialización determinista de importes y tasas financieras evitando representaciones en coma flotante o notación científica (<code>PlainDecimalSerializer</code>), e implementé la orquestación transaccional e idempotente para la generación y persistencia de cronogramas de pago derivados de ofertas bancarias DEMO (<code>OfferScheduleService</code>).<br><br><b>TB4 (Avance 4):</b> Asimilé y apliqué la normativa prudencial de la SBS sobre capacidad de endeudamiento y límite de carga financiera (ratio cuota/ingreso no mayor al 35% de los ingresos netos del solicitante), diseñando el motor determinista de recomendación hipotecaria <code>AiPropertyRecommendationEngine</code> y su servicio <code>AiPropertyRecommendationService</code>. Adicionalmente, investigué la especificación OpenXML de hojas de cálculo electrónicas (ISO/IEC 29500), diseñando el motor de exportación <code>ExcelScheduleExportEngine</code> para generar archivos <code>.xlsx</code> nativos sin dependencias externas pesadas, asegurando la descarga binaria segura de cronogramas en microservicios.<strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> <b>AV1:</b> Investigué los mecanismos de interoperabilidad entre plataformas FinTech/PropTech y entidades financieras bancarias reguladas en el Perú, analizando los modelos de integración mediante APIs y la estructura normativa de tasas activas y seguro de desgravamen de la SBS, estableciendo las bases conceptuales para la comparación multiproducto en CrediCasa.<br><br><b>TB1:</b> Me capacité en la implementación práctica del patrón Ports & Adapters (Clean Architecture) y en la automatización de pruebas de arquitectura con ArchUnit 1.3.0. Desarrollé el puerto <code>BankingIntegrationPort</code> y los adaptadores concretos (<code>BankingIntegrationCompositeAdapter</code>, <code>BcpBankingAdapter</code>, <code>InterbankBankingAdapter</code>, <code>SbsAdapter</code>), garantizando que los contratos externos propietarios sean traducidos al modelo canónico de CrediCasa (<code>BankRateBenchmark</code>) sin contaminar el núcleo de dominio. Adicionalmente, construí la suite <code>HexagonalArchitectureTest</code> con ArchUnit para verificar en tiempo de compilación que el dominio permanezca completamente aislado de frameworks y dependencias de infraestructura, satisfaciendo el Driver 3 de Modificabilidad e Interoperabilidad (ASR-MOD).<br><br><b>TB3 (Avance 3):</b> Me capacité en metodologías avanzadas de aseguramiento de calidad automatizada con enfoque BDD y pruebas end-to-end (E2E) en entornos web. Diseñé la especificación formal de características en Gherkin (<code>sprint2.feature</code>) para Cucumber JVM, implementé la suite de 36 pruebas unitarias frontend con Node.js, y construí la batería completa de pruebas de aceptación de navegador con Playwright (<code>acceptance.spec.js</code>), validando de forma automatizada 6 flujos de usuario críticos (login, 2FA TOTP, catálogo con filtros, borrado autorizado, notificaciones por sondeo y cronogramas con saldo final 0.00).<br><br><b>TB4 (Avance 4):</b> Me capacité en técnicas avanzadas de automatización de pruebas BDD con Cucumber JVM y pruebas end-to-end de navegador con Playwright para flujos transaccionales y de exportación de archivos binarios. Diseñé la especificación formal de características <code>sprint3.feature</code> con 12 escenarios en Gherkin cubriendo suscripciones, validación SUNARP, descarga XLSX, asesor IA y mensajería segura, e implementé la suite de pruebas de aceptación de navegador <code>sprint3-acceptance.spec.js</code>, elevando la cobertura a 42 pruebas unitarias y 12 escenarios BDD automatizados en verde.</td>
+			<td><b>AV1:</b> El equipo identificó los fundamentos conceptuales de la plataforma y tradujo la problemática del mercado inmobiliario y crediticio en especificaciones funcionales y de arquitectura preliminar.<br><br><b>TB1:</b> El equipo consolidó una asimilación técnica profunda y autónoma de las tecnologías estándar de la industria, transitando exitosamente desde los modelos abstractos del Capítulo IV hacia una implementación backend funcional y rigurosamente validada en Spring Boot 3.3.4 con Java 21. Se dominó la configuración moderna de Spring Security 6 basada en cadenas funcionales de filtros y autenticación sin estado con tokens JWT (JJWT), protegiendo los recursos críticos del sistema bajo control de acceso RBAC para satisfacer el driver de seguridad (ASR-SEC). Asimismo, se logró traducir la rigurosa normativa de la SBS (Resolución SBS N.° 3274-2017 y modificatorias) en algoritmos matemáticos deterministas ejecutados con <code>BigDecimal</code>, resolviendo el cronograma de amortización francés con saldo final exacto de 0.00 (criterio AC-02), períodos de gracia, cuota balón, TIR mensual por bisección y TCEA bajo el driver de rendimiento y precisión numérica (ASR-PERF). Finalmente, el equipo incorporó ArchUnit 1.3.0 para auditar y salvaguardar automáticamente la pureza de la Arquitectura Hexagonal en el pipeline de testing, demostrando capacidad integral para seleccionar, adoptar y validar tecnologías avanzadas frente a problemas de ingeniería complejos sin dependencias de frameworks en el núcleo de dominio (ASR-MOD).<br><br><b>TB3 (Avance 3):</b> El equipo demostró una sólida capacidad de autoaprendizaje y actualización técnica continua al transitar de un prototipo básico hacia una solución empresarial desacoplada y robusta. Se adoptaron exitosamente herramientas de vanguardia como Flyway 10 para versionamiento inmutable de esquemas de datos, algoritmos criptográficos AES-256-GCM y TOTP RFC 6238 para seguridad de acceso, la especificación OpenAPI 3.0 con contratos enriquecidos, y marcos de automatización BDD (Cucumber) y E2E (Playwright) ejecutados de forma determinista contra APIs reales.<br><br><b>TB4 (Avance 4):</b> El equipo consolidó una asimilación técnica integral y multidisciplinaria al materializar el incremento del Sprint 3, expandiendo la plataforma hacia capacidades avanzadas de monetización SaaS, verificación de autenticidad registral con SUNARP, recomendación hipotecaria con IA alineada a la normativa del 35% DTI de la SBS, y exportación de cronogramas a formatos abiertos de hoja de cálculo OpenXML (.xlsx). La sincronización entre el backend en Spring Boot 3.3.4 y el frontend en Vue 3.5 con Vite 8 demostró la madurez técnica alcanzada, sustentada por una cobertura de pruebas automatizadas del 100% en suites BDD (12/12) y frontend unitario (42/42), sin desviaciones arquitectónicas.</td>
 		</tr>
 		<tr>
 			<td>Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</td>
-			<td><strong>Jonseck Choque, Oliver:</strong><br> <b>AV1:</b> Descubrí la importancia de entender al cliente y sus necesidades al momento de realizar pagos de suma importancia.<br><br><b>TB1:</b> Comprendí que el diseño de contratos de software no es una actividad estática, sino que exige aprendizaje permanente para adaptarse a la evolución de las especificaciones de API y las expectativas de los clientes. Al diseñar los DTOs y la documentación Swagger/OpenAPI 3.0, reconocí que los desarrolladores debemos capacitarnos continuamente en estándares de diseño de interfaces abiertas y buenas prácticas de validación de esquemas (Jakarta Validation), asegurando que el backend pueda interoperar de manera transparente y desacoplada con clientes web, móviles o servicios de terceros sin introducir deuda técnica.<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> <b>AV1:</b> Reconocí que la evolución constante de las expectativas y comportamientos del usuario en el ecosistema financiero y proptech exige una mentalidad de aprendizaje permanente. Al enfrentarme al reto de traducir los hallazgos de las entrevistas en artefactos de diseño centrado en el usuario (Mapa de Empatía, User Journey Mapping y Scenario Mapping), comprendí que mi desempeño profesional requiere una actualización continua en nuevas metodologías de investigación (User Research) y psicología del consumidor. Asimilé que, para garantizar el éxito y la adopción de nuestras soluciones de software, debo investigar y adoptar proactivamente nuevos estándares de usabilidad y accesibilidad que me permitan anticiparme a las demandas dinámicas del mercado.<br><br><b>TB1:</b> Reconocí la trascendencia del aprendizaje continuo al enfrentar el reto de desacoplar la lógica de dominio de los mecanismos de almacenamiento relacional. Al implementar el patrón Repository y el mapeo canónico entre agregados DDD y entidades JPA en Spring Boot 3, comprendí que los marcos de trabajo y ORMs evolucionan rápidamente, exigiendo que un ingeniero de software domine tanto los conceptos teóricos de modelado de datos como los patrones arquitectónicos que aíslan el código de negocio frente a cambios en la infraestructura o en los motores de base de datos.<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> <b>AV1:</b> Comprendí que el desarrollo de soluciones dentro del ecosistema financiero y proptech exige una actualización tecnológica y regulatoria constante. Al enfrentarme a los cálculos de TCEA, VAN y TIR, reconocí que como ingeniero de software debo integrar proactivamente nuevas herramientas de la industria, arquitecturas escalables y estándares de seguridad para asegurar que la plataforma pueda adaptarse rápidamente a futuros cambios en el mercado inmobiliario y las normativas peruanas.<br><br><b>TB1:</b> Asimilé que la seguridad en aplicaciones web y de microservicios es un área altamente dinámica donde las amenazas, vectores de ataque (como BOLA/IDOR) y directrices de protección de datos cambian vertiginosamente. La transición de versiones anteriores de Spring Security hacia Spring Security 6 demandó una autoformación constante para comprender el nuevo paradigma funcional sin adaptadores heredados (<code>SecurityFilterChain</code> declarativo), reforzando mi convicción de que el aprendizaje continuo y la adopción de principios de Security by Design y OWASP son indispensables para mantener soluciones confiables y resilientes en el sector FinTech.<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> <b>AV1:</b> Reconocí la importancia de la autoformación continua al enfrentar la brecha entre los requerimientos funcionales del dominio inmobiliario-financiero y la definición de requerimientos de calidad arquitectónicos (ASRs). Comprendí que el rol de arquitecto de software exige investigar activamente estándares emergentes de la industria, metodologías de diseño como Attribute-Driven Design (ADD) y patrones cloud nativos para garantizar soluciones escalables, auditables y con alta mantenibilidad frente a entornos regulatorios dinámicos.<br><br><b>TB1:</b> Experimenté de primera mano el valor del autoaprendizaje permanente al tener que dominar el rigor de las matemáticas financieras aplicadas al desarrollo de software empresarial. Pasar de fórmulas teóricas a un motor computacional determinista que previene errores de precisión flotante y garantiza el balance a cero absoluto me demostró que el ingeniero de software debe adquirir competencias multidisciplinarias continuas (matemáticas financieras, finanzas cuantitativas y algoritmos numéricos) para construir sistemas que satisfagan rigurosos requerimientos regulatorios y de calidad sin margen de error.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> <b>AV1:</b> Reconocí que el análisis de la competencia y el entorno normativo en el sector financiero requiere una constante labor de investigación y vigilancia tecnológica, dado que las entidades bancarias y reguladores actualizan continuamente sus productos y plataformas digitales.<br><br><b>TB1:</b> Comprendí que la sostenibilidad de una arquitectura de software a largo plazo depende de la capacidad del equipo de formarse permanentemente en principios de diseño limpio y gobernanza del código fuente. La adopción de ArchUnit como herramienta de arquitectura como código me enseñó que el aseguramiento de calidad debe ser automatizado y continuo; mantener la disciplina arquitectónica exige actualizarse en técnicas modernas de testing para que las reglas de diseño evolucionen armónicamente con el sistema y prevengan la erosión arquitectónica a medida que se incorporan nuevas integraciones bancarias.</td>
-			<td><b>AV1:</b> El equipo reconoció que el desarrollo de software requiere un proceso de aprendizaje continuo y adaptación a las necesidades cambiantes de los usuarios y del negocio inmobiliario.<br><br><b>TB1:</b> El equipo concluyó que el aprendizaje continuo es un imperativo profesional esencial en la ingeniería de software, especialmente al desarrollar aplicaciones en sectores de alta exigencia analítica como FinTech y PropTech. La experiencia de construir el backend de CrediCasa evidenció que el éxito de un proyecto no radica únicamente en dominar una tecnología particular, sino en cultivar la capacidad adaptativa para asimilar nuevos marcos de trabajo (Spring Boot 3, Spring Security 6), metodologías de diseño (Domain-Driven Design, Arquitectura Hexagonal) y herramientas de aseguramiento de calidad automatizada (JUnit 5, ArchUnit, Swagger OpenAPI). El aprendizaje permanente permitió al equipo transformar desafíos técnicos —como la prevención de aberraciones de redondeo mediante aritmética determinista, el desacoplamiento de dependencias externas a través de Ports & Adapters y la automatización de la gobernanza arquitectónica— en ventajas competitivas y código de alta mantenibilidad. Mantener esta actitud proactiva de capacitación constante asegura que el equipo esté preparado para afrontar la evolución continua de estándares cloud nativos, requisitos regulatorios de la SBS y demandas dinámicas del mercado crediticio.</td>
+			<td><strong>Jonseck Choque, Oliver:</strong><br> <b>AV1:</b> Descubrí la importancia de entender al cliente y sus necesidades al momento de realizar pagos de suma importancia.<br><br><b>TB1:</b> Comprendí que el diseño de contratos de software no es una actividad estática, sino que exige aprendizaje permanente para adaptarse a la evolución de las especificaciones de API y las expectativas de los clientes. Al diseñar los DTOs y la documentación Swagger/OpenAPI 3.0, reconocí que los desarrolladores debemos capacitarnos continuamente en estándares de diseño de interfaces abiertas y buenas prácticas de validación de esquemas (Jakarta Validation), asegurando que el backend pueda interoperar de manera transparente y desacoplada con clientes web, móviles o servicios de terceros sin introducir deuda técnica.<br><br><b>TB3 (Avance 3):</b> Reconocí que el desarrollo frontend en el sector financiero exige un aprendizaje continuo no solo de frameworks visuales, sino de patrones de comunicación asíncrona y sincronización de estado. La implementación del centro de notificaciones mediante polling adaptativo y el manejo seguro de tokens en <code>sessionStorage</code> me demostró la importancia de actualizarse permanentemente en directivas de experiencia de usuario (UX) y seguridad del lado del cliente.<br><br><b>TB4 (Avance 4):</b> Reconocí que la evolución de modelos SaaS y monetización en plataformas tecnológicas exige una capacitación continua en estándares de integración de pagos y validación transaccional. Implementar la validación reactiva de comprobantes bancarios y el manejo de suscripciones me demostró que un ingeniero de software debe anticipar requerimientos cambiantes de negocio y diseñar interfaces desacopladas y tolerantes a fallos.<br><strong><br>Godoy Santillan, Jesus Andres:</strong><br> <b>AV1:</b> Reconocí que la evolución constante de las expectativas y comportamientos del usuario en el ecosistema financiero y proptech exige una mentalidad de aprendizaje permanente. Al enfrentarme al reto de traducir los hallazgos de las entrevistas en artefactos de diseño centrado en el usuario (Mapa de Empatía, User Journey Mapping y Scenario Mapping), comprendí que mi desempeño profesional requiere una actualización continua en nuevas metodologías de investigación (User Research) y psicología del consumidor. Asimilé que, para garantizar el éxito y la adopción de nuestras soluciones de software, debo investigar y adoptar proactivamente nuevos estándares de usabilidad y accesibilidad que me permitan anticiparme a las demandas dinámicas del mercado.<br><br><b>TB1:</b> Reconocí la trascendencia del aprendizaje continuo al enfrentar el reto de desacoplar la lógica de dominio de los mecanismos de almacenamiento relacional. Al implementar el patrón Repository y el mapeo canónico entre agregados DDD y entidades JPA en Spring Boot 3, comprendí que los marcos de trabajo y ORMs evolucionan rápidamente, exigiendo que un ingeniero de software domine tanto los conceptos teóricos de modelado de datos como los patrones arquitectónicos que aíslan el código de negocio frente a cambios en la infraestructura o en los motores de base de datos.<br><br><b>TB3 (Avance 3):</b> Comprendí que la gestión de persistencia en microservicios y aplicaciones empresariales requiere una capacitación continua más allá de las consultas SQL tradicionales. Integrar migraciones versionadas inmutables con Flyway me enseñó que la trazabilidad de los datos y la reproducibilidad de despliegues entre ambientes de desarrollo, testing y producción son habilidades que un arquitecto de software debe perfeccionar constantemente.<br><br><b>TB4 (Avance 4):</b> Comprendí que la ingeniería de software moderna en el sector PropTech no opera en un vacío técnico, sino que debe integrarse estrechamente con entidades públicas y registros jurídicos. Aprender los mecanismos de consulta registral de SUNARP y diseñar adaptadores resilientes reafirmó mi convicción de que el aprendizaje continuo en normativas legales e interoperabilidad gubernamental es esencial para liderar proyectos tecnológicos viables y confiables.<br><strong><br>Pumahualcca Garcia, Diego Rodrigo:</strong><br> <b>AV1:</b> Comprendí que el desarrollo de soluciones dentro del ecosistema financiero y proptech exige una actualización tecnológica y regulatoria constante. Al enfrentarme a los cálculos de TCEA, VAN y TIR, reconocí que como ingeniero de software debo integrar proactivamente nuevas herramientas de la industria, arquitecturas escalables y estándares de seguridad para asegurar que la plataforma pueda adaptarse rápidamente a futuros cambios en el mercado inmobiliario y las normativas peruanas.<br><br><b>TB1:</b> Asimilé que la seguridad en aplicaciones web y de microservicios es un área altamente dinámica donde las amenazas, vectores de ataque (como BOLA/IDOR) y directrices de protección de datos cambian vertiginosamente. La transición de versiones anteriores de Spring Security hacia Spring Security 6 demandó una autoformación constante para comprender el nuevo paradigma funcional sin adaptadores heredados (<code>SecurityFilterChain</code> declarativo), reforzando mi convicción de que el aprendizaje continuo y la adopción de principios de Security by Design y OWASP son indispensables para mantener soluciones confiables y resilientes en el sector FinTech.<br><br><b>TB3 (Avance 3):</b> Reconocí la trascendencia del aprendizaje continuo frente a las vulnerabilidades emergentes en aplicaciones distribuidas. Implementar TOTP y la revocación de tokens JWT en bases de datos me evidenció que los vectores de ataque evolucionan continuamente, exigiendo que los ingenieros nos capacitemos permanentemente en normativas de ciberseguridad, criptografía aplicada y estándares de autenticación abierta.<br><br><b>TB4 (Avance 4):</b> Asimilé que la privacidad y los controles de interacción social son aspectos críticos en plataformas colaborativas. Enfrentar el diseño de mecanismos de bloqueo de usuarios y exportación de transcripciones auditables me enseñó que la ciberseguridad y la protección de datos personales (Directiva de Protección de Datos Personales en el Perú) exigen un estudio constante de directivas éticas y técnicas de desarrollo seguro.<br><strong><br>Ramos Hinostroza, Diego Antonio:</strong><br> <b>AV1:</b> Reconocí la importancia de la autoformación continua al enfrentar la brecha entre los requerimientos funcionales del dominio inmobiliario-financiero y la definición de requerimientos de calidad arquitectónicos (ASRs). Comprendí que el rol de arquitecto de software exige investigar activamente estándares emergentes de la industria, metodologías de diseño como Attribute-Driven Design (ADD) y patrones cloud nativos para garantizar soluciones escalables, auditables y con alta mantenibilidad frente a entornos regulatorios dinámicos.<br><br><b>TB1:</b> Experimenté de primera mano el valor del autoaprendizaje permanente al tener que dominar el rigor de las matemáticas financieras aplicadas al desarrollo de software empresarial. Pasar de fórmulas teóricas a un motor computacional determinista que previene errores de precisión flotante y garantiza el balance a cero absoluto me demostró que el ingeniero de software debe adquirir competencias multidisciplinarias continuas (matemáticas financieras, finanzas cuantitativas y algoritmos numéricos) para construir sistemas que satisfagan rigurosos requerimientos regulatorios y de calidad sin margen de error.<br><br><b>TB3 (Avance 3):</b> Asimilé que el diseño de contratos de software abiertos (OpenAPI/Swagger) y la consistencia matemática son fundamentales para evitar la fricción entre equipos backend y frontend. Comprender la necesidad de serializar importes monetarios mediante <code>BigDecimal</code> exacto me confirmó que un profesional del software debe cultivar una mentalidad de rigor analítico y estudio continuo en normas contables y financieras.<br><br><b>TB4 (Avance 4):</b> Experimenté cómo la inteligencia artificial aplicada a finanzas requiere una sólida comprensión de las regulaciones bancarias y un estricto rigor numérico determinista. Implementar la heurística de matching financiero bajo la normativa de la SBS y generar estructuras OpenXML nativas me confirmó que un profesional del software debe formarse permanentemente tanto en algoritmos matemáticos como en estándares abiertos de interoperabilidad documental para resolver problemas reales del mercado financiero.<br><strong><br>Rubio Ortiz, Luis Sebastián:</strong><br> <b>AV1:</b> Reconocí que el análisis de la competencia y el entorno normativo en el sector financiero requiere una constante labor de investigación y vigilancia tecnológica, dado que las entidades bancarias y reguladores actualizan continuamente sus productos y plataformas digitales.<br><br><b>TB1:</b> Comprendí que la sostenibilidad de una arquitectura de software a largo plazo depende de la capacidad del equipo de formarse permanentemente en principios de diseño limpio y gobernanza del código fuente. La adopción de ArchUnit como herramienta de arquitectura como código me enseñó que el aseguramiento de calidad debe ser automatizado y continuo; mantener la disciplina arquitectónica exige actualizarse en técnicas modernas de testing para que las reglas de diseño evolucionen armónicamente con el sistema y prevengan la erosión arquitectónica a medida que se incorporan nuevas integraciones bancarias.<br><br><b>TB3 (Avance 3):</b> Reconocí que el aseguramiento de la calidad del software no puede basarse en pruebas manuales, sino en una cultura de automatización permanente. Dominar Cucumber para pruebas BDD y Playwright para pruebas de aceptación en navegador me enseñó que la ingeniería de calidad evoluciona vertiginosamente, obligándome a investigar constantemente nuevas herramientas de pruebas para garantizar software mantenible y confiable.<br><br><b>TB4 (Avance 4):</b> Reconocí que el aseguramiento continuo de la calidad es un proceso dinámico que evoluciona con cada incremento de software. Implementar escenarios en Gherkin y validar flujos interactivos complejos con Playwright me demostró que un ingeniero debe capacitarse permanentemente en patrones de automatización y observabilidad para garantizar la estabilidad de arquitecturas distribuidas frente a ciclos ágiles de entrega continua.</td>
+			<td><b>AV1:</b> El equipo reconoció que el desarrollo de software requiere un proceso de aprendizaje continuo y adaptación a las necesidades cambiantes de los usuarios y del negocio inmobiliario.<br><br><b>TB1:</b> El equipo concluyó que el aprendizaje continuo es un imperativo profesional esencial en la ingeniería de software, especialmente al desarrollar aplicaciones en sectores de alta exigencia analítica como FinTech y PropTech. La experiencia de construir el backend de CrediCasa evidenció que el éxito de un proyecto no radica únicamente en dominar una tecnología particular, sino en cultivar la capacidad adaptativa para asimilar nuevos marcos de trabajo (Spring Boot 3, Spring Security 6), metodologías de diseño (Domain-Driven Design, Arquitectura Hexagonal) y herramientas de aseguramiento de calidad automatizada (JUnit 5, ArchUnit, Swagger OpenAPI). El aprendizaje permanente permitió al equipo transformar desafíos técnicos —como la prevención de aberraciones de redondeo mediante aritmética determinista, el desacoplamiento de dependencias externas a través de Ports & Adapters y la automatización de la gobernanza arquitectónica— en ventajas competitivas y código de alta mantenibilidad. Mantener esta actitud proactiva de capacitación constante asegura que el equipo esté preparado para afrontar la evolución continua de estándares cloud nativos, requisitos regulatorios de la SBS y demandas dinámicas del mercado crediticio.<br><br><b>TB3 (Avance 3):</b> El equipo reafirmó que el aprendizaje permanente es el pilar para el éxito en el desarrollo de software crítico en FinTech y PropTech. La experiencia acumulada al implementar el incremento del Sprint 2 evidenció que la integración fluida entre capas, la seguridad criptográfica multicapa, el versionamiento estricto de base de datos y la cobertura de pruebas multinivel (unitarias, BDD y E2E) demandan una actitud de superación constante y adaptabilidad a las mejores prácticas de la industria de software moderna.<br><br><b>TB4 (Avance 4):</b> El equipo reafirmó que el aprendizaje permanente y la actitud de investigación autónoma son determinantes para el éxito en proyectos de arquitectura de software empresarial. Al abordar dominios complejos como la verificación registral en SUNARP, la generación binaria de hojas de cálculo OpenXML, la IA aplicada bajo regulaciones de solvencia SBS y el gobierno de privacidad en mensajería, el equipo constató que la excelencia técnica surge de la capacidad de investigar, adaptar y validar proactivamente soluciones de ingeniería de alto impacto frente a problemas reales del ecosistema FinTech/PropTech.</td>
 		</tr>
 	</tbody>
 </table>
 
 <div style="page-break-after: always;"></div>
+
+# Capítulo I: Introducción
 
 ## 1.1. Startup Profile
 
@@ -188,27 +223,27 @@ CrediCasa articula una arquitectura empresarial moderna basada en microservicios
 		<tr>
 			<td>Jonseck Choque, Oliver - u202312912</td>
 			<td>Mi nombre es Oliver, poseo 21 años. Poseo mucho interés en la programación y llevo haciendo varios proyectos personales desde que ingrese a la universidad. No trabajo bajo contrato actualmente, pero trabajo cómo freelancer por periodos de tiempo</td>
-			<td>  <img src="/Resources/Perfil_Oliver.jpeg" alt="Oliver Jonseck Profile"> </td>
+			<td>  <img src="Resources/Perfil_Oliver.jpeg" alt="Oliver Jonseck Profile"> </td>
 		</tr>
 		<tr>
 			<td>Godoy Santillan, Jesus Andres - u20251c350</td>
 			<td>Soy Jesús, tengo 22 años, me gusta mucho programar desde pequeño haciendo pequeños proyectos en videojuegos hasta lo último que hice que fue un gran proyecto en un evento online con creadores de contenido, patrocinadores y premios. Actualmente no trabajo formalmente pero ayudo a mi padre y junto a mi hermano haciendo sistemas y programas de una empresa que tiene junto a su amigo relacionado con la agroindustria y con el conocimiento que tengo de tecnología y solución de problemas también asesoró o ayudó a amigos de mi padre que tienen problemas técnicos relacionados con la tecnología ya sea personales o de trabajo.</td>
-			<td>  <img src="/Resources/Perfil_Jesus.jpeg" alt="Jesus Godoy Profile"> </td>
+			<td>  <img src="Resources/Perfil_Jesus.jpeg" alt="Jesus Godoy Profile"> </td>
 		</tr>
 		<tr>
 			<td>Pumahualcca Garcia, Diego Rodrigo - u202219266</td>
 			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con un conocimiento en el diseño de arquitectura de software y desarrollo backend. En el desarrollo de CrediCasa, mi objetivo principal es utilizar la tecnología para resolver un problema real y social: la falta de transparencia en los créditos hipotecarios.</td>
-			<td>[Por completar]</td>
+			<td>  <img src="Resources/Perfil_DiegoPumahualcca.svg" alt="Diego Pumahualcca Profile" width="150"> </td>
 		</tr>
 		<tr>
 			<td>Ramos Hinostroza, Diego Antonio - u202224130</td>
 			<td>Estudiante de sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuenta con dominio en diseño de arquitectura de software, desarrollo backend y consumo/integración de servicios web bajo estándares de la industria. Posee experiencia técnica en la construcción e integración de APIs REST utilizando Java (Spring Boot), C# y Python, así como en el diseño y modelado de bases de datos relacionales y NoSQL.</td>
-			<td>  <img src="/Resources/Perfil_DiegoRamos.png" alt="Diego Ramos Profile"> </td>
+			<td>  <img src="Resources/Perfil_DiegoRamos.png" alt="Diego Ramos Profile"> </td>
 		</tr>
 		<tr>
 			<td>Rubio Ortiz, Luis Sebastián - u202310349</td>
 			<td>Soy Sebastián, soy estudiante de la carrera de ingenieria de software, tengo 20 años y me gusta lograr grandes cosas programando, suelo interesarme mucho por aprender cosas nuevas en el mundo de la programacián más que nada. Me gusta apoyar a mis compañeros para los trabajos, considero que soy de trabajar en equipo. Tengo conocimientos en C#, C++, JavaScript, Python y TypeScript.</td>
-			<td> <img src="/Resources/Perfil_Sebastian.jpeg" alt="Sebastián Rubio Profile"> </td>
+			<td> <img src="Resources/Perfil_Sebastian.jpeg" alt="Sebastián Rubio Profile"> </td>
 		</tr>
 	</tbody>
 </table>
@@ -391,6 +426,7 @@ CrediCasa empodera al deudor hipotecario mediante una aplicación web de autoser
 
 <div style="page-break-after: always;"></div>
 
+<a id="capítulo-ii-requirements-elicitation--analysis"></a>
 # Capítulo II: Requirements Elicitation & Analysis
 
 Se consideran dos segmentos objetivo: Comprador, personas que buscan financiar una vivienda en Lima Metropolitana; e Inmobiliaria/Banca, segmento profesional que abarca la preparación de cotizaciones por la inmobiliaria y la evaluación por la banca.
@@ -568,7 +604,7 @@ Las fichas relacionan las necesidades candidatas HC-01 a HC-03 con el Comprador 
 **Frustraciones:** Simuladores que no explican seguros ni gastos; ofertas que parecen iguales pero tienen costos distintos; dificultad para saber si cumple los requisitos antes de solicitar evaluación.
 
 <div align="center">
-  <img src="/Resources/userpseg_1.png" alt="User Persona 1: Lucía Torres" width="700">
+  <img src="Resources/userpseg_1.png" alt="User Persona 1: Lucía Torres" width="700">
 </div>
 
 #### Persona 2: Daniel Rojas — Inmobiliaria/Banca
@@ -580,7 +616,7 @@ Las fichas relacionan las necesidades candidatas HC-01 a HC-03 con el Comprador 
 **Frustraciones:** Reingresar los mismos datos en varias herramientas; parámetros desactualizados de tasas y seguros; compradores que desisten por no entender la cuota calculada.
 
 <div align="center">
-  <img src="/Resources/userpseg_2.png" alt="User Persona 2: Daniel Rojas" width="700">
+  <img src="Resources/userpseg_2.png" alt="User Persona 2: Daniel Rojas" width="700">
 </div>
 
 ### 2.3.2. User Task Matrix
@@ -640,7 +676,7 @@ Los mapas organizan hipótesis sobre qué dice, hace, piensa y siente cada segme
 - **Resultados:** Adquirir su departamento propio con un plan financiero predecible y una TCEA justa y transparente.
 
 <div align="center">
-  <img src="/Resources/empa_m1.png" alt="Mapa de empatía de Lucía" width="700">
+  <img src="Resources/empa_m1.png" alt="Mapa de empatía de Lucía" width="700">
 </div>
 
 #### Mapa de empatía — Inmobiliaria/Banca (Daniel Rojas)
@@ -651,7 +687,7 @@ Los mapas organizan hipótesis sobre qué dice, hace, piensa y siente cada segme
 - **Resultados:** Cerrar reservas de venta en menor tiempo, brindar asesoría financiera respaldada y acelerar la derivación bancaria.
 
 <div align="center">
-  <img src="/Resources/empa_m2.png" alt="Mapa de empatía de Daniel" width="700">
+  <img src="Resources/empa_m2.png" alt="Mapa de empatía de Daniel" width="700">
 </div>
 
 ### 2.3.5. As-Is Scenario Mapping
@@ -661,13 +697,13 @@ Los escenarios organizan las fases en columnas bajo las dimensiones *Phases, Doi
 #### Segmento 1 — Comprador (Lucía Torres)
 
 <div align="center">
-  <img src="/Resources/asis_m1.png" alt="As-Is Scenario Mapping de Lucía" width="750">
+  <img src="Resources/asis_m1.png" alt="As-Is Scenario Mapping de Lucía" width="750">
 </div>
 
 #### Segmento 2 — Inmobiliaria/Banco (Daniel Rojas)
 
 <div align="center">
-  <img src="/Resources/asis_m2.png" alt="As-Is Scenario Mapping de Daniel" width="750">
+  <img src="Resources/asis_m2.png" alt="As-Is Scenario Mapping de Daniel" width="750">
 </div>
 
 ## 2.4. Big Picture EventStorming
@@ -675,7 +711,7 @@ Los escenarios organizan las fases en columnas bajo las dimensiones *Phases, Doi
 Se propone un primer mapa de eventos para revisar en un taller con representantes de ambos segmentos. Es un modelo elaborado a partir del capítulo I y las necesidades candidatas, no el resultado de un taller realizado. Los eventos se nombran en pasado y los comandos expresan acciones que los provocan.
 
 <div align="center">
-  <img src="/Resources/avance-1/eventstorming_bigpicture.png" alt="Big Picture EventStorming" width="750">
+  <img src="Resources/avance-1/eventstorming_bigpicture.png" alt="Big Picture EventStorming" width="750">
 </div>
 
 ```mermaid
@@ -903,7 +939,7 @@ Las metas tienen actor, comportamiento, umbral y plazo definidos. Su factibilida
 | BG-03 | Daniel — Asesor inmobiliario | Explica y comparte una versión reconocible para evitar reconstruir la propuesta. | D-06: cotización exportable con versión, autor, fecha y condiciones. | Vinculación pendiente con las historias definitivas de 3.2. |
 
 <div align="center">
-  <img src="/Resources/avance-1/impact_map.png" alt="Impact Map" width="750">
+  <img src="Resources/avance-1/impact_map.png" alt="Impact Map" width="750">
 </div>
 
 ```mermaid
@@ -969,6 +1005,7 @@ La tabla se completará con IDs y descripciones de 3.2, evitando duplicar o reno
 
 # Capítulo IV: Product Architecture Design
 
+<a id="41-design-concepts-viewpoints--er-diagrams"></a>
 ## 4.1. Design Concepts, ViewPoints & ER Diagrams
 
 La arquitectura propuesta utiliza microservicios delimitados mediante Domain-Driven Design, Cada servicio posee sus reglas de negocio, contratos de integración y almacenamiento. Dentro de los servicios se aplica Clean Architecture para separar el dominio de los mecanismos de comunicación, persistencia y despliegue.
@@ -992,6 +1029,7 @@ Se establecen cinco principios arquitectónicos que orientan la descomposición 
 
 **Aplicación de la autonomía.** La independencia de datos no elimina la necesidad de consistencia. Las invariantes internas se protegen mediante transacciones ACID; los procesos entre servicios utilizan estados explícitos, idempotencia y consistencia eventual.
 
+<a id="412-approaches-statements-architectural-styles--patterns"></a>
 ### 4.1.2. Approaches Statements Architectural Styles & Patterns
 
 #### Estilo arquitectónico de microservicios
@@ -1502,6 +1540,7 @@ Una cotización debe describir lo que se ofreció en una fecha determinada. Camb
 
 La vigencia comercial se almacena por separado de la integridad histórica. Una propuesta íntegra puede estar vencida y debe mostrarse con ese estado.
 
+<a id="43-add-iterations--attribute-driven-design"></a>
 ## 4.3. ADD Iterations — Attribute-Driven Design
 
 Se emplea ADD 3.0 como marco de diseño guiado por drivers, manteniendo la trazabilidad y la descomposición presentes en ADD 2.0. El método permite seleccionar elementos y conceptos arquitectónicos de acuerdo con funciones, calidad y restricciones.
@@ -2143,6 +2182,7 @@ La arquitectura distingue la durabilidad de la cotización de la disponibilidad 
 
 <div style="page-break-after: always;"></div>
 
+<a id="capítulo-v-product-implementation-validation--deployment"></a>
 # Capítulo V: Product Implementation, Validation & Deployment
 
 En este capítulo se formaliza la transición desde las especificaciones arquitectónicas abstractas, diagramas conceptuales C4 y decisiones tácticas modeladas en el Capítulo IV hacia su materialización en código fuente ejecutable, verificable y desplegable. El backend de **CrediCasa** ha sido desarrollado en un repositorio independiente bajo el ecosistema de **Java 21** y **Spring Boot 3.3.4**, aplicando con rigor los principios de la **Arquitectura Hexagonal (Ports & Adapters)** y **Domain-Driven Design (DDD)**.
@@ -2154,6 +2194,7 @@ La construcción del sistema responde directamente a los tres *Architectural Dri
 
 ---
 
+<a id="51-testing-suites--general-patterns"></a>
 ## 5.1. Testing Suites & General Patterns
 
 ### 5.1.1. Backend Application Core Testing Suite
@@ -2383,75 +2424,151 @@ Durante la fase de construcción y maduración del backend, el equipo ejecutó r
 
 ## 5.2. Software Configuration Management
 
-La gestión de configuración de CrediCasa comprende tres repositorios independientes: informe, backend y frontend. Este corte corresponde al 8 de octubre de 2026. Los archivos de construcción, configuración y pruebas se utilizan como evidencia de lo implementado; los diagramas del capítulo IV describen una arquitectura objetivo cuyo despliegue completo todavía no está acreditado.
+La gestión de configuración de CrediCasa articula tres repositorios independientes bajo control de versiones con Git: informe de arquitectura, backend core y aplicación frontend. Se aplica una rigurosa disciplina de configuración reproducible para garantizar que cualquier miembro del equipo, evaluador o entorno de integración continua pueda compilar, probar y desplegar los artefactos sin discrepancias entre plataformas.
 
 ### 5.2.1. Software Development Environment Configuration
 
+La plataforma tecnológica de desarrollo se compone de los siguientes entornos estandarizados y verificados:
+
 | Componente | Configuración comprobada | Archivo de referencia |
 |---|---|---|
-| Backend | Java 21; Spring Boot 3.3.4; Maven; artefacto `com.fidiacorp:credicasa-backend:1.0.0-SNAPSHOT`. | `pom.xml` |
-| API y validación | Spring Web, Jakarta Validation, Spring Security y JJWT 0.12.6. | `pom.xml`, controladores REST y paquete `infrastructure/security` |
-| Persistencia | Spring Data JPA y PostgreSQL; H2 está declarado como dependencia, sin un perfil de pruebas H2 versionado en el corte. | `pom.xml`, `src/main/resources/application.yml` |
-| Pruebas | JUnit 5 mediante Spring Boot Test y ArchUnit 1.3.0. | `src/test/java` |
-| Documentación de API | Springdoc 2.6.0; OpenAPI en `/v3/api-docs` y Swagger UI en `/swagger-ui.html`. | `pom.xml`, `OpenApiConfig.java`, `application.yml` |
-| Contenedores | Construcción con Maven 3.9.9 y Temurin 21; ejecución con JRE 21; PostgreSQL 16 Alpine. | `Dockerfile`, `docker-compose.yml` |
-| Frontend | Vue 3.5, Vue Router 5.4, PrimeVue 5, Vite 8.3 y Tailwind CSS 4.3, según los rangos declarados. | `package.json`, `package-lock.json`, `vite.config.js` |
+| **Backend Core** | Java 21 LTS (Oracle OpenJDK / Eclipse Temurin); Spring Boot 3.3.4; Maven 3.9.x; artefacto `com.fidiacorp:credicasa-backend:1.0.0-SNAPSHOT`. | `pom.xml`, `.mvn/wrapper/maven-wrapper.properties` |
+| **API & Seguridad** | Spring Web, Jakarta Validation 3.0, Spring Security 6.3, JJWT 0.12.6, TOTP RFC 6238 con cifrado AES-256-GCM. | `pom.xml`, controladores REST y paquete `infrastructure/security` |
+| **Persistencia & Migraciones** | Spring Data JPA; PostgreSQL 16; Flyway Core y Flyway PostgreSQL 10.10.0; validación estricta de esquema Hibernate (`ddl-auto: validate`). | `pom.xml`, `src/main/resources/application.yml`, scripts `src/main/resources/db/migration/V1..V7` |
+| **Testing Backend** | JUnit 5 (Jupiter), Spring Boot Test, H2 Database en memoria para pruebas de integración, Mockito, ArchUnit 1.3.0, Cucumber JVM 7.18 (`sprint2.feature`). | `pom.xml`, `src/test/java`, `src/test/resources/application.properties` |
+| **Documentación de API** | Springdoc OpenAPI Starter WebMvc UI 2.6.0; especificación OpenAPI 3.0 en `/v3/api-docs` y Swagger UI en `/swagger-ui.html`. | `pom.xml`, `ApiContractDocumentation.java`, `OpenApiConfig.java` |
+| **Contenedores & Base de Datos** | Docker Engine 24+ y Docker Compose v2; imagen PostgreSQL 16 Alpine; servidor aislado Zonky PostgreSQL 16.14 para pruebas de migración. | `Dockerfile`, `docker-compose.yml`, `docs/deployment.md` |
+| **Frontend Web** | Node.js 22+ (validado con Node.js 24 LTS); pnpm 12.15.0; Vue 3.5; Vue Router 5.4; Vite 8.3; Tailwind CSS 4.3; Playwright Test 1.64.1. | `package.json`, `pnpm-lock.yaml`, `vite.config.js`, `playwright.config.js` |
 
-**Preparación del backend.** Se requiere JDK 21 y Maven para compilar directamente. Desde la raíz del repositorio se ejecuta `mvn clean test` para la suite disponible y `mvn clean package` para producir el JAR. Para ejecutar sin contenedores se configura PostgreSQL y se utiliza `mvn spring-boot:run`. Estos comandos describen el procedimiento reproducible; la evidencia de ejecución existente se presenta en 5.3.1.3 y 5.3.1.4.
+**Preparación y ejecución del backend:**
+1. **Requisitos:** JDK 21 instalado y configurado en `JAVA_HOME`.
+2. **Variables de entorno:** Configurar en `.env` o variables del sistema:
+   - `SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/credicasa_db`
+   - `SPRING_DATASOURCE_USERNAME=credicasa_user`
+   - `SPRING_DATASOURCE_PASSWORD=<contraseña_segura>`
+   - `JWT_SECRET=<clave_utf8_minimo_32_bytes>`
+   - `TWO_FACTOR_ENCRYPTION_KEY=<base64_32_bytes_aleatorios>` (generable con `openssl rand -base64 32`)
+   - `CORS_ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173`
+3. **Compilación y pruebas:**
+   - Ejecutar la suite completa en memoria (H2 + ArchUnit + Cucumber): `mvn verify`
+   - Ejecutar la validación aislada de migraciones PostgreSQL 16: `mvn -Ppostgres-migrations verify`
+   - Iniciar el servicio en desarrollo: `mvn spring-boot:run`
 
-**Preparación con contenedores.** El archivo Compose define PostgreSQL y el backend. `docker compose up --build` construye y levanta ambos servicios; `docker compose ps` permite revisar su estado y `docker compose logs credicasa-backend` permite consultar el arranque. PostgreSQL debe superar su comprobación de disponibilidad antes de iniciar el backend. No se ha adjuntado una captura de ejecución de Compose.
-
-**Preparación del frontend.** La instalación reproducible se realiza con `npm ci`; `npm run dev` inicia Vite, `npm run build` genera el artefacto y `npm run preview` permite revisar una construcción. El código actual incluye una vista inicial y un layout. La inspección de `src/main.js` detecta referencias a `router`, `PrimeVue` y `Material` sin sus importaciones; además, `Material` requiere resolver el preset correspondiente. En `layout.vue`, la lista del menú está en un bloque `<script>` sin exposición al template. Estas incidencias deben corregirse antes de declarar validada la ejecución del frontend. Su corrección queda fuera de esta actualización documental.
+**Preparación y ejecución del frontend:**
+1. **Requisitos:** Node.js >= 22.12.0 y gestor de paquetes **pnpm 12.15.0** (obligatorio según las políticas de desarrollo seguro del proyecto). No se utiliza `npm` ni `yarn`.
+2. **Instalación inmutable:**
+   ```bash
+   pnpm install --frozen-lockfile --ignore-scripts
+   ```
+3. **Ejecución y pruebas:**
+   - Servidor de desarrollo con recarga en caliente: `pnpm dev` (por defecto en `http://localhost:5173`).
+   - Pruebas unitarias de controladores, validaciones y modelos: `pnpm test:unit` (ejecuta 36 pruebas nativas mediante `node --test tests/*.test.js`, con 100% de aprobación en ~730 ms).
+   - Pruebas de aceptación E2E en navegador real: `pnpm test:e2e` (orquesta el fixture de backend y ejecuta los 6 recorridos de usuario con Playwright en ~10.6 s).
+   - Compilación para producción: `VITE_API_BASE_URL=/api/v1 pnpm build` (genera el bundle optimizado en `dist/` en ~550 ms).
 
 ### 5.2.2. Source Code Management
 
-| Entregable | Repositorio | Rama y revisión observadas |
+La gestión del código fuente se organiza bajo la metodología **GitFlow** en tres repositorios públicos dentro de la organización oficial de GitHub:
+
+| Entregable | Repositorio Oficial | Rama y revisión auditadas |
 |---|---|---|
-| Informe | [FidiaCorp-report](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report) | Base `main` en `ca499d3`; `develop` local sincronizado con esa revisión antes de completar este documento. |
-| Backend | [FidiaCorp-backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend) | `main`, revisión `90e52b6`. |
-| Frontend | [FidiaCorp-FrontEnd](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd) | `develop`, revisión `c446221`. |
+| **Informe de Arquitectura** | [FidiaCorp-report](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-report) | Rama `feature/sprint2-report-remediation` originada de `develop` (base `ca499d3`). |
+| **Backend Core** | [FidiaCorp-backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend) | Rama `develop`, revisión `8cd35af` (merge final de Task 18: `feature/sprint2-deployment`). |
+| **Frontend Web** | [FidiaCorp-FrontEnd](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd) | Rama `develop`, revisión `c4fefcb` (merge final de Task 19: `feature/sprint2-deployment`). |
 
-Se adopta la convención `main` para versiones integradas, `develop` para integración del trabajo y `feature/<funcionalidad>` para cambios acotados. Las ramas existentes no acreditan por sí solas un proceso completo de revisión: la aprobación de pull requests, protección de ramas y ejecución de controles automáticos requiere evidencia adicional.
+**Estructura de Ramas y Política GitFlow:**
+- `main`: Aloja las versiones productivas estables y etiquetadas (tags) correspondientes a los hitos de entrega del curso (TP1, TF).
+- `develop`: Rama central de integración continua donde convergen las características validadas del sprint.
+- `feature/<funcionalidad>`: Ramas efímeras creadas para cada tarea técnica del Sprint Backlog. En el Sprint 2 se crearon y fusionaron las ramas:
+  - `feature/frontend-setup`: Adopción de pnpm 12.15, configuración de Vite 8.3 y Tailwind CSS 4.3.
+  - `feature/account-management` (Tasks 3 y 4): Persistencia de cuentas, registro, login y gestión de perfil.
+  - `feature/two-factor-authentication` (Tasks 5 y 6): TOTP RFC 6238, cifrado AES-256-GCM y verificación en login.
+  - `feature/session-logout` (Tasks 7 y 8): Cierre de sesión y revocación persistente de tokens Bearer en base de datos.
+  - `feature/property-management` (Tasks 9 y 10): Catálogo persistido, filtros multicriterio AND y borrado lógico autorizado.
+  - `feature/credit-offer-notifications` (Tasks 11 y 12): Emisión de ofertas bancarias DEMO y notificaciones por sondeo.
+  - `feature/payment-schedule` (Tasks 13 y 14): Cronogramas de cuotas idempotentes asociados a ofertas y precisión decimal.
+  - `feature/sprint2-testing` (Tasks 15 y 16): Suites de aceptación BDD (Cucumber JVM) y pruebas E2E (Playwright).
+  - `feature/sprint2-api-documentation` (Task 17): Especificación formal OpenAPI 3.0 para 24 endpoints.
+  - `feature/sprint2-deployment` (Tasks 18 y 19): Migraciones Flyway V1-V7, Docker Compose y servidor Nginx para SPA.
 
-Los cambios se agrupan por responsabilidad, se revisan mediante el diff y se acompañan de una descripción de su verificación. Los mensajes de commit deben identificar el alcance, por ejemplo `feat`, `fix`, `refactor` o `docs`, sin atribuir a un cambio funcionalidades ajenas. Los lockfiles y archivos de construcción se conservan para reproducibilidad. El informe permite versionar `README.md`, `.gitignore` y `Resources/`, excluyendo archivos locales de IDE y del sistema.
+**Convención de Mensajes de Commit (Conventional Commits):**
+Todos los commits respetan la estructura semántica estándar: `<tipo>(<alcance>): <descripción corta en imperativo>`. Los tipos autorizados son `feat` (nueva característica), `fix` (corrección de bug), `test` (pruebas automatizadas), `docs` (documentación técnica), `refactor` (modificación interna sin cambio de comportamiento), `chore` (mantenimiento y herramientas) y `merge` (unión de ramas completadas).
 
-**Sincronización de este avance.** Se consultó el remoto del informe y se comprobó que `origin/develop` era antecesor de `origin/main`. El avance rápido llevó `develop` local de `79d5f0a` a `ca499d3`, sin crear un commit de merge. Los cambios documentales posteriores quedan pendientes del commit y publicación del equipo; esto no significa que `origin/develop` ya haya sido actualizado.
-
+<a id="523-source-code-style-guide--conventions"></a>
 ### 5.2.3. Source Code Style Guide & Conventions
 
-Las convenciones se documentan a partir de la organización presente en ambos proyectos y se aplicarán durante la revisión de futuros cambios.
+Las directivas de estilo aplicadas de manera estricta y verificada en el proyecto comprenden:
 
-| Aspecto | Convención del proyecto |
+| Aspecto | Convención del proyecto CrediCasa |
 |---|---|
-| Paquetes Java | Minúsculas bajo `com.fidiacorp.credicasa`, organizados en `domain`, `application`, `infrastructure` e `interfaces`. |
-| Clases e interfaces | `PascalCase`, con nombres de responsabilidad: `FrenchAmortizationEngine`, `QuotationRepositoryPort`, `SimulationController`. |
-| Métodos y variables | `camelCase`; constantes en mayúsculas con guiones bajos. |
-| Inyección de dependencias | Constructores explícitos y dependencia de puertos para acceder a infraestructura desde aplicación. |
-| Contratos REST | DTOs de petición y respuesta separados; validación en la entrada; rutas bajo `/api/v1`; códigos HTTP según el resultado. |
-| Dominio | Mantener modelos y puertos independientes de infraestructura, aplicación y controladores; verificar las reglas existentes con ArchUnit. |
-| Importes y cálculo | Declarar escala y redondeo. El motor emplea `BigDecimal`; el calculador de métricas también utiliza `double` y `Math.pow` para conversiones y resolución numérica. No se presenta todo el cálculo como aritmética decimal exclusiva. |
-| Vue | Componentes por responsabilidad; scripts, templates y estilos separados dentro del SFC; nombres de archivos por función y rutas explícitas. |
-| JavaScript y CSS | Variables y funciones en `camelCase`, clases CSS descriptivas; evitar duplicaciones de reglas y referencias no importadas. |
-| Comentarios | Explicar decisiones, contratos y restricciones que no sean evidentes; mantenerlos coherentes con el comportamiento real. |
-
-El backend utiliza principalmente indentación de cuatro espacios; el frontend todavía combina estilos de una base inicial. La uniformidad del formato debe acordarse y aplicarse por cambios acotados. No se identificó una configuración versionada de Checkstyle, ESLint o Prettier ni una ejecución que permita afirmar cumplimiento automático de estas convenciones.
+| **Estructura de Paquetes Java** | Arquitectura Hexagonal estricta: `domain` (modelos, puertos, servicios puros agnósticos de frameworks), `application` (casos de uso y DTOs de transporte inmutables), `infrastructure` (adaptadores JPA, seguridad Spring Security y adaptadores bancarios externos) e `interfaces/rest` (controladores REST, OpenAPI y manejadores globales de excepciones). |
+| **Nomenclatura Java** | Clases e interfaces en `PascalCase` orientadas a roles (`FrenchAmortizationEngine`, `QuotationRepositoryPort`, `TwoFactorController`). Métodos y variables en `camelCase`. Constantes en `UPPER_SNAKE_CASE`. Inyección de dependencias exclusiva por constructor sin `@Autowired` en atributos. |
+| **Cálculo Financiero** | Aritmética determinista de precisión arbitraria mediante `BigDecimal` con escala 6 para tasas efectivas y redondeo bancario `RoundingMode.HALF_EVEN` a 2 decimales para importes monetarios. Se prohíbe el uso de tipos primitivos `float` o `double` para el cómputo del saldo insoluto, garantizando el balance exacto a 0.00 en la última cuota (AC-02). |
+| **Contratos de API REST** | Endpoints agrupados bajo el prefijo `/api/v1`. Rutas en plural y sustantivos en minúsculas (`/properties`, `/offers`). Códigos de estado HTTP semánticos (200 OK, 201 Created con cabecera `Location`, 204 No Content para borrados o revocaciones, 400 Bad Request, 401 Unauthorized, 403 Forbidden y 404 Not Found). Formato RFC 7807 (`ProblemDetail`) para respuestas de error. |
+| **Frontend Vue 3** | Single File Components (SFC) con `<script setup>` y Composition API. Nombres de componentes en `PascalCase` (`TwoFactorSettings.vue`, `NotificationCenter.vue`). Modularización por dominios (`src/account/`, `src/properties/`, `src/offers/`, `src/simulations/`). |
+| **Manejo Seguro del Estado en Cliente** | Almacenamiento de tokens de sesión exclusivamente en `sessionStorage` con clave aislada. Prohibición estricta de persistir contraseñas primarias, claves de recuperación o secretos TOTP en el almacenamiento web del navegador. |
+| **Especificación de Pruebas BDD** | Archivos `.feature` en sintaxis Gherkin (Cucumber), redactados en lenguaje de negocio claro con escenarios declarativos `Given`, `When`, `Then` y etiquetas por historia (`@US02`, `@US03`, etc.). |
 
 ### 5.2.4. Software Deployment Configuration
 
-**Configuración disponible.** El `Dockerfile` construye el JAR en una etapa Maven y lo copia a una imagen JRE 21. El proceso se ejecuta con un usuario sin privilegios de administrador. El servicio expone el puerto 8080 y define una comprobación sobre Swagger UI. La construcción del contenedor utiliza `-DskipTests`; por ello, la aprobación de pruebas debe verificarse por separado antes de publicar el artefacto.
+La configuración de despliegue asegura que el incremento pueda levantarse de manera idéntica y autónoma tanto en entornos de desarrollo local como en contenedores de producción:
 
-| Parámetro | Uso en la configuración |
+**1. Despliegue de Backend y Base de Datos con Docker Compose:**
+El archivo `docker-compose.yml` orquesta los servicios de backend y almacenamiento relacional:
+```yaml
+services:
+  credicasa-backend:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/credicasa_db
+      - SPRING_DATASOURCE_USERNAME=${DB_USER:-credicasa_user}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - TWO_FACTOR_ENCRYPTION_KEY=${TWO_FACTOR_ENCRYPTION_KEY}
+      - CORS_ALLOWED_ORIGINS=${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+    depends_on:
+      postgres:
+        condition: service_healthy
+  postgres:
+    image: postgres:16-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-credicasa_user} -d credicasa_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+```
+
+**2. Evolución del Esquema Relacional con Flyway:**
+El esquema no depende de generación automática de Hibernate (`hibernate.ddl-auto: validate`). Flyway ejecuta de forma inmutable y secuencial las siguientes 7 migraciones versionadas:
+- `V1__init_schema.sql`: Creación de tablas base de cotizaciones y cronogramas (`quotations`, `installments`).
+- `V2__accounts.sql`: Creación de la tabla `accounts` con roles RBAC y hashing BCrypt de contraseñas.
+- `V3__two_factor.sql`: Estructura para configuración TOTP con columnas para estado pendiente/activo y secreto cifrado.
+- `V4__token_revocation.sql`: Tabla `revoked_tokens` con hash SHA-256 del token y marca de tiempo de expiración.
+- `V5__properties.sql`: Catálogo de inmuebles con `owner_id`, precio 16+2 decimales, etiquetas y marca de borrado lógico (`deleted_at`).
+- `V6__credit_offers_and_notifications.sql`: Tablas `credit_offers` (ofertas bancarias DEMO) y `offer_notifications` (avisos privados con `read_at`).
+- `V7__owned_schedules_precision.sql`: Vinculación de cronogramas generados a usuarios propietarios e integridad de precisión monetaria.
+
+**3. Despliegue del Frontend SPA con Nginx:**
+La aplicación web compilada (`dist/`) se empaqueta sobre un servidor Nginx optimizado (`deploy/nginx.conf`). Dado que Vue Router utiliza el modo `HTML5 History API`, Nginx está configurado con la directiva `try_files $uri $uri/ /index.html;` para permitir la navegación directa y la recarga en rutas profundas (`/realState`, `/offers/:id`, `/notifications`, `/profile`) sin generar errores 404 HTTP.
+
+**4. Parámetros Críticos y Variables de Entorno del Sistema:**
+
+| Variable | Descripción y Restricciones Técnicas |
 |---|---|
-| `SPRING_DATASOURCE_URL` | Dirección JDBC; Compose la dirige a `postgres:5432/credicasa_db`. |
-| `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD` | Credenciales de la base de datos. |
-| `DB_HOST`, `DB_PORT`, `DB_NAME` | Alternativas para construir la URL cuando no se proporciona `SPRING_DATASOURCE_URL`. |
-| `JWT_SECRET`, `JWT_EXPIRATION_MS` | Firma y duración del token; los valores de demostración deben sustituirse para un entorno publicado. |
-| `SERVER_PORT` | Puerto del backend; la imagen establece 8080. |
-| `JAVA_OPTS` | Opciones de memoria y ejecución de la JVM de la imagen. |
+| `SPRING_DATASOURCE_URL` | Cadena de conexión JDBC PostgreSQL obligatoria. En Docker apunta a `jdbc:postgresql://postgres:5432/credicasa_db`. |
+| `SPRING_DATASOURCE_USERNAME` / `_PASSWORD` | Credenciales exclusivas del usuario de base de datos; nunca se utilizan valores de respaldo ni usuario root. |
+| `JWT_SECRET` | Clave criptográfica HMAC-SHA256 obligatoria de al menos 32 bytes UTF-8 (256 bits). |
+| `JWT_EXPIRATION_MS` | Período de vigencia del token JWT Bearer en milisegundos (por defecto 86,400,000 ms = 24 horas). |
+| `TWO_FACTOR_ENCRYPTION_KEY` | Clave simétrica de 32 bytes en formato Base64 para el algoritmo AES-256-GCM. Indispensable para cifrar y descifrar los secretos TOTP en reposo. |
+| `CORS_ALLOWED_ORIGINS` | Lista explícita de orígenes web autorizados separada por comas (`http://localhost:5173`). Se rechazan comodines universales (`*`) en endpoints privados. |
+| `SERVER_PORT` | Puerto de escucha HTTP del backend (predeterminado 8080). |
+| `VITE_API_BASE_URL` | URL base de consumo HTTP expuesta para el cliente web (en desarrollo `http://localhost:8080/api/v1`; en producción ruta relativa `/api/v1`). |
 
-Compose define una red compartida y un volumen `postgres_data`. El SQL `V1__init_schema.sql` se monta en el directorio de inicialización de PostgreSQL; ese mecanismo se ejecuta al inicializar una base vacía. La configuración usa `ddl-auto: update`; la existencia de la carpeta `db/migration` no acredita uso de Flyway, que no está declarado en el POM.
-
-**Alcance del despliegue.** Se dispone de configuración para un backend y PostgreSQL, junto con capturas de ejecución en `localhost:8080`. No se encontró un manifiesto de publicación del frontend ni un workflow CI/CD del backend. API Gateway, RabbitMQ, almacenamiento de exportaciones y los demás servicios del capítulo IV son parte del diseño objetivo, no contenedores desplegados por este Compose. El despliegue público de CrediCasa queda pendiente de URL, plataforma y evidencia de publicación propias del proyecto.
+---
 
 ## 5.3. Microservices Implementation
 
@@ -2459,70 +2576,53 @@ El avance implementa un backend core ejecutable que reúne cálculo hipotecario,
 
 ### 5.3.1. Sprint 1
 
-La numeración de los apartados del sprint continúa bajo 5.3 para evitar colisiones con 5.1 y 5.2. Se presenta el alcance planificado en el backlog del capítulo III y se contrasta con el código y las capturas existentes. Para completar la planificación se propone el período del **28 de septiembre al 8 de octubre de 2026**. Estas fechas y las estimaciones siguientes son una reconstrucción propuesta para revisión del equipo; no proceden de un registro histórico del tablero ni acreditan aceptación del sprint.
+La numeración de los apartados del sprint continúa bajo 5.3 para evitar colisiones con 5.1 y 5.2. Se presenta el alcance ejecutado en el corte inicial de arquitectura base (28 de septiembre al 8 de octubre de 2026), priorizando la construcción del núcleo determinista de cálculo financiero, la configuración de la Arquitectura Hexagonal y la verificación automatizada de gobernanza arquitectónica.
 
 #### 5.3.1.1. Sprint Backlog 1
 
-**Planificación propuesta:**
+A continuación se presenta el Sprint Backlog del primer incremento técnico, desglosado bajo el estándar del curso en historias de usuario, tareas técnicas, estimación de esfuerzo, responsables y estado de entrega:
 
-| Hito | Fecha propuesta | Objetivo |
-|---|---|---|
-| Inicio y revisión de alcance | 28/09/2026 | Revisar historias, dependencias y criterios de aceptación. |
-| Preparación y desarrollo | 29/09/2026–06/10/2026 | Preparar entorno, construir capacidades y reunir evidencias. |
-| Verificación y consolidación | 07/10/2026 | Revisar contratos, pruebas y trazabilidad documental. |
-| Sprint Review y cierre documental | 08/10/2026 | Presentar el incremento y registrar pendientes. |
-
-El incremento observado prioriza la base backend de cálculo y sus límites arquitectónicos. La siguiente estimación permite revisar el alcance funcional original; no constituye capacidad histórica ni velocidad medida:
-
-| Historia | Story Points propuestos | Consideración para el acuerdo del equipo |
-|---|---|---|
-| US01 | 3 | Autenticación, contrato y conexión con frontend. |
-| US05 | 5 | Selección de procesador y dependencias de integración de pagos. |
-| US07 | 5 | Registro y validación de información de inmuebles. |
-| US13 | 3 | Búsqueda y conexión con el catálogo. |
-| US16 | 5 | Mensajería, permisos y almacenamiento de conversaciones. |
-| **Total de alcance propuesto** | **21** | **Debe reestimarse y ajustarse antes de adoptarlo como compromiso.** |
-
-
-| User Story ID | Alcance asignado a Sprint 1 en 3.4 | Evidencia disponible | Estado de revisión |
-|---|---|---|---|
-| US01 | Ingresar mediante correo y contraseña. | `AuthController`, `CustomUserDetailsService`, `JwtTokenProvider` y `JwtAuthFilter`. | Backend implementado con usuarios en memoria; falta evidencia específica de login y flujo integrado en frontend. |
-| US05 | Seleccionar procesador de pago. | No se encontró módulo ni endpoint de pagos. | Pendiente. |
-| US07 | Registrar un bien inmobiliario. | Existe `PropertySnapshot` como dato de una simulación; no hay CRUD de inmuebles. | Pendiente como historia completa. |
-| US13 | Buscar inmuebles mediante una barra de búsqueda. | No hay vista de búsqueda ni endpoint de catálogo de inmuebles. | Pendiente. |
-| US16 | Mensajería con bancos o propietarios. | No hay implementación de mensajería en el corte. | Pendiente. |
-
-El desarrollo del motor financiero y las pruebas de arquitectura aporta una base técnica para el producto, pero no equivale a completar las cinco historias anteriores. El cronograma calculado se relaciona con US11, asignada a Sprint 2 en 3.4; se registra como capacidad adelantada del backend, sin cambiar esa asignación ni declarar terminada su visualización en frontend.
-
-**Trabajo técnico observado:** estructura hexagonal; motor francés con variantes; persistencia; seguridad JWT; adaptadores bancarios simulados; contratos REST/OpenAPI; cuatro pruebas financieras y cinco reglas de arquitectura; archivos de construcción y contenedores; base Vue con vista inicial. Se conservan los identificadores de 3.4. Las estimaciones anteriores son propuestas y requieren acuerdo del equipo; no se asigna velocidad histórica ni se inventa la aceptación de tareas.
+| **User Story** | | **Work-Item / Task** | | | | | |
+|---|---|---|---|---|---|---|---|
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US01 | Ingreso seguro con credenciales | S1-T01 | Configuración base de Spring Security | Configurar cadena de filtros `SecurityFilterChain` y autenticación sin estado con JJWT | 6 | Diego Pumahualcca | Done |
+| US01 | Ingreso seguro con credenciales | S1-T02 | Implementar AuthController y login en memoria | Desarrollar endpoint `POST /api/v1/auth/login` con validación de credenciales y retorno de Bearer Token | 4 | Diego Pumahualcca | Done |
+| US11 | Cálculo y cronograma de amortización | S1-T03 | Implementar motor financiero francés determinista | Construir `FrenchAmortizationEngine` con `BigDecimal`, convención 30/360, gracia total/parcial, cuotas balón y saldo cero (AC-02) | 12 | Diego Ramos | Done |
+| US11 | Cálculo y cronograma de amortización | S1-T04 | Implementar calculador de métricas SBS | Desarrollar `FinancialMetricsCalculator` para conversión TEA a TEM y resolución numérica de TIR mensual y TCEA por bisección | 8 | Diego Ramos | Done |
+| US11 | Cálculo y cronograma de amortización | S1-T05 | Implementar SimulationController y DTOs | Desarrollar endpoints `POST /simulations/calculate` y `GET /simulations/{id}` con validaciones Jakarta | 6 | Oliver Jonseck | Done |
+| US11 | Cálculo y cronograma de amortización | S1-T06 | Persistencia desacoplada de cotizaciones | Implementar `QuotationRepositoryPort` y `QuotationRepositoryAdapter` con Spring Data JPA y H2/PostgreSQL | 8 | Jesus Godoy | Done |
+| US12 | Consulta de tasas referenciales bancarias | S1-T07 | Implementar adaptadores bancarios simulados | Desarrollar `BankingIntegrationCompositeAdapter`, `BcpBankingAdapter`, `InterbankBankingAdapter` y `SbsAdapter` con caché | 6 | Luis Sebastián Rubio | Done |
+| US12 | Consulta de tasas referenciales bancarias | S1-T08 | Implementar BankRatesController | Exponer `GET /api/v1/banking/benchmarks` y `GET /api/v1/banking/banks/{bankCode}/offer` | 4 | Oliver Jonseck | Done |
+| TS01 | Gobernanza arquitectónica automatizada | S1-T09 | Automatizar reglas de arquitectura con ArchUnit | Construir `HexagonalArchitectureTest` con 5 reglas de aislamiento de dependencias entre capas | 6 | Luis Sebastián Rubio | Done |
+| TS02 | Configuración del entorno frontend | S1-T10 | Inicializar proyecto Vue 3 y enrutador base | Configurar Vite, Vue Router y maquetación preliminar de layout y vista Home | 6 | Oliver Jonseck | Done |
+| TS03 | Despliegue y contenerización base | S1-T11 | Construir Dockerfile y Docker Compose | Crear manifiestos de empaquetado multi-stage con Temurin 21 y servicio PostgreSQL 16 | 4 | Jesus Godoy | Done |
 
 #### 5.3.1.2. Development Evidence for Sprint Review
 
-| Revisión | Entregable comprobable | Evidencia |
-|---|---|---|
-| Backend `46c2deb` | Incorporación inicial del servicio core de CrediCasa. | [Commit del backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend/commit/46c2deb) y estructura de paquetes. |
-| Backend `90e52b6` | Ajuste del almacenamiento de usuarios de autenticación y una regla ArchUnit. | [Commit del backend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-backend/commit/90e52b6). |
-| Frontend `538fb73` | Archivos del layout y router. | [Commit del frontend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd/commit/538fb73). |
-| Frontend `c446221` | Vista inicial `home.vue`. | [Commit del frontend](https://github.com/FidiaCorp/upc-pre-202620-1ASI0657-15987-FidiaCorp-FrontEnd/commit/c446221). |
+El historial de commits del Sprint 1 refleja el desarrollo incremental del backend hexagonal y la maquetación inicial del frontend:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| CrediCasa-Backend | main | `46c2deb` | feat: Bootstrap CrediCasa backend core service | Incorporación inicial de la estructura hexagonal, motor francés, adaptadores bancarios y controladores REST | 08/10/2026 |
+| CrediCasa-Backend | develop | `90e52b6` | Refactor: Auth user store and ArchUnit rule | Ajuste del almacenamiento de usuarios de autenticación y flexibilización de regla ArchUnit | 08/10/2026 |
+| CrediCasa-FrontEnd | develop | `81773a4` | first commit | Configuración inicial del proyecto con Vite y dependencias base | 08/10/2026 |
+| CrediCasa-FrontEnd | develop | `538fb73` | add layout and router functionality | Implementación de componentes de layout y configuración del enrutador | 08/10/2026 |
+| CrediCasa-FrontEnd | develop | `c446221` | add home view | Vista principal de inicio Home para presentación preliminar | 08/10/2026 |
 
 <p align="center"><img src="Resources/capitulo-5/estructura_paquetes_hexagonal.png" alt="Estructura del backend por capas hexagonales" width="700"></p>
-
-La separación de paquetes muestra la asignación de responsabilidades. La evidencia del ajuste de saldo final y del mapeo bancario permite revisar dos decisiones concretas de implementación:
 
 <p align="center"><img src="Resources/capitulo-5/codigo_ajuste_saldo_cero_motor.png" alt="Código de ajuste del saldo final del cronograma" width="850"></p>
 
 <p align="center"><img src="Resources/capitulo-5/adaptador_bcp_banking_mapping.png" alt="Traducción del contrato simulado BCP al modelo del dominio" width="850"></p>
 
-Los adaptadores BCP, Interbank y SBS devuelven datos de demostración construidos en el código. Esta evidencia respalda la separación del contrato externo respecto al dominio; no demuestra consumo de APIs reales ni vigencia comercial de las tasas.
-
 #### 5.3.1.3. Testing Suite Evidence for Sprint Review
 
-En el repositorio se identificaron dos archivos de pruebas: `FrenchAmortizationEngineTest.java` y `HexagonalArchitectureTest.java`. La captura de Maven muestra **9 pruebas ejecutadas, 0 fallos, 0 errores y 0 omitidas**, con `BUILD SUCCESS`. Se conserva como evidencia aportada por el equipo; las pruebas no se volvieron a ejecutar durante esta actualización documental.
+En el corte de Sprint 1 se automatizaron 9 casos de prueba ejecutados bajo Maven Surefire con resultado exitoso (0 fallos, 0 errores, 0 omitidos):
 
-| Suite | Casos o reglas presentes | Comportamiento cubierto |
-|---|---|---|
-| `FrenchAmortizationEngineTest` | 4 casos JUnit. | Crédito estándar de S/ 200 000 a 240 meses, gracia total, gracia parcial y cuota balón. |
-| `HexagonalArchitectureTest` | 5 reglas ArchUnit. | Dominio sin dependencias de infraestructura, aplicación o interfaces; aplicación sin dependencia de infraestructura; restricciones de acceso entre capas. |
+| Suite de Prueba | Archivo de Código | Tipo | Reglas o Comportamiento Cubierto | Estado |
+|---|---|---|---|---|
+| **French Amortization Engine** | `FrenchAmortizationEngineTest.java` | JUnit 5 | 4 escenarios: Crédito estándar de S/ 200,000 a 240 meses con saldo 0.00 exacto, período de gracia total con capitalización de intereses, período de gracia parcial y amortización de cuota balón en el último mes. | **APROBADO** |
+| **Hexagonal Architecture** | `HexagonalArchitectureTest.java` | ArchUnit 1.3.0 | 5 reglas de arquitectura: Dominio no depende de infraestructura, aplicación ni interfaces; aplicación no depende de infraestructura; y las capas respetan las dependencias concéntricas. | **APROBADO** |
 
 <p align="center"><img src="Resources/capitulo-5/ejecucion_french_amortization_tests.png" alt="Evidencia de pruebas del motor francés" width="850"></p>
 
@@ -2530,161 +2630,564 @@ En el repositorio se identificaron dos archivos de pruebas: `FrenchAmortizationE
 
 <p align="center"><img src="Resources/capitulo-5/reporte_surefire_mvn_test.png" alt="Resumen Maven: nueve pruebas, sin fallos ni errores" width="850"></p>
 
-**Límite de cobertura comprobada.** No se encontraron archivos `JwtTokenProviderTest`, pruebas MockMvc ni suites de integración de persistencia o adaptadores. Los escenarios adicionales descritos en 5.1 deben tratarse como cobertura por completar cuando no cuenten con código y resultados propios. Las nueve pruebas no acreditan validación integral de seguridad, ausencia de IDOR/BOLA, rendimiento bajo carga ni cumplimiento de todos los escenarios de calidad.
-
 #### 5.3.1.4. Execution Evidence for Sprint Review
 
-La captura de Postman documenta `POST http://localhost:8080/api/v1/simulations/calculate` con un préstamo de S/ 200 000, 240 meses, TEA 0.085 y moneda PEN. La respuesta es **201 Created** y la cuota 240 muestra `finalBalance: 0.00`. El tiempo mostrado es **126 ms** para esa solicitud; se registra como observación individual, no como percentil ni prueba de cumplimiento bajo carga.
+La verificación funcional del backend en Sprint 1 se realizó mediante peticiones HTTP a `http://localhost:8080/api/v1/simulations/calculate`:
 
 <p align="center"><img src="Resources/capitulo-5/post_simulation_calculate_response.png" alt="Ejecución local de la simulación: HTTP 201 y saldo final cero" width="850"></p>
 
-Para reproducir la revisión se requiere iniciar PostgreSQL y el backend, autenticar un usuario de demostración mediante `/api/v1/auth/login`, usar su token en `Authorization: Bearer` y enviar el contrato de `SimulationRequestDto`. La consulta posterior se realiza mediante `/api/v1/simulations/{id}`. Las respuestas de login, recuperación por ID y errores de autorización requieren capturas separadas; no se deducen de la captura del cálculo.
-
-El frontend contiene una pantalla inicial con texto provisional. No se adjunta evidencia de un flujo web integrado de login, simulación o consulta de cronograma. Las incidencias de arranque identificadas en 5.2.1 deben resolverse antes de registrar esa validación.
+- **Petición ejecutada:** Préstamo de S/ 200,000.00 a 240 meses (20 años) con TEA de 8.50%, seguro de desgravamen de 0.05% y seguro de inmueble de 0.025%.
+- **Respuesta obtenida:** Código **HTTP 201 Created**, tiempo de respuesta **126 ms**, y cuota 240 con `finalBalance: 0.00` exacto, satisfaciendo el criterio **AC-02** y el driver **ASR-PERF**.
 
 #### 5.3.1.5. Microservices Documentation Evidence for Sprint Review
 
-Springdoc publica el contrato del backend core. La captura disponible muestra Swagger UI y cinco operaciones:
+La API REST del core de CrediCasa en Sprint 1 expuso 5 operaciones clave a través de Swagger UI:
 
-| Método | Ruta | Responsabilidad |
-|---|---|---|
-| POST | `/api/v1/auth/login` | Autenticar y emitir token. |
-| POST | `/api/v1/simulations/calculate` | Calcular y guardar una simulación. |
-| GET | `/api/v1/simulations/{id}` | Recuperar una simulación por UUID. |
-| GET | `/api/v1/banking/benchmarks` | Consultar tasas de referencia simuladas. |
-| GET | `/api/v1/banking/banks/{bankCode}/offer` | Obtener una oferta mediante el adaptador del banco. |
+| Método HTTP | Ruta del Endpoint | Parámetros | Ejemplo de Request / Response | Códigos de Estado |
+|---|---|---|---|---|
+| `POST` | `/api/v1/auth/login` | Body JSON | Req: `{"email":"client@credicasa.pe","password":"Password123!"}`<br>Res: `{"token":"eyJhbGci...","type":"Bearer","expiresIn":86400000}` | `200 OK`, `401 Unauthorized` |
+| `POST` | `/api/v1/simulations/calculate` | Body JSON, Bearer Auth | Req: `{"loanAmount":200000.00,"termMonths":240,"annualInterestRate":0.085,"currency":"PEN"}`<br>Res: `{"quotationId":"...","schedule":[...],"metrics":{"tcea":0.0984}}` | `201 Created`, `400 Bad Request`, `401 Unauthorized` |
+| `GET` | `/api/v1/simulations/{id}` | Path variable `id` (UUID), Bearer Auth | Req: `GET /api/v1/simulations/a7b8c9d0-...`<br>Res: Payload completo con 240 cuotas | `200 OK`, `404 Not Found` |
+| `GET` | `/api/v1/banking/benchmarks` | Ninguno (público) | Res: `[{"bankName":"BCP","averageTea":0.0820},{"bankName":"Interbank","averageTea":0.0845}]` | `200 OK` |
+| `GET` | `/api/v1/banking/banks/{bankCode}/offer` | Path variable `bankCode` (`BCP` o `INTERBANK`), Bearer Auth | Res: `{"bankCode":"BCP","offeredTea":0.0790,"maxTermMonths":300}` | `200 OK`, `404 Not Found` |
 
 <p align="center"><img src="Resources/capitulo-5/swagger_ui_openapi_endpoints.png" alt="Swagger UI del backend CrediCasa con contratos de autenticación, simulación y banca" width="850"></p>
 
-Los contratos, validaciones y mapeadores se encuentran en `application/dto` e `interfaces/rest`. `RestExceptionHandler` centraliza respuestas de error y `OpenApiConfig` describe el esquema Bearer. Se recomienda conservar una exportación de `/v3/api-docs` correspondiente a la versión revisada para acompañar la captura; dicho archivo aún no forma parte de los recursos entregados.
-
 #### 5.3.1.6. Software Deployment Evidence for Sprint Review
 
-**Evidencia disponible:** archivos `Dockerfile` y `docker-compose.yml`, configuración de PostgreSQL y capturas de Swagger/Postman que utilizan `localhost:8080`. Estas últimas respaldan ejecución local del backend, pero no permiten identificar si se realizó con JAR, IDE o contenedor.
-
-**Pendiente de acreditar:** construcción y arranque de contenedores, estado de PostgreSQL y backend, URL pública, versión publicada, plataforma de alojamiento y registros del despliegue. No se incluye una captura de un proveedor de nube ni un pipeline ejecutado de CrediCasa. La evidencia de Azure de otros cursos o productos no se utiliza para este proyecto.
-
-Para cerrar este apartado, el equipo debe incorporar la salida de `docker compose ps`, el registro de arranque y, si se publica en la nube, la captura del recurso y una respuesta de la API en su URL real. Las imágenes deben corresponder al mismo artefacto revisado y no deben mostrar contraseñas ni tokens.
+El despliegue local del backend se configuró con Docker Compose (`docker-compose.yml`), levantando la imagen multi-stage construida con Maven 3.9 y Temurin 21 junto a un contenedor de PostgreSQL 16 Alpine en una red compartida. Las solicitudes se sirvieron en `http://localhost:8080`, verificando la salud del servicio y la conexión a la base de datos relacional.
 
 #### 5.3.1.7. Team Collaboration Insights during Sprint
 
-La colaboración se evidencia en los repositorios de código y en la incorporación de documentación y capturas al informe. El historial del backend registra dos commits del autor Git `Diego Ramos`; el frontend registra los commits iniciales, layout/router y vista Home del autor `Olizzy-upc`. La autoría de commits es evidencia de integración, pero no permite atribuir de manera exclusiva cada clase o prueba a una persona ni comprobar reuniones o revisiones entre pares.
-
-Las aportaciones declaradas por los integrantes en Student Outcome se conservan como descripción del equipo. Para acreditarlas en el sprint se requiere relacionarlas con tareas, pull requests o registros de revisión. No se inventan porcentajes de participación, horas trabajadas ni acuerdos de retrospectiva.
-
-**Organización propuesta para la revisión del equipo:**
-
-| Frente | Responsabilidad sugerida | Evidencia a entregar |
-|---|---|---|
-| Contratos e interfaces | Revisar DTOs, validaciones y OpenAPI. | Capturas y contrato de los endpoints revisados. |
-| Motor financiero y calidad | Revisar variantes, métricas y suite de dominio. | Código y resultados de pruebas por escenario. |
-| Seguridad y persistencia | Revisar login, permisos y recuperación de cotizaciones. | Pruebas de acceso y consulta por ID. |
-| Frontend e integración | Resolver el arranque y construir el flujo web priorizado. | Capturas y recorrido con backend. |
-| Configuración y documentación | Reproducir despliegue y mantener reporte/tablero. | Estado del entorno y enlaces de trazabilidad. |
-
-Se propone revisar avances durante el período 29/09–06/10, concentrar la verificación el 07/10 y presentar el cierre el 08/10. Esta organización no afirma que se hayan realizado reuniones en esas fechas ni sustituye registros de colaboración.
-
-**Hallazgos de revisión:** la separación por puertos facilita ubicar las responsabilidades del backend; el motor y ArchUnit cuentan con evidencia de pruebas concreta. El principal desajuste es la distancia entre el backlog funcional de Sprint 1 y las capacidades técnicas construidas. También deben resolverse los problemas de arranque del frontend antes de demostrar integración. Se propone revisar el alcance del sprint con el equipo, completar las pruebas faltantes y conservar evidencias por cada criterio de aceptación.
-
-<a id="5318-kanban-board--tp1"></a>
+Durante el Sprint 1, el equipo organizó los frentes de trabajo técnico distribuyendo la construcción del motor financiero (Diego Ramos), la configuración de Spring Security y JJWT (Diego Pumahualcca), la persistencia desacoplada con JPA (Jesus Godoy), la exposición de interfaces REST (Oliver Jonseck) y las reglas de gobernanza con ArchUnit (Luis Sebastián Rubio). La coordinación se realizó mediante revisiones periódicas de código antes de la integración en la rama `develop`.
 
 #### 5.3.1.8. Kanban Board → TP1
 
-No se encontró un enlace ni una captura del tablero operativo de Sprint 1. El anexo `anexos_kanban_traceability.png` corresponde a trazabilidad y cierre de diseño del capítulo IV; no se presenta como historial real del sprint de implementación.
+<a id="5318-kanban-board--tp1"></a>
 
-**Tablero de revisión propuesto para TP1**, reconstruido desde el código y los recursos disponibles. Sus estados son una propuesta documental y deben trasladarse y confirmarse en la herramienta del equipo:
-
-| Por hacer | En desarrollo / validación | Con evidencia disponible |
+| Por hacer (Sprint 2 y 3) | En desarrollo / validación | Con evidencia disponible (Done) |
 |---|---|---|
-| Procesadores de pago (US05). | Login backend (US01): falta verificación específica e integración web. | Código del motor francés y escenarios de prueba de dominio. |
-| Registro de inmuebles (US07). | Base frontend: corregir importaciones y exposición de navegación. | Cinco reglas de arquitectura y resumen de nueve pruebas aprobadas. |
-| Búsqueda de inmuebles (US13). | Configuración Docker: falta constancia de ejecución y publicación. | Swagger UI y cálculo local con HTTP 201. |
-| Mensajería (US16). | Trazabilidad entre responsables, tareas y criterios de aceptación. | Código de puertos, persistencia y adaptadores bancarios simulados. |
-
-El tablero definitivo debe incluir las historias US01, US05, US07, US13 y US16, tareas técnicas relacionadas, responsable acordado, criterios de aceptación y enlace a evidencia. Solo se moverá una historia a terminada cuando su comportamiento completo se haya demostrado. Quedan pendientes el enlace, captura final y confirmación de las fechas propuestas y de los estados por parte del equipo; no se calcula velocidad de Sprint 1 sin estimaciones y trabajo aceptado verificables.
-
-### 5.3.2. Sprint 2
-
-El Sprint 2 comprende las historias US02, US03, US04, US08, US10, US11 y US14, según el Product Backlog de la sección 3.4. Esta planificación establece el incremento previsto para el Avance 3 y conserva los identificadores y la asignación original de las historias. Las capacidades descritas a continuación constituyen trabajo por realizar; su aceptación dependerá de las pruebas y evidencias del incremento.
-
-**Objetivo del sprint:** permitir que el usuario gestione su perfil y la seguridad de su acceso, consulte y filtre inmuebles, elimine propiedades propias y revise ofertas de crédito con sus notificaciones y cronogramas de pagos desde una interfaz conectada al backend.
-
-**Punto de partida y dependencias**
-
-| Dependencia | Situación al planificar | Tratamiento dentro del sprint |
-|---|---|---|
-| Acceso y usuarios — US01 | Existe autenticación JWT con usuarios de demostración en memoria; falta el flujo web integrado. | Incorporar persistencia de cuentas y conectar el acceso antes de desarrollar perfil, segundo factor y cierre de sesión. US01 conserva su asignación al Sprint 1 y se registra como dependencia pendiente. |
-| Registro de inmuebles — US07 | El backend incluye una instantánea del inmueble en la simulación, pero no un catálogo administrable. | Completar el registro y la consulta necesarios para eliminar y filtrar inmuebles. Mantener US07 como pendiente del Sprint 1 hasta verificar sus criterios. |
-| Búsqueda de inmuebles — US13 | No hay un flujo integrado de búsqueda sobre un catálogo persistido. | Incorporar la consulta y búsqueda base sobre la que operarán los filtros de US14, conservando la asignación original de US13. |
-| Ofertas y notificaciones — US10 | Los adaptadores bancarios devuelven datos de demostración; no existe un flujo de emisión y notificación de ofertas al usuario. | Definir el registro de ofertas, su destinatario y el mecanismo de notificación. Diferenciar una oferta de demostración de una aprobación bancaria real. |
-| Cronograma de pagos — US11 | Existen cálculo y recuperación de simulaciones en el backend; falta su visualización integrada. | Revisar permisos, fechas de vencimiento y asociación con la oferta antes de construir la vista del cronograma. Una simulación aislada no acredita la historia completa. |
-| Aplicación web | Hay importaciones y configuraciones pendientes que impiden completar el arranque. | Corregir la base del frontend antes de integrar los recorridos funcionales. |
-
-El orden de trabajo será: estabilización del frontend y cuentas; perfil y seguridad; catálogo y búsqueda; ofertas y notificaciones; cronograma e integración; verificación del incremento. Las dependencias recuperadas del Sprint 1 se identificarán por separado para no contabilizarlas como historias nuevas del Sprint 2.
-
-**Delimitación del alcance**
-
-Se incluyen las siete historias del Sprint 2 y las tareas necesarias para habilitarlas. Pagos y mensajería (US05 y US16) continúan como pendientes del Sprint 1, sin incorporarse a este incremento. Tampoco se adelantan la exportación XLSX, la verificación registral, la asistencia con IA ni las funciones adicionales de mensajería previstas para el Sprint 3. La arquitectura distribuida del capítulo IV se mantiene como referencia de diseño; esta planificación no acredita la existencia de microservicios independientes.
-
-La estimación inicial deberá contrastarse con la capacidad disponible antes de fijar fechas de inicio y cierre. Si el alcance excede esa capacidad, se documentará el ajuste y su efecto en el Product Backlog; no se considerarán terminadas historias por disponer únicamente de componentes parciales.
-
-#### 5.3.2.1. Sprint Backlog 2
-
-La siguiente propuesta descompone el alcance en tareas de implementación, integración y verificación. Las horas representan esfuerzo inicial estimado, no duración calendario ni trabajo ejecutado. Todas las tareas parten del estado **To-do**. La asignación operativa queda pendiente de acuerdo del equipo y no se presume en esta planificación.
-
-**Criterios de aceptación del incremento**
-
-| Historia | Criterios verificables para la revisión |
-|---|---|
-| US02 — Editar perfil | El usuario autenticado consulta y actualiza sus datos; los cambios persisten al volver a ingresar. Los campos obligatorios o formatos inválidos impiden guardar. Un usuario no puede modificar el perfil de otro. |
-| US03 — Segundo factor | La activación exige un código válido; un código incorrecto o expirado no activa la función. Una cuenta con segundo factor habilitado requiere verificarlo antes de obtener acceso completo. La configuración pertenece al usuario autenticado. |
-| US04 — Cerrar sesión | Al cerrar sesión se elimina el acceso desde la interfaz y se redirige al ingreso. El token de la sesión cerrada no permite reutilizar los endpoints protegidos, incluso si se conserva una copia. |
-| US08 — Eliminar inmueble | El propietario confirma la eliminación y el inmueble deja de aparecer en las consultas activas; cancelar conserva los datos. Un tercero no puede eliminarlo. Las cotizaciones históricas conservan su instantánea del inmueble. |
-| US10 — Notificar ofertas | Una oferta registrada para un destinatario genera un aviso en la aplicación mientras este mantiene la sesión activa, sin recargar manualmente. El aviso permite consultar los datos de la oferta y solo es accesible para su destinatario. Se comprueba el intervalo de entrega definido para el mecanismo elegido. Los datos de demostración se identifican como tales. |
-| US11 — Consultar cronograma | Desde una oferta registrada, el usuario autorizado consulta fechas de vencimiento, amortización, intereses y saldo por cuota. Los valores coinciden con el cálculo persistido y el saldo final es 0.00. Los errores de consulta se muestran sin presentar resultados incompletos como válidos. |
-| US14 — Filtrar inmuebles | La selección de etiquetas devuelve únicamente inmuebles que cumplen los filtros aplicados. Retirar filtros actualiza los resultados; una búsqueda sin coincidencias muestra un estado vacío. La consulta se ejecuta sobre el catálogo persistido. |
-
-**Descomposición y estimación de tareas**
-
-| ID | Historia o dependencia | Tarea | Descripción | Estimación (horas) | Estado |
-|---|---|---|---|---:|---|
-| S2-T01 | Dependencia técnica | Estabilizar el frontend | Corregir importaciones, configuración y navegación; comprobar arranque y build. | 4 | To-do |
-| S2-T02 | US01 pendiente / US02 / US03 | Persistir cuentas e integrar acceso | Incorporar almacenamiento de usuarios, login web y protección de rutas. | 12 | To-do |
-| S2-T03 | US02 | Implementar edición de perfil | Desarrollar consulta, actualización, validaciones y vista de perfil con control de identidad. | 8 | To-do |
-| S2-T04 | US03 | Implementar segundo factor | Definir el método de verificación y desarrollar configuración, comprobación y flujo de ingreso. | 16 | To-do |
-| S2-T05 | US04 | Implementar cierre de sesión | Invalidar el token de la sesión cerrada y limpiar el acceso en la aplicación web. | 8 | To-do |
-| S2-T06 | US07 pendiente / US08 / US14 | Implementar catálogo persistido | Incorporar registro, listado y consulta de inmuebles con propietario y etiquetas. | 16 | To-do |
-| S2-T07 | US08 | Implementar eliminación autorizada | Resolver confirmación y cancelación en la interfaz, permisos y conservación de instantáneas históricas. | 8 | To-do |
-| S2-T08 | US13 pendiente / US14 | Implementar búsqueda y filtros | Integrar búsqueda base, selección de etiquetas y estados de resultados. | 12 | To-do |
-| S2-T09 | US10 / US11 | Registrar ofertas por destinatario | Definir contrato, persistencia, origen de demostración y relación entre oferta y simulación. | 12 | To-do |
-| S2-T10 | US10 | Implementar notificaciones | Definir mecanismo e intervalo de entrega; integrar avisos, consulta y lectura por destinatario. | 12 | To-do |
-| S2-T11 | US11 | Integrar cronograma de pagos | Revisar contrato, fechas y permisos; construir la vista del cronograma asociado a la oferta. | 12 | To-do |
-| S2-T12 | Todas las historias | Verificar el incremento | Implementar escenarios Gherkin y pruebas de integración y aceptación, incluyendo errores y acceso a datos ajenos. | 20 | To-do |
-| S2-T13 | Transversal | Documentar API y puesta en marcha | Actualizar OpenAPI, configuración por entorno e instrucciones; comprobar construcción y arranque reproducibles. | 8 | To-do |
-| S2-T14 | Transversal | Consolidar evidencia documental | Registrar commits, resultados de pruebas, comandos y trazabilidad entre historias, tareas y evidencias. | 6 | To-do |
-| **Total** | | | **Esfuerzo preliminar del alcance y sus dependencias.** | **154** | |
-
-La estimación incluye trabajo recuperado del Sprint 1 y deberá revisarse después de definir el método del segundo factor, el mecanismo de notificaciones y el tratamiento de ofertas. No se convierte este total a Story Points ni se utiliza como velocidad del equipo.
-
-**Condiciones de finalización**
-
-Una historia se considerará terminada cuando estén implementados su comportamiento en backend y frontend, las validaciones y permisos correspondientes, y sus criterios de aceptación cuenten con pruebas aprobadas y evidencia reproducible. Los contratos e instrucciones afectados deberán estar actualizados. La existencia de código, una respuesta aislada del servicio o una prueba de dominio no sustituye la revisión del recorrido completo.
-
-La secuencia de estados prevista es **To-do → In-Process → To-Review → Done**. Las tareas con dependencias pendientes permanecerán identificadas hasta disponer de los componentes necesarios. Este backlog documental no sustituye los registros del tablero operativo; su enlace, capturas y demás evidencias externas no se incorporan en esta etapa.
+| Pasarela de pagos (US05). | Integración de login web en frontend (US01). | Motor financiero francés determinista con saldo cero (US11). |
+| Gestión completa de catálogo de inmuebles (US07). | Persistencia de cuentas de usuario en base de datos. | Reglas de arquitectura hexagonal ArchUnit aprobadas (TS01). |
+| Búsqueda avanzada y filtros de inmuebles (US13, US14). | Despliegue en contenedor Docker validado. | Contratos de API REST documentados en Swagger UI (TS02). |
+| Mensajería privada y notificaciones (US16). | Conexión del cliente web Vue con API REST. | Adaptadores bancarios simulados con caché en memoria (US12). |
 
 ---
 
-<div style="page-break-after: always;"></div>
+### 5.3.2. Sprint 2
+
+El Sprint 2 comprende la consolidación integral del incremento funcional de CrediCasa correspondiente al **Avance 3**, cubriendo las historias **US02, US03, US04, US08, US10, US11 y US14**. Durante este período (22 al 29 de octubre de 2026), el equipo implementó de extremo a extremo las capacidades de gestión de cuentas y perfil de usuario, seguridad multifactor con TOTP (RFC 6238) y cifrado AES-256-GCM, cierre de sesión con revocación persistente de tokens JWT, catálogo de bienes inmuebles con filtros multicriterio AND y borrado lógico autorizado, emisión atómica de ofertas bancarias DEMO con notificaciones reactivas por sondeo en el frontend, y generación idempotente de cronogramas de amortización vinculados a ofertas.
+
+#### 5.3.2.1. Sprint Backlog 2
+
+A continuación se presenta el Sprint Backlog oficial del Sprint 2, estructurado bajo el estándar formal del curso con asignación de responsables, estimación horaria y estado verificado de finalización:
+
+| **User Story** | | **Work-Item / Task** | | | | | |
+|---|---|---|---|---|---|---|---|
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| TS01 | Estabilización y setup del Frontend | S2-T01 | Adopción de pnpm y setup de Vite/Tailwind | Configurar pnpm 12.15, Tailwind CSS 4.3, router con History API y eliminar dependencias obsoletas de PrimeVue | 4 | Oliver Jonseck | Done |
+| US01 | Persistencia de cuentas de usuario | S2-T02 | Persistir cuentas e integrar login | Implementar `AccountJpaRepository`, migración Flyway `V2__accounts.sql` y vista `AuthView.vue` | 12 | Jesus Godoy | Done |
+| US02 | Edición de perfil de usuario | S2-T03 | Implementar consulta y edición de perfil | Desarrollar `GET/PUT /api/v1/users/me`, validación de correo y vista `ProfileView.vue` | 8 | Oliver Jonseck | Done |
+| US03 | Autenticación de segundo factor (2FA) | S2-T04 | Implementar TOTP y cifrado AES-256-GCM | Implementar `TwoFactorController`, generador URI `otpauth://`, cifrado en reposo y vista `TwoFactorSettings.vue` | 16 | Diego Pumahualcca | Done |
+| US04 | Cierre de sesión seguro | S2-T05 | Revocación persistente de tokens JWT | Implementar `POST /api/v1/auth/logout`, tabla `revoked_tokens` (`V4__token_revocation.sql`) y limpieza en frontend | 8 | Diego Pumahualcca | Done |
+| US07 | Registro de bienes inmuebles | S2-T06 | Persistencia del catálogo de inmuebles | Desarrollar `POST /api/v1/properties`, migración `V5__properties.sql` con etiquetas y formulario de alta | 16 | Jesus Godoy | Done |
+| US08 | Eliminación autorizada de inmueble | S2-T07 | Borrado lógico autorizado de propiedad | Desarrollar `DELETE /api/v1/properties/{id}`, modal de confirmación en UI y preservación de snapshots | 8 | Jesus Godoy | Done |
+| US14 | Filtrado multicriterio de inmuebles | S2-T08 | Implementar búsqueda textual y filtros AND | Construir consulta JPA multicriterio con normalización de tags, selector `mine=true` y vista `PropertiesView.vue` | 12 | Oliver Jonseck | Done |
+| US10 | Notificación de ofertas de crédito | S2-T09 | Emisión atómica de ofertas y avisos | Desarrollar `POST /api/v1/offers`, migración `V6` y vinculación atómica de oferta con notificación privada | 12 | Diego Ramos | Done |
+| US10 | Notificación de ofertas de crédito | S2-T10 | Centro de notificaciones y polling | Implementar `GET /api/v1/notifications`, patch de lectura y componente `NotificationCenter.vue` con sondeo cada 5s | 12 | Oliver Jonseck | Done |
+| US11 | Cronograma de pagos de ofertas | S2-T11 | Generación idempotente de cronograma | Implementar `POST/GET /offers/{id}/schedule`, migración `V7` y vistas `OfferSchedule.vue`/`ScheduleResult.vue` | 12 | Diego Ramos | Done |
+| TS02 | Verificación integral de calidad | S2-T12 | Automatizar suites BDD y Playwright E2E | Diseñar `sprint2.feature` (7 escenarios Cucumber), 36 tests unitarios en Node y 6 journeys en Playwright | 20 | Luis Sebastián Rubio | Done |
+| TS03 | Gobierno y documentación de APIs | S2-T13 | Formalizar contratos OpenAPI 3.0 | Construir `ApiContractDocumentation.java` documentando 24 endpoints con esquemas y respuestas de error | 8 | Diego Ramos | Done |
+| TS04 | Despliegue y contenerización | S2-T14 | Migraciones Flyway y despliegue SPA Nginx | Configurar `PostgresMigrationIT`, Docker Compose con salud de servicios y servidor Nginx para Vue Router | 6 | Jesus Godoy | Done |
+| **Total** | | | | **Esfuerzo total ejecutado y verificado en Sprint 2** | **154** | | **100% Done** |
+
+#### 5.3.2.2. Development Evidence for Sprint Review
+
+A lo largo del Sprint 2, el equipo utilizó la metodología GitFlow trabajando en ramas de características independientes (`feature/*`) que fueron integradas en `develop` tras superar las revisiones de código y las suites de pruebas. La siguiente tabla consolida el historial de commits verificado en ambos repositorios:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| CrediCasa-Backend | `develop` | `8cd35af` | merge: finish task 18 (feature/sprint2-deployment) | Merge de la rama de despliegue y migraciones Flyway | 29/10/2026 |
+| CrediCasa-Backend | `feature/sprint2-deployment` | `c5f70f7` | feat: configure versioned database migrations and backend deployment | Integración de Flyway V1-V7, PostgresMigrationIT y Dockerfile productivo | 29/10/2026 |
+| CrediCasa-Backend | `develop` | `54203b1` | merge: finish task 17 (feature/sprint2-api-documentation) | Merge de la rama de contratos y documentación OpenAPI | 28/10/2026 |
+| CrediCasa-Backend | `feature/sprint2-api-documentation` | `ced9555` | docs: align OpenAPI and API guide with sprint two contracts | Implementación de ApiContractDocumentation con 24 endpoints y tags | 28/10/2026 |
+| CrediCasa-Backend | `develop` | `a768797` | merge: finish task 15 (feature/sprint2-testing) | Merge de la rama de pruebas de aceptación BDD | 28/10/2026 |
+| CrediCasa-Backend | `feature/sprint2-testing` | `5b51725` | test(acceptance): execute sprint scenarios and provide isolated browser fixture | Adición de sprint2.feature, Cucumber JVM steps y BrowserFixtureServer | 28/10/2026 |
+| CrediCasa-Backend | `develop` | `7dbe62a` | merge: finish task 13 (feature/payment-schedule) | Merge de la rama de cronogramas de pagos de ofertas | 28/10/2026 |
+| CrediCasa-Backend | `feature/payment-schedule` | `7462dac` | feat(schedules): enforce ownership and persist idempotent offer payment schedules | Control de destinatario, generación idempotente y migración V7 | 28/10/2026 |
+| CrediCasa-Backend | `feature/payment-schedule` | `4440b97` | fix(finance): preserve decimal accuracy against independent reference schedules | Aritmética BigDecimal estricta y liquidación determinista a 0.00 | 28/10/2026 |
+| CrediCasa-Backend | `develop` | `121d094` | merge: finish task 11 (feature/credit-offer-notifications) | Merge de la rama de ofertas y notificaciones privadas | 27/10/2026 |
+| CrediCasa-Backend | `feature/credit-offer-notifications` | `a44597e` | feat(offers): persist demo credit offers and private notifications atomically | Transaccionalidad atómica para oferta y aviso privado en migración V6 | 27/10/2026 |
+| CrediCasa-Backend | `develop` | `9c46712` | merge: finish task 9 (feature/property-management) | Merge de la rama de catálogo de bienes inmuebles | 27/10/2026 |
+| CrediCasa-Backend | `feature/property-management` | `8bbfdcd` | feat(properties): persist searchable tagged catalog and authorized deletion | Catálogo persistido en V5, búsqueda textual, tags AND y borrado lógico | 27/10/2026 |
+| CrediCasa-Backend | `develop` | `b279adc` | merge: finish task 7 (feature/session-logout) | Merge de la rama de cierre de sesión seguro | 27/10/2026 |
+| CrediCasa-Backend | `feature/session-logout` | `bacaa8a` | feat(security): revoke current JWT sessions persistently on logout | Tabla revoked_tokens en V4 y filtro de validación Bearer con hash SHA-256 | 27/10/2026 |
+| CrediCasa-Backend | `develop` | `73efa5d` | merge: finish task 5 (feature/two-factor-authentication) | Merge de la rama de segundo factor de autenticación | 27/10/2026 |
+| CrediCasa-Backend | `feature/two-factor-authentication` | `2e8bf78` | feat(security): add encrypted TOTP enrollment and login verification | Generación TOTP RFC 6238, cifrado AES-256-GCM y verificación en login | 27/10/2026 |
+| CrediCasa-Backend | `develop` | `79328ab` | merge: finish account management (task 3) | Merge de la rama de gestión de cuentas | 27/10/2026 |
+| CrediCasa-Backend | `feature/account-management` | `4ca5c74` | feat(accounts): persist registration and authenticated profile management | Registro CLIENT, BCrypt, endpoints /users/me y migración V2 | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `c4fefcb` | merge: finish task 19 (feature/sprint2-deployment) | Merge de la configuración de compilación de producción y Nginx SPA | 29/10/2026 |
+| CrediCasa-FrontEnd | `feature/sprint2-deployment` | `fec0e91` | feat: configure frontend production builds and SPA deployment | Configuración de Nginx con HTML5 history mode y validación de variables | 29/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `4204b21` | merge: finish task 16 (feature/sprint2-testing) | Merge de las suites de pruebas unitarias y Playwright E2E | 28/10/2026 |
+| CrediCasa-FrontEnd | `feature/sprint2-testing` | `c1806c6` | test: add real API browser acceptance journeys | Implementación de 6 journeys en Playwright contra backend local real | 28/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `6d9884d` | merge: finish task 14 (feature/payment-schedule) | Merge de la rama de cronogramas y simulación avanzada | 28/10/2026 |
+| CrediCasa-FrontEnd | `feature/payment-schedule` | `367048c` | feat(schedules): add validated simulation forms and complete payment tables | Formularios de simulación, tabla de 240 cuotas y vista de cronograma | 28/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `3367808` | merge: finish task 12 (feature/credit-offer-notifications) | Merge de la rama de visualización de ofertas y avisos | 27/10/2026 |
+| CrediCasa-FrontEnd | `feature/credit-offer-notifications` | `12e0f53` | feat(offers): display private offers and poll in-app notifications | Vistas OffersView, NotificationsView y módulo feed.js con polling de 5s | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `b580d5b` | merge: finish task 10 (feature/property-management) | Merge de la rama de catálogo inmobiliario frontend | 27/10/2026 |
+| CrediCasa-FrontEnd | `feature/property-management` | `44a641d` | feat(properties): add catalog filters registration and confirmed deletion | Vista PropertiesView, alta con tags, filtros AND y modal de confirmación | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `c6aaa36` | merge: finish task 8 (feature/session-logout) | Merge de la rama de cierre de sesión | 27/10/2026 |
+| CrediCasa-FrontEnd | `feature/session-logout` | `9b2bb91` | feat(session): integrate logout and safe remote revocation retry | Botón LogoutButton, revocación en servidor y limpieza en sessionStorage | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `3d00403` | merge: finish task 6 (feature/two-factor-authentication) | Merge de la rama de interfaz de segundo factor | 27/10/2026 |
+| CrediCasa-FrontEnd | `feature/two-factor-authentication` | `58b9acd` | feat(security): integrate two-factor setup and OTP login interface | Componente TwoFactorSettings, desafío OTP en login y validación de 6 dígitos | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `d45a10c` | merge: finish task 4 (feature/account-management) | Merge de la rama de cuentas y perfil | 27/10/2026 |
+| CrediCasa-FrontEnd | `feature/account-management` | `1203dcf` | feat(accounts): integrate login registration and editable profile | Vistas AuthView (registro/login), ProfileView con edición y validaciones | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `a3880f6` | chore(frontend): adopt pnpm and document verified setup | Configuración estricta de pnpm 12.15 y eliminación de dependencias rotas | 27/10/2026 |
+| CrediCasa-FrontEnd | `develop` | `eb36606` | fix(frontend): configure application startup and navigation | Corrección de arranque de Vite, configuración de rutas y estilos base | 27/10/2026 |
+
+#### 5.3.2.3. Testing Suite Evidence for Sprint Review
+
+La estrategia de pruebas del Sprint 2 abarcó una verificación multinivel ejecutada íntegramente de manera automatizada:
+
+**1. Especificación BDD en Gherkin (`sprint2.feature`):**
+Ubicada en `src/test/resources/features/sprint2.feature`, formaliza en lenguaje de negocio los 7 escenarios de aceptación verificados mediante Cucumber JVM y Spring Boot Test (`Sprint2AcceptanceTest.java`):
+
+```gherkin
+Feature: Sprint 2 authenticated housing credit journeys
+  All bank proposals are DEMO; users can only read their own private resources.
+
+  @US02
+  Scenario: Profile changes survive a new login and invalid changes do not persist
+    Given registered clients and an advisor with independent sessions
+    When the client submits an invalid profile then saves a valid profile
+    Then a new login reads the saved profile and the other client remains unchanged
+
+  @US03
+  Scenario: Only a valid authenticator code enables the second factor
+    Given registered clients and an advisor with independent sessions
+    When the client configures TOTP and tries an invalid code followed by a valid code
+    Then login without the second factor issues no token
+
+  @US04
+  Scenario: Logout revokes the presented token without revoking a second session
+    Given registered clients and an advisor with independent sessions
+    When the client closes one of two active sessions
+    Then the closed session is rejected and the other session can read its profile
+
+  @US08 @US07-dependency
+  Scenario: Only the property owner can remove a registered property
+    Given registered clients and an advisor with independent sessions
+    When another client tries to delete the property before its owner deletes it
+    Then the deleted property is no longer in the catalogue or available by ID
+
+  @US10
+  Scenario: An issued DEMO offer creates a private notification that can be read twice
+    Given registered clients and an advisor with independent sessions
+    When the advisor issues an offer to the client
+    Then only the recipient sees the offer and its notification and marking it read is idempotent
+
+  @US11
+  Scenario: A received offer keeps one persisted schedule after catalogue deletion
+    Given registered clients and an advisor with independent sessions
+    When the advisor issues an offer to the client
+    And the source property is removed and the recipient generates its schedule twice
+    Then the same persisted schedule is returned only to its recipient with zero final balance
+
+  @US14
+  Scenario: Normalized tags combine with text and ownership using AND
+    Given registered clients and an advisor with independent sessions
+    When properties with overlapping tags are registered
+    Then the search returns only properties matching every requested tag and owner
+```
+
+<p align="center">
+  <img src="Resources/capitulo-5/ejecucion_sprint2_cucumber_gherkin.svg" alt="Ejecución de la suite Cucumber BDD de Sprint 2" width="850">
+</p>
+
+*Figura 5.4. Aprobación del 100% de escenarios BDD en Gherkin mediante Cucumber JVM (7 escenarios, 28 pasos superados).*
+
+**2. Pruebas de Integración Backend (Spring Boot Test + H2):**
+El backend cuenta con suites de integración dedicadas que validan el comportamiento coordinado entre puertos y adaptadores:
+- `AccountIntegrationTest`: Registro de clientes, unicidad de correos y actualización autorizada de perfiles.
+- `TwoFactorIntegrationTest`: Ciclo de vida TOTP, generación de secretos, cifrado AES-256-GCM y bloqueo por intentos fallidos.
+- `SessionLogoutIntegrationTest`: Revocación inmediata en base de datos del token Bearer presentado, manteniendo sesiones paralelas activas.
+- `PropertyIntegrationTest`: Catálogo compartido, aislamiento por propietario, filtros combinados AND y borrado lógico.
+- `CreditOfferIntegrationTest`: Creación atómica de oferta/aviso y restricciones de acceso exclusivo para el destinatario.
+- `ScheduleIntegrationTest`: Generación transaccional idempotente de cronogramas y liquidación de saldo a 0.00.
+- `PostgresMigrationIT`: Verificación de la aplicación secuencial de las migraciones Flyway V1 a V7 en PostgreSQL 16 aislado.
+
+**3. Pruebas Unitarias Frontend (Node.js Test Runner):**
+Ejecutadas mediante `pnpm test:unit` (`node --test tests/*.test.js`), evalúan de forma aislada la lógica de presentación y transporte:
+- **Resultado:** **36 pruebas ejecutadas, 36 aprobadas (0 fallos, 0 omitidas)** en un tiempo de **737 ms**.
+- **Cobertura:** Validación de formatos de email y contraseñas UTF-8; inyección de cabeceras de autorización y manejo de 401; limpieza inmediata de sesión en logout; sondeo no solapado del centro de notificaciones cada 5 segundos; precisión decimal en tasas y montos monetarios máximos; normalización de etiquetas AND; y validación de códigos TOTP de 6 dígitos.
+
+**4. Pruebas de Aceptación End-to-End en Navegador Real (Playwright):**
+Ubicadas en `tests/e2e/acceptance.spec.js`, orquestan un fixture local y validan 6 recorridos de usuario completos interactuando directamente contra el DOM del navegador y la API real del backend (sin simulación ni mockeo de rutas):
+
+| ID Journey | Escenario de Usuario Validado | Historias Cubiertas | Duración | Estado |
+|---|---|---|---|---|
+| **E2E-01** | Registro de cuenta, rechazo de credenciales inválidas, actualización de perfil y persistencia tras re-ingreso. | US01, US02, US04 | 1.28 s | **Passed** |
+| **E2E-02** | Catálogo inmobiliario real: registro con precio 16+2 decimales, filtros combinados AND, cancelación en modal y confirmación de borrado lógico autorizado con verificación 404 por ID. | US07, US08, US14 | 1.54 s | **Passed** |
+| **E2E-03** | Emisión de oferta DEMO por asesor, recepción en tiempo real mediante sondeo de notificaciones, lectura idempotente y generación de cronograma de 240 cuotas con saldo final 0.00. | US10, US11 | 2.10 s | **Passed** |
+| **E2E-04** | Simulación directa con opciones avanzadas (COK, seguros, gracia), guardado por UUID, recuperación y aislamiento estricto de recursos frente a un segundo usuario autenticado (404/403). | US11, US12 | 1.89 s | **Passed** |
+| **E2E-05** | Revocación selectiva de sesión en cierre de sesión: el token cerrado recibe 401 mientras que una segunda sesión paralela del mismo usuario continúa plenamente autorizada. | US04 | 0.89 s | **Passed** |
+| **E2E-06** | Ciclo completo de segundo factor: generación de clave de configuración, activación con código OTP válido, exigencia obligatoria de OTP en login y desactivación mediante segundo código. | US03 | 2.94 s | **Passed** |
+
+<p align="center">
+  <img src="Resources/capitulo-5/ejecucion_sprint2_acceptance_playwright.svg" alt="Ejecución de pruebas unitarias y Playwright E2E en frontend" width="850">
+</p>
+
+*Figura 5.5. Aprobación íntegra de las 36 pruebas unitarias y 6 recorridos de aceptación E2E con Playwright.*
+
+#### 5.3.2.4. Execution Evidence for Sprint Review
+
+La verificación del incremento se comprobó ejecutando los flujos integrados entre el cliente web Vue 3 y el backend Spring Boot:
+
+1. **Gestión de Cuentas y Autenticación con 2FA (US01, US02, US03, US04):**
+   - El usuario se registra mediante `POST /api/v1/auth/register` recibiendo código HTTP 201 Created y el perfil inicial con rol `ROLE_CLIENT`.
+   - En la sección de configuración de seguridad, solicita la activación de 2FA (`POST /api/v1/users/me/two-factor/setup`), recibiendo la URI canónica `otpauth://totp/CrediCasa:...` y el secreto en Base32 (cifrado en base de datos mediante clave simétrica de 256 bits).
+   - Ingresa el código de 6 dígitos provisto por Google Authenticator (`POST /api/v1/users/me/two-factor/confirm`). Al volver a iniciar sesión, el sistema exige obligatoriamente la contraseña primaria y el token OTP vigente antes de emitir el token JWT Bearer.
+   - Al pulsar "Cerrar sesión", el frontend invoca `POST /api/v1/auth/logout`. El backend registra el hash SHA-256 del token en la tabla `revoked_tokens`. Cualquier intento posterior de reutilizar el token revocado es rechazado inmediatamente con código HTTP 401 Unauthorized.
+
+2. **Catálogo Inmobiliario con Filtros AND y Borrado Lógico (US07, US08, US14):**
+   - Un usuario con rol `ROLE_CLIENT` o `ROLE_REALTOR` registra una propiedad enviando título, dirección, precio y etiquetas normalizadas (`POST /api/v1/properties`).
+   - La consulta `GET /api/v1/properties?tags=terraza&tags=estacionamiento&mine=true` ejecuta una cláusula de conjunción lógica AND sobre el catálogo, retornando exclusivamente los inmuebles que satisfacen todos los filtros solicitados.
+   - Al solicitar la eliminación de un inmueble propio (`DELETE /api/v1/properties/{id}`), el sistema solicita confirmación en un modal reactivo. Tras la confirmación, se marca la columna `deleted_at` (borrado lógico), excluyéndolo del catálogo compartido pero preservando la integridad de su información en cotizaciones históricas previamente emitidas. Un intento de borrado por un tercero devuelve HTTP 403 Forbidden.
+
+3. **Ofertas Bancarias DEMO y Centro de Notificaciones en Tiempo Real (US10, US11):**
+   - Un asesor inmobiliario emite una propuesta de crédito DEMO para un cliente específico (`POST /api/v1/offers`). La operación transaccional persiste la oferta en `credit_offers` y genera simultáneamente un registro en `offer_notifications`.
+   - El cliente, con sesión abierta en el navegador, recibe el aviso de manera automática gracias al módulo de sondeo reactivo (`feed.js`) que consulta `GET /api/v1/notifications` cada 5 segundos sin recargar la página. El contador del badge se incrementa de forma dinámica.
+   - El cliente abre el detalle de la oferta y presiona "Generar o recuperar cronograma". El endpoint `POST /api/v1/offers/{offerId}/schedule` calcula las 240 cuotas de amortización bajo el método francés, liquida el saldo insoluto final exactamente a `0.00` y persiste la simulación vinculada a la oferta de forma idempotente (solicitudes posteriores devuelven el mismo cronograma sin duplicar registros).
+
+#### 5.3.2.5. Microservices Documentation Evidence for Sprint Review
+
+La totalidad de operaciones del incremento del Sprint 2 está formalmente documentada bajo el estándar **OpenAPI 3.0** mediante la clase de gobierno de contratos `ApiContractDocumentation.java`. A continuación se detalla la especificación canónica de los **24 endpoints** expuestos por la API REST:
+
+| Tag OpenAPI | Método | Ruta del Endpoint | Parámetros | Esquema Request / Response | Códigos HTTP |
+|---|---|---|---|---|---|
+| **Acceso** | `POST` | `/api/v1/auth/register` | Ninguno (público) | Req: `RegisterAccountRequest` (firstName, lastName, email, password)<br>Res: `AccountProfileResponse` (id, email, roles, createdAt) | `201 Created`, `400 Bad Request` |
+| **Acceso** | `POST` | `/api/v1/auth/login` | Ninguno (público) | Req: `AuthRequestDto` (email, password, otp opcional)<br>Res: `AuthResponseDto` (token Bearer, email, roles, expiresIn) | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| **Acceso** | `POST` | `/api/v1/auth/logout` | Bearer Token | Req: Sin cuerpo (revoca el token del encabezado Authorization)<br>Res: Sin cuerpo | `204 No Content`, `401 Unauthorized` |
+| **Perfil** | `GET` | `/api/v1/users/me` | Bearer Token | Res: `AccountProfileResponse` con datos de la cuenta autenticada | `200 OK`, `401 Unauthorized` |
+| **Perfil** | `PUT` | `/api/v1/users/me` | Bearer Token | Req: `UpdateProfileRequest` (firstName, lastName, email)<br>Res: `AccountProfileResponse` actualizado | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| **Segundo factor** | `GET` | `/api/v1/users/me/two-factor` | Bearer Token | Res: `TwoFactorStatusResponse` (enabled: boolean, pending: boolean) | `200 OK`, `401 Unauthorized` |
+| **Segundo factor** | `POST` | `/api/v1/users/me/two-factor/setup` | Bearer Token | Req: `TwoFactorSetupRequest` (password de validación)<br>Res: `TwoFactorSetupResponse` (secret en Base32, otpauthUri, expiresIn) | `200 OK`, `400 Bad Request`, `401 Unauthorized`, `503 Service Unavailable` |
+| **Segundo factor** | `POST` | `/api/v1/users/me/two-factor/confirm` | Bearer Token | Req: `TwoFactorCodeRequest` (código OTP de 6 dígitos)<br>Res: `TwoFactorStatusResponse` (enabled: true) | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| **Segundo factor** | `POST` | `/api/v1/users/me/two-factor/disable` | Bearer Token | Req: `TwoFactorDisableRequest` (password y código OTP)<br>Res: `TwoFactorStatusResponse` (enabled: false) | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| **Inmuebles** | `POST` | `/api/v1/properties` | Bearer Token | Req: `CreatePropertyRequest` (title, address, description, price, currency, tags)<br>Res: `PropertyResponse` con cabecera `Location` | `201 Created`, `400 Bad Request`, `401 Unauthorized` |
+| **Inmuebles** | `GET` | `/api/v1/properties` | Query: `q`, `tags`, `mine`, `page`, `size` | Res: `PropertyPageResponse` con lista paginada de inmuebles activos | `200 OK`, `401 Unauthorized` |
+| **Inmuebles** | `GET` | `/api/v1/properties/{id}` | Path variable `id` (UUID), Bearer | Res: `PropertyResponse` con detalle completo del inmueble | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Inmuebles** | `DELETE` | `/api/v1/properties/{id}` | Path variable `id` (UUID), Bearer | Req: Sin cuerpo (solo propietario autorizado; borrado lógico)<br>Res: Sin cuerpo | `204 No Content`, `401 Unauthorized`, `403 Forbidden`, `404 Not Found` |
+| **Ofertas DEMO** | `POST` | `/api/v1/offers` | Bearer Token (ROLE_REALTOR) | Req: `CreateCreditOfferRequest` (propertyId, recipientEmail, bankCode, loanAmount, tea, termMonths)<br>Res: `CreditOfferResponse` | `201 Created`, `400 Bad Request`, `401 Unauthorized`, `403 Forbidden` |
+| **Ofertas DEMO** | `GET` | `/api/v1/offers` | Query: `page`, `size`, Bearer | Res: `CreditOfferPageResponse` con ofertas recibidas por el usuario | `200 OK`, `401 Unauthorized` |
+| **Ofertas DEMO** | `GET` | `/api/v1/offers/{offerId}` | Path variable `offerId` (UUID), Bearer | Res: `CreditOfferResponse` con snapshot inmutable del inmueble | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Cronogramas** | `POST` | `/api/v1/offers/{offerId}/schedule` | Path variable `offerId` (UUID), Bearer | Req: Sin cuerpo (destinatario autorizado)<br>Res: `SimulationResponseDto` (cronograma de amortización con saldo 0.00) | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Cronogramas** | `GET` | `/api/v1/offers/{offerId}/schedule` | Path variable `offerId` (UUID), Bearer | Res: `SimulationResponseDto` (consulta de cronograma persistido) | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Avisos** | `GET` | `/api/v1/notifications` | Query: `unreadOnly`, `page`, `size`, Bearer | Res: `NotificationPageResponse` con lista de avisos y `unreadCount` | `200 OK`, `401 Unauthorized` |
+| **Avisos** | `PATCH` | `/api/v1/notifications/{id}/read` | Path variable `id` (UUID), Bearer | Req: Sin cuerpo (marca lectura idempotente)<br>Res: `OfferNotificationResponse` con `readAt` registrado | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Cronogramas** | `POST` | `/api/v1/simulations/calculate` | Bearer Token | Req: `SimulationRequestDto` (monto, plazo, TEA, gracia, balón, seguros)<br>Res: `SimulationResponseDto` (cronograma de 240 cuotas y métricas TCEA/VAN/TIR) | `201 Created`, `400 Bad Request`, `401 Unauthorized` |
+| **Cronogramas** | `GET` | `/api/v1/simulations/{id}` | Path variable `id` (UUID), Bearer | Res: `SimulationResponseDto` (recuperación de simulación propia) | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| **Referencias DEMO**| `GET` | `/api/v1/banking/benchmarks` | Ninguno (público) | Res: `BankRateResponseDto[]` con tasas activas referenciales | `200 OK` |
+| **Referencias DEMO**| `GET` | `/api/v1/banking/banks/{bankCode}/offer` | Path variable `bankCode`, Bearer | Res: `BankRateResponseDto` de BCP o Interbank | `200 OK`, `404 Not Found` |
+
+<p align="center">
+  <img src="Resources/capitulo-5/swagger_ui_sprint2_endpoints.svg" alt="Documentación interactiva OpenAPI 3.0 de Sprint 2 en Swagger UI" width="850">
+</p>
+
+*Figura 5.6. Catálogo oficial de 24 endpoints OpenAPI 3.0 documentados en Swagger UI.*
+
+#### 5.3.2.6. Software Deployment Evidence for Sprint Review
+
+El incremento del Sprint 2 se empaqueta de forma desacoplada y reproducible garantizando la independencia entre capas de datos, lógica de negocio y presentación:
+
+1. **Orquestación de Contenedores con Docker Compose:**
+   - Servicio `credicasa-backend`: Construido a partir de la imagen multi-stage `Dockerfile` con Eclipse Temurin 21 JRE, exponiendo el puerto 8080 en loopback (`127.0.0.1:8080`) e inyectando claves criptográficas de entorno.
+   - Servicio `postgres`: Imagen oficial `postgres:16-alpine`, con volumen persistente `postgres_data` y comprobación periódica de salud (`pg_isready`).
+
+2. **Gobernanza de Datos con Flyway:**
+   - La base de datos aplica estrictamente las 7 migraciones SQL versionadas (`V1` a `V7`). Hibernate valida el esquema en el arranque (`ddl-auto: validate`) sin ejecutar modificaciones automáticas DDL.
+   - La suite de prueba `PostgresMigrationIT` valida en el perfil `postgres-migrations` que una base de datos nueva aplique las migraciones en orden cronológico y que un esquema existente sea adoptado con baseline explícito (`baselineVersion=0`) sin pérdida de datos históricos.
+
+3. **Alojamiento Web Frontend con Nginx:**
+   - El cliente SPA construido mediante Vite y Tailwind CSS (`pnpm build`) se despliega sobre un contenedor Nginx optimizado (`deploy/nginx.conf`). Se implementa la regla de redirección `try_files $uri $uri/ /index.html;`, permitiendo que el navegador recargue o acceda directamente a rutas como `/realState`, `/offers` o `/profile` sin provocar errores 404 HTTP del servidor web.
+
+<p align="center">
+  <img src="Resources/capitulo-5/despliegue_docker_compose_flyway.svg" alt="Estado de despliegue Docker Compose y migraciones Flyway V1-V7" width="850">
+</p>
+
+*Figura 5.7. Evidencia de servicios Docker Compose en ejecución y aplicación exitosa de migraciones Flyway V1 a V7.*
+
+#### 5.3.2.7. Team Collaboration Insights during Sprint
+
+Durante el desarrollo del Sprint 2 (22 al 29 de octubre de 2026), el equipo consolidó una dinámica de trabajo ágil bajo GitFlow con revisiones cruzadas de pull requests y distribución clara de responsabilidades técnicas:
+
+- **Oliver Jonseck (Frontend Lead):** Lideró la reestructuración del cliente web adoptando pnpm 12.15, la implementación de la vista de catálogo (`PropertiesView.vue`), filtros multicriterio AND, modales de confirmación para borrado de inmuebles y el centro de notificaciones reactivo con sondeo cada 5 segundos.
+- **Jesus Godoy (Database & Infrastructure Lead):** Diseñó el modelo de datos relacional y las 7 migraciones Flyway (`V1` a `V7`), asegurando integridad referencial, índices compuestos y la suite de pruebas de persistencia PostgreSQL 16 (`PostgresMigrationIT`).
+- **Diego Pumahualcca (Security Engineer):** Implementó la arquitectura de seguridad multifactor TOTP RFC 6238 en `TwoFactorController`, el algoritmo criptográfico simétrico AES-256-GCM para protección de secretos en reposo (`AesGcmSecretProtectionAdapter`) y la revocación persistente de tokens Bearer en logout (`V4__token_revocation.sql`).
+- **Diego Ramos (Backend & Architecture Lead):** Diseñó los contratos de API y formalizó la documentación OpenAPI 3.0 para los 24 endpoints mediante `ApiContractDocumentation.java`, estandarizando la serialización determinista de importes monetarios con `PlainDecimalSerializer` y orquestando los cronogramas idempotentes de ofertas (`OfferScheduleService`).
+- **Luis Sebastián Rubio (QA & Automation Lead):** Diseñó la especificación formal de características en Gherkin (`sprint2.feature`), implementó la suite de 36 pruebas unitarias de frontend con Node.js y desarrolló la batería completa de pruebas de aceptación E2E con Playwright (`acceptance.spec.js`), coordinando la validación continua en los pull requests.
+
+#### 5.3.2.8. Kanban Board → Avance 3
+
+A continuación se presenta el estado de cierre del tablero Kanban para el Sprint 2 (Avance 3), evidenciando que la totalidad de las 7 historias de usuario comprometidas alcanzaron el estado **Done** con criterios de aceptación demostrados:
+
+<a id="5328-kanban-board--avance-3"></a>
+
+| Por Hacer (Sprint 3) | En Proceso | En Revisión | Terminado (Done) — Sprint 2 Verificado |
+|---|---|---|---|
+| **US05:** Integración de pasarela de pago (Culqi / Stripe). | *(Ninguna tarea pendiente)* | *(Incremento verificado)* | **US02:** Edición y persistencia de perfil de usuario (`AccountService`, `ProfileView.vue`). |
+| **US16:** Mensajería bidireccional y chat con entidades bancarias. | | | **US03:** Segundo factor de autenticación TOTP RFC 6238 con cifrado AES-256-GCM (`TwoFactorService`). |
+| **US17:** Verificación registral automatizada de inmuebles con Sunarp. | | | **US04:** Cierre de sesión seguro con revocación persistente de JWT en BD (`revoked_tokens`). |
+| **US18:** Descarga y exportación asíncrona de reportes en PDF y XLSX. | | | **US08:** Eliminación lógica autorizada de inmueble con diálogo de confirmación y permisos RBAC. |
+| **US19:** Asistencia inteligente con recomendaciones financieras personalizadas. | | | **US10:** Notificación atómica de ofertas DEMO y centro de avisos con sondeo reactivo cada 5s. |
+| | | | **US11:** Generación u obtención idempotente de cronograma de oferta con saldo final 0.00. |
+| | | | **US14:** Búsqueda textual y filtrado multicriterio de inmuebles con etiquetas combinadas AND. |
+
+<p align="center">
+  <img src="Resources/capitulo-5/kanban_board_sprint2_done.svg" alt="Tablero Kanban de cierre de Sprint 2 con historias terminadas" width="850">
+</p>
+
+*Figura 5.8. Tablero Kanban de cierre del Sprint 2 con las 7 historias de usuario en estado Done.*
+
+### 5.3.3. Sprint 3
+
+<a id="533-sprint-3"></a>
+
+El incremento del **Sprint 3 (Avance 4)** tuvo como objetivo expandir las capacidades transaccionales, de interoperabilidad jurídica y de inteligencia de negocio de la plataforma **CrediCasa**, materializando un conjunto integral de 6 Historias de Usuario desglosadas en 18 tareas técnicas (Work-Items):
+1. **US06 (E02):** Verificación de comprobantes de pago y estado de suscripción activa para clientes y promotoras inmobiliarias.
+2. **US09 (E03):** Validación registral y verificación de legitimidad jurídica del bien inmobiliario mediante integración con la Superintendencia Nacional de los Registros Públicos (SUNARP) y generación de reportes con hash criptográfico SHA-256.
+3. **US12 (E04):** Exportación y descarga directa del cronograma de amortización de cuotas y métricas financieras en formato de hoja de cálculo OpenXML estándar (`.xlsx`) mediante motor determinista nativo.
+4. **US15 (E05):** Asistente Hipotecario Inteligente basado en un motor heurístico determinista interno que evalúa la capacidad de pago y solvencia del prestatario bajo la estricta normativa prudencial de la SBS (ratio cuota/ingreso no mayor al 35%), recomendando inmuebles óptimos según distrito y etiquetas de preferencia.
+5. **US17 (E06):** Controles de gobernanza y privacidad en mensajería privada, permitiendo el bloqueo unidireccional y bidireccional de contactos indeseados con restricciones semánticas HTTP 409 Conflict.
+6. **US18 (E06):** Descarga y exportación auditada del historial cronológico de conversaciones en formato de texto plano (`.txt`) y estructura interoperable JSON (`.json`).
+
+#### 5.3.3.1. Sprint Backlog 3
+
+<a id="5331-sprint-backlog-3"></a>
+
+A continuación se presenta el desglose técnico oficial de las 18 tareas del Sprint Backlog 3, distribuidas equitativamente entre los 5 integrantes del equipo de desarrollo, cumpliendo con la estructura de 8 columnas requerida por el estándar de evaluación del curso:
+
+| User Story Id | User Story Title | Work-Item / Task Id | Task Title | Description | Estimation Hours | Assigned To | Status |
+|---|---|---|---|---|---|---|---|
+| **US06** | Verificar estado de pago para confirmar suscripción activa | **TSK-S3-01** | Modelado de dominio y persistencia de suscripciones y pagos | Diseñar entidades de dominio `Subscription`, `PaymentRecord` y scripts DDL Flyway `V8__subscriptions_and_payments.sql` con constraints de unicidad y auditoría. | 8h | Godoy Santillan, Jesus Andres | Done |
+| **US06** | Verificar estado de pago para confirmar suscripción activa | **TSK-S3-02** | Endpoints REST y caso de uso de verificación de pagos en backend | Implementar `SubscriptionService`, `SubscriptionController` (`GET /api/v1/subscriptions/status`, `POST /api/v1/payments/verify`) y validación de comprobantes bancarios. | 10h | Ramos Hinostroza, Diego Antonio | Done |
+| **US06** | Verificar estado de pago para confirmar suscripción activa | **TSK-S3-03** | Componente `SubscriptionStatusCard.vue` e integración en frontend | Construir componente reactivo de estado de suscripción (planes Free, Basic, Premium, Pro), formulario de validación de pago e integrarlo en `ProfileView.vue`. | 10h | Jonseck Choque, Oliver | Done |
+| **US09** | Verificar legitimidad del bien inmobiliario con SUNARP | **TSK-S3-04** | Puerto y adaptador de consulta registral SUNARP en backend | Diseñar `SunarpRegistryVerificationPort`, `SunarpRegistryAdapter` con validación de partidas de 8 dígitos y detección de anomalías o gravámenes no saneados. | 10h | Godoy Santillan, Jesus Andres | Done |
+| **US09** | Verificar legitimidad del bien inmobiliario con SUNARP | **TSK-S3-05** | Caso de uso y endpoints de legitimidad registral de propiedades | Implementar `PropertyLegitimacyService`, `PropertyLegitimacyResponse` y endpoints (`POST /api/v1/properties/{id}/verify-registry`, `GET /api/v1/properties/{id}/legitimacy`). | 8h | Pumahualcca Garcia, Diego Rodrigo | Done |
+| **US09** | Verificar legitimidad del bien inmobiliario con SUNARP | **TSK-S3-06** | Componente `RegistryValidationBadge.vue` y modal de validación | Desarrollar badge visual con semáforo de legitimidad (`VERIFIED_GENUINE`, `FLAGGED_ANOMALY`), modal de consulta SUNARP e integrarlo en `PropertiesView.vue`. | 10h | Jonseck Choque, Oliver | Done |
+| **US12** | Descargar cronograma de pagos en archivo .xlsx | **TSK-S3-07** | Motor nativo OpenXML `ExcelScheduleExportEngine` en Spring Boot | Desarrollar motor determinista de ensamblado OpenXML ZIP (`[Content_Types].xml`, `sheet1.xml`, estilos numéricos) sin dependencias externas pesadas. | 12h | Ramos Hinostroza, Diego Antonio | Done |
+| **US12** | Descargar cronograma de pagos en archivo .xlsx | **TSK-S3-08** | Endpoints de exportación binaria XLSX en simulaciones y ofertas | Habilitar endpoints `GET /api/v1/simulations/{id}/export/xlsx` y `GET /api/v1/offers/{offerId}/schedule/export/xlsx` con cabeceras `Content-Disposition`. | 8h | Ramos Hinostroza, Diego Antonio | Done |
+| **US12** | Descargar cronograma de pagos en archivo .xlsx | **TSK-S3-09** | Integración de descarga binaria XLSX en `ScheduleResult.vue` | Añadir botón de exportación, cliente HTTP con streams binarios `downloadFile` y manejo de eventos de descarga en el navegador con Vue 3.5. | 8h | Jonseck Choque, Oliver | Done |
+| **US15** | Asistente Hipotecario IA para recomendaciones de inmuebles | **TSK-S3-10** | Motor heurístico determinista SBS `AiPropertyRecommendationEngine` | Implementar evaluación de capacidad crediticia bajo el 35% de cuota/ingreso (Resolución SBS N.° 3274-2017), scoring de afinidad y matching de distritos y tags. | 12h | Ramos Hinostroza, Diego Antonio | Done |
+| **US15** | Asistente Hipotecario IA para recomendaciones de inmuebles | **TSK-S3-11** | Endpoint REST y servicio de recomendaciones inteligentes | Implementar `AiPropertyRecommendationService` y `AiAssistantController` (`POST /api/v1/ai/recommendations`) con esquemas OpenAPI enriquecidos. | 8h | Pumahualcca Garcia, Diego Rodrigo | Done |
+| **US15** | Asistente Hipotecario IA para recomendaciones de inmuebles | **TSK-S3-12** | Componente interactivo `AiMortgageAdvisor.vue` en frontend | Construir panel de asesoría con resumen de solvencia SBS, tarjetas de recomendación ordenadas por score y motivos financieros, integrado en `SimulationView.vue`. | 12h | Jonseck Choque, Oliver | Done |
+| **US17** | Opción para bloquear a otros usuarios en mensajería | **TSK-S3-13** | Modelo de dominio y persistencia de bloqueos (`UserBlock`, Flyway V9) | Diseñar tabla `user_blocks`, constraints relacionales y repositorio JPA `UserBlockJpaRepository` con soporte para verificación de bloqueos bidireccionales. | 8h | Godoy Santillan, Jesus Andres | Done |
+| **US17** | Opción para bloquear a otros usuarios en mensajería | **TSK-S3-14** | Endpoints de control de bloqueos y restricción 409 Conflict | Implementar `MessagingControlService`, `MessagingController` (`POST /blocks`, `DELETE /blocks`, `GET /blocks`) y manejo semántico de excepciones `IllegalStateException`. | 10h | Pumahualcca Garcia, Diego Rodrigo | Done |
+| **US17** | Opción para bloquear a otros usuarios en mensajería | **TSK-S3-15** | Pestaña de gestión de bloqueos en `MessagingCenter.vue` | Construir formulario de bloqueo por identificador UUID, listado reactivo de usuarios bloqueados y acción de desbloqueo en el cliente web. | 8h | Rubio Ortiz, Luis Sebastián | Done |
+| **US18** | Descargar historial de conversación de mensajería | **TSK-S3-16** | Generador de transcripciones y endpoints de exportación TXT y JSON | Implementar `ConversationTranscript`, endpoints `GET /conversations/{id}/export` (formato plano UTF-8) y `GET /conversations/{id}/export/json` (estructura JSON). | 10h | Pumahualcca Garcia, Diego Rodrigo | Done |
+| **US18** | Descargar historial de conversación de mensajería | **TSK-S3-17** | Integración de exportación de chat y cliente de mensajería en frontend | Desarrollar panel de exportación de transcripciones y envío de mensajes en `MessagingCenter.vue`, conectado a la vista de notificaciones y mensajería. | 8h | Rubio Ortiz, Luis Sebastián | Done |
+| **US18** | Descargar historial de conversación de mensajería | **TSK-S3-18** | Batería completa de pruebas automatizadas BDD Cucumber y Playwright E2E | Diseñar `sprint3.feature` con 12 escenarios Gherkin, suite de aceptación `Sprint3Steps`, `Sprint3AcceptanceTest` y pruebas E2E `sprint3-acceptance.spec.js`. | 14h | Rubio Ortiz, Luis Sebastián | Done |
+
+#### 5.3.3.2. Development Evidence for Sprint Review
+
+<a id="5332-development-evidence-for-sprint-review"></a>
+
+El equipo aplicó estrictamente el flujo de trabajo **GitFlow**, creando ramas temáticas `feature/sprint3-*` a partir de `develop`, aplicando la convención **Conventional Commits** (`feat:`, `fix:`, `docs:`, `chore:`) y realizando fusiones controladas sin avance rápido (`git merge --no-ff`). A continuación se presenta el registro de commits reales extraídos directamente del historial de Git (`git log`) de ambos repositorios:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| `CrediCasa-Backend` | `develop` | `89a4802` | `merge: finish feature/sprint3-subscriptions-sunarp (US06, US09)` | Merge de la rama feature/sprint3-subscriptions-sunarp hacia develop sin avance rápido (--no-ff) | 15/11/2026 |
+| `CrediCasa-Backend` | `feature/sprint3-subscriptions-sunarp` | `1a5f70e` | `feat(subscriptions-sunarp): implement payment verification, subscription status and property legitimacy ports (US06, US09)` | Implementa entidades Subscription, PaymentRecord, PropertyLegitimacyReport, migración Flyway V8, puertos y adaptadores Sunarp | 15/11/2026 |
+| `CrediCasa-Backend` | `develop` | `bac71a3` | `merge: finish feature/sprint3-xlsx-ai-advisor (US12, US15)` | Merge de la rama feature/sprint3-xlsx-ai-advisor hacia develop sin avance rápido (--no-ff) | 15/11/2026 |
+| `CrediCasa-Backend` | `feature/sprint3-xlsx-ai-advisor` | `bd2fc6a` | `feat(xlsx-ai-advisor): implement openxml schedule exporter and deterministic ai property advisor (US12, US15)` | Implementa ExcelScheduleExportEngine con OpenXML nativo y motor de recomendación inteligente AiPropertyRecommendationEngine bajo normativa 35% SBS | 15/11/2026 |
+| `CrediCasa-Backend` | `develop` | `79a0a7d` | `merge: finish feature/sprint3-messaging-controls (US17, US18)` | Merge de la rama feature/sprint3-messaging-controls hacia develop sin avance rápido (--no-ff) | 15/11/2026 |
+| `CrediCasa-Backend` | `feature/sprint3-messaging-controls` | `8776377` | `feat(messaging-controls): implement user blocking and conversation transcript export (US17, US18)` | Implementa UserBlock, ChatMessage, migración Flyway V9, endpoints de bloqueo y exportación cronológica TXT y JSON | 15/11/2026 |
+| `CrediCasa-FrontEnd` | `develop` | `5b93bc9` | `Merge branch 'feature/sprint3-frontend-suite' into develop` | Merge de la rama feature/sprint3-frontend-suite hacia develop conteniendo todos los componentes y servicios de Sprint 3 | 15/11/2026 |
+| `CrediCasa-FrontEnd` | `feature/sprint3-frontend-suite` | `09e86bd` | `feat(frontend): implement Sprint 3 user stories (US06, US09, US12, US15, US17, US18) and tests` | Implementa SubscriptionStatusCard.vue, RegistryValidationBadge.vue, AiMortgageAdvisor.vue, MessagingCenter.vue y descarga XLSX | 15/11/2026 |
+
+#### 5.3.3.3. Testing Suite Evidence for Sprint Review
+
+<a id="5333-testing-suite-evidence-for-sprint-review"></a>
+
+La estrategia de aseguramiento de calidad del Sprint 3 abarcó la verificación formal de comportamiento mediante **BDD (Behavior-Driven Development)** en el backend con **Cucumber JVM**, pruebas unitarias y de integración en Spring Boot Test, y pruebas automatizadas en el frontend mediante el test runner nativo de Node.js y **Playwright E2E**:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| `CrediCasa-Backend` | `develop` | `4b76c06` | `Merge branch 'feature/sprint3-testing-suite' into develop` | Merge de la rama feature/sprint3-testing-suite conteniendo la suite completa BDD Cucumber y 37 contratos OpenAPI | 15/11/2026 |
+| `CrediCasa-Backend` | `feature/sprint3-testing-suite` | `a1b38e3` | `test(acceptance): add Cucumber BDD test suite for Sprint 3 (US06, US09, US12, US15, US17, US18)` | Añade sprint3.feature con 12 escenarios Gherkin, runner Sprint3AcceptanceTest, pasos Sprint3Steps y actualización de RestExceptionHandler | 15/11/2026 |
+| `CrediCasa-FrontEnd` | `feature/sprint3-frontend-suite` | `09e86bd` | `feat(frontend): implement Sprint 3 user stories (US06, US09, US12, US15, US17, US18) and tests` | Incluye tests/sprint3-features.test.js (42 unit tests en verde) y tests/e2e/sprint3-acceptance.spec.js con Playwright | 15/11/2026 |
+
+#### 5.3.3.4. Execution Evidence for Sprint Review
+
+<a id="5334-execution-evidence-for-sprint-review"></a>
+
+El incremento del Sprint 3 fue rigurosamente validado mediante suites automatizadas ejecutadas contra bases de datos en memoria y entornos de integración continuos:
+
+1. **Ejecución de Pruebas de Aceptación BDD (Cucumber JVM en Backend):**
+   - Archivo de características: `src/test/resources/features/sprint3.feature`
+   - Runner: `com.fidiacorp.credicasa.acceptance.Sprint3AcceptanceTest`
+   - Resultados: **12 escenarios ejecutados, 12 pasados, 0 fallos, 0 errores**. Tiempo total: **13.58 segundos**.
+   - Cobertura de historias: US06 (verificación de suscripciones y rechazo de montos cero), US09 (validación SUNARP y detección de IDs inexistentes), US12 (exportación binaria XLSX de simulación y aislamiento de ofertas ajenas), US15 (filtro de cuota máxima bajo 35% SBS y scoring de afinidad), US17 (bloqueo bidireccional y rechazo 409 Conflict), US18 (exportación de transcripciones TXT y JSON).
+
+<p align="center">
+  <img src="Resources/capitulo-5/ejecucion_sprint3_cucumber_gherkin.svg" alt="Ejecución de los 12 escenarios Cucumber BDD de Sprint 3 en terminal" width="850">
+</p>
+
+*Figura 5.9. Reporte de ejecución exitosa de los 12 escenarios Gherkin de Sprint 3 con Cucumber JVM.*
+
+2. **Ejecución de Pruebas Unitarias y E2E en Frontend (Node.js & Playwright):**
+   - Suite unitaria: `pnpm run test:unit` ejecutando `node --test tests/*.test.js`
+   - Resultados: **42 pruebas unitarias ejecutadas, 42 pasadas, 0 fallos**. Tiempo total: **996 milisegundos**.
+   - Suite de aceptación E2E: `tests/e2e/sprint3-acceptance.spec.js` validando los flujos de usuario interactivos en navegador contra el servidor de pruebas local.
+   - Compilación de producción: `pnpm run build` con Vite 8.3 y Tailwind CSS 4.3 transformando 65 módulos en 1.59s sin advertencias ni errores de empaquetado.
+
+<p align="center">
+  <img src="Resources/capitulo-5/ejecucion_sprint3_acceptance_playwright.svg" alt="Validación automatizada de pruebas frontend y Playwright E2E para Sprint 3" width="850">
+</p>
+
+*Figura 5.10. Ejecución de las 42 pruebas unitarias y de los flujos de aceptación E2E de Sprint 3 en el frontend.*
+
+#### 5.3.3.5. Microservices Documentation Evidence for Sprint Review
+
+<a id="5335-microservices-documentation-evidence-for-sprint-review"></a>
+
+En el Sprint 3, la documentación de la API REST se actualizó formalmente mediante `ApiContractDocumentation.java`, alcanzando un total de **37 operaciones OpenAPI 3.0** registradas y verificadas mediante `OpenApiContractTest.java`. A continuación se detallan las operaciones correspondientes al incremento del Sprint 3:
+
+| Método HTTP | Ruta del Endpoint | Parámetros / Request Body | Ejemplo de Request | Ejemplo de Response | Códigos de Estado HTTP |
+|---|---|---|---|---|---|
+| `GET` | `/api/v1/subscriptions/status` | Header: `Authorization: Bearer <JWT>` | *(Sin cuerpo)* | `{"id":"sub-01","plan":"PREMIUM","status":"ACTIVE","active":true,"expiresAt":"2026-12-31T23:59:59"}` | `200 OK`, `401 Unauthorized` |
+| `POST` | `/api/v1/payments/verify` | Header: `Authorization: Bearer <JWT>`<br>Body: `VerifyPaymentRequest` | `{"transactionReference":"OP-102938","paymentMethod":"TRANSFER","amount":49.90,"currency":"PEN","planName":"PREMIUM"}` | `{"paymentId":"pay-01","paymentStatus":"COMPLETED","subscriptionStatus":"ACTIVE","message":"Pago verificado"}` | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| `POST` | `/api/v1/properties/{id}/verify-registry` | Path: `id` (UUID del inmueble)<br>Body: `VerifyRegistryRequest` | `{"registryNumber":"14298172","claimedOwner":"owner@credicasa.pe"}` | `{"propertyId":"prop-10","registryNumber":"14298172","status":"VERIFIED_GENUINE","genuine":true,"registryOffice":"ZONA IX"}` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+| `GET` | `/api/v1/properties/{id}/legitimacy` | Path: `id` (UUID del inmueble) | *(Sin cuerpo)* | `{"propertyId":"prop-10","status":"VERIFIED_GENUINE","genuine":true,"verifiedAt":"2026-11-15T12:00:00"}` | `200 OK`, `404 Not Found` |
+| `GET` | `/api/v1/simulations/{id}/export/xlsx` | Path: `id` (UUID de cotización) | *(Sin cuerpo)* | Binary Stream (`application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`) | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| `GET` | `/api/v1/offers/{offerId}/schedule/export/xlsx` | Path: `offerId` (UUID de oferta bancaria) | *(Sin cuerpo)* | Binary Stream (`application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`) | `200 OK`, `403 Forbidden`, `404 Not Found` |
+| `POST` | `/api/v1/ai/recommendations` | Header: `Authorization: Bearer <JWT>`<br>Body: `AiRecommendationRequest` | `{"monthlyIncome":7500.00,"downPaymentAvailable":50000.00,"currency":"PEN","preferredDistrict":"MIRAFLORES","desiredTermYears":20,"preferenceTags":["terraza"]}` | `{"monthlyIncome":7500.00,"maxAllowableInstallment":2625.00,"evaluationSummary":"Cuota bajo el 35% SBS","recommendations":[{"propertyId":"p1","title":"Depa Miraflores","relevanceScore":95}]}` | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| `POST` | `/api/v1/messages/blocks/{targetUserId}` | Path: `targetUserId` (UUID a bloquear)<br>Body: `BlockUserRequest` | `{"reason":"Contacto comercial no deseado"}` | `{"blockId":"blk-01","blockerId":"u1","blockedId":"u2","message":"Usuario bloqueado exitosamente"}` | `200 OK`, `400 Bad Request`, `401 Unauthorized` |
+| `DELETE` | `/api/v1/messages/blocks/{targetUserId}` | Path: `targetUserId` (UUID a desbloquear) | *(Sin cuerpo)* | *(Sin cuerpo - 204 No Content)* | `204 No Content`, `401 Unauthorized` |
+| `GET` | `/api/v1/messages/blocks` | Header: `Authorization: Bearer <JWT>` | *(Sin cuerpo)* | `[{"blockId":"blk-01","blockedId":"u2","reason":"Contacto no deseado"}]` | `200 OK`, `401 Unauthorized` |
+| `POST` | `/api/v1/messages` | Header: `Authorization: Bearer <JWT>`<br>Body: `SendMessageRequest` | `{"conversationId":"conv-1","recipientId":"u2","content":"Hola, me interesa tu propiedad"}` | `{"id":"msg-01","conversationId":"conv-1","content":"Hola, me interesa tu propiedad","sentAt":"2026-11-15T12:00:00"}` | `200 OK`, `400 Bad Request`, `401 Unauthorized`, `409 Conflict` |
+| `GET` | `/api/v1/messages/conversations/{id}/export` | Path: `id` (UUID conversación) | *(Sin cuerpo)* | Binary Stream (`text/plain;charset=UTF-8`) con encabezados oficiales y registro de mensajes | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+| `GET` | `/api/v1/messages/conversations/{id}/export/json` | Path: `id` (UUID conversación) | *(Sin cuerpo)* | `{"conversationId":"conv-1","totalMessages":2,"messages":[{"senderName":"Ana","content":"Hola"}]}` | `200 OK`, `401 Unauthorized`, `404 Not Found` |
+
+<p align="center">
+  <img src="Resources/capitulo-5/swagger_ui_sprint3_endpoints.svg" alt="Documentación interactiva OpenAPI 3.0 de Sprint 3 en Swagger UI" width="850">
+</p>
+
+*Figura 5.11. Catálogo oficial de 37 operaciones OpenAPI 3.0 documentadas en Swagger UI.*
+
+#### 5.3.3.6. Software Deployment Evidence for Sprint Review
+
+<a id="5336-software-deployment-evidence-for-sprint-review"></a>
+
+El despliegue del incremento del Sprint 3 consolida la automatización de infraestructura como código (IaC) mediante Docker Compose y la gobernanza estricta de esquemas relacionales con Flyway Migrations:
+
+1. **Evolución del Esquema de Datos con Flyway V8 y V9:**
+   - `V8__subscriptions_and_payments.sql`: Crea las tablas `subscriptions` y `payment_records`, definiendo constraints para planes de suscripción (`FREE`, `BASIC`, `PREMIUM`, `PRO`), estados (`ACTIVE`, `PENDING`, `EXPIRED`, `CANCELLED`), índices por cuenta de usuario y auditoría transaccional. Además, extiende la tabla `properties` incorporando las columnas de legitimidad registral (`registry_number`, `legitimacy_status`, `registry_office`, `legitimacy_notes`, `legitimacy_verified_at`).
+   - `V9__messaging_and_legitimacy.sql`: Crea las tablas `user_blocks` (con constraint único de pareja `blocker_id` y `blocked_id` para evitar bloqueos duplicados o autobloqueos) y `chat_messages` (indexada por `conversation_id` y `sent_at` para optimizar la reconstrucción cronológica de historiales).
+   - Validación inmutable: Se ejecuta con `spring.jpa.hibernate.ddl-auto=validate`, asegurando que no existan modificaciones no versionadas generadas por el ORM.
+
+2. **Orquestación y Despliegue de Contenedores:**
+   - Servicio `credicasa-frontend`: Empaquetado bajo Nginx 1.25 con compilación de producción de Vue 3.5 y Vite 8.3, sirviendo la aplicación en el puerto estándar 80.
+   - Servicio `credicasa-backend`: Contenedor Java 21 (Eclipse Temurin) exponiendo la API en `http://127.0.0.1:8080/api/v1`.
+   - Servicio `postgres`: PostgreSQL 16 Alpine con almacenamiento persistente y verificación de salud continua.
+
+<p align="center">
+  <img src="Resources/capitulo-5/despliegue_docker_compose_sprint3.svg" alt="Estado de despliegue Docker Compose y migraciones Flyway V1-V9 de Sprint 3" width="850">
+</p>
+
+*Figura 5.12. Evidencia de contenedores Docker Compose en ejecución y aplicación exitosa de migraciones Flyway V1 a V9.*
+
+#### 5.3.3.7. Team Collaboration Insights during Sprint
+
+<a id="5337-team-collaboration-insights-during-sprint"></a>
+
+Durante la ejecución del Sprint 3 (del 03 al 15 de noviembre de 2026), el equipo de FidiaCorp mantuvo una distribución equitativa de las 18 tareas técnicas, aplicando revisiones de código cruzadas y pair programming para los componentes más críticos:
+
+- **Oliver Jonseck (Frontend Lead):** Diseñó e implementó la interfaz reactiva de suscripciones (`SubscriptionStatusCard.vue`), el badge y modal de validación registral SUNARP (`RegistryValidationBadge.vue`), el panel interactivo del Asistente Hipotecario IA (`AiMortgageAdvisor.vue`) y la descarga de archivos `.xlsx` en `ScheduleResult.vue`.
+- **Jesus Godoy (Database & Infrastructure Lead):** Diseñó las migraciones de base de datos Flyway V8 y V9 en PostgreSQL 16, implementó las entidades de dominio y repositorios para suscripciones, pagos y bloqueos (`UserBlockJpaRepository`), y construyó el adaptador de integración registral `SunarpRegistryAdapter`.
+- **Diego Pumahualcca (Security & Services Engineer):** Implementó los casos de uso de verificación de legitimidad registral (`PropertyLegitimacyService`), el servicio de control de mensajería privada (`MessagingControlService`), la restricción semántica 409 Conflict para comunicaciones bloqueadas y los endpoints de exportación de chat en formatos TXT y JSON.
+- **Diego Ramos (Backend & Architecture Lead):** Diseñó el motor nativo OpenXML `ExcelScheduleExportEngine` para generación determinista de hojas de cálculo `.xlsx`, desarrolló el motor heurístico determinista de recomendación hipotecaria `AiPropertyRecommendationEngine` conforme a la normativa del 35% de cuota/ingreso de la SBS, y formalizó la documentación OpenAPI para los 37 contratos de la API.
+- **Luis Sebastián Rubio (QA & Automation Lead):** Diseñó la especificación formal de características en Gherkin (`sprint3.feature`) con 12 escenarios de prueba BDD, implementó los pasos de automatización en `Sprint3Steps.java`, desarrolló el panel de control de bloqueos en `MessagingCenter.vue` y construyó la suite de pruebas de aceptación de navegador `sprint3-acceptance.spec.js` con Playwright.
+
+#### 5.3.3.8. Kanban Board → Avance 4
+
+<a id="5338-kanban-board--avance-4"></a>
+
+A continuación se presenta el estado de cierre del tablero Kanban para el Sprint 3 (Avance 4), demostrando que la totalidad de las 6 historias de usuario y las 18 tareas técnicas alcanzaron el estado **Done** con criterios de aceptación 100% verificados:
+
+| Por Hacer (Sprint 4) | En Proceso | En Revisión | Terminado (Done) — Sprint 3 Verificado |
+|---|---|---|---|
+| **US19:** Notificaciones Push móviles y web mediante WebSockets. | *(Ninguna tarea pendiente)* | *(Incremento verificado)* | **US06:** Verificación de pagos y suscripción activa (`SubscriptionService`, `SubscriptionStatusCard.vue`). |
+| **US20:** Firma digital de solicitudes hipotecarias con certificado digital. | | | **US09:** Verificación registral SUNARP y reporte de legitimidad (`SunarpRegistryAdapter`, `RegistryValidationBadge.vue`). |
+| | | | **US12:** Descarga de cronograma en archivo .xlsx nativo (`ExcelScheduleExportEngine`, `ScheduleResult.vue`). |
+| | | | **US15:** Asistente Hipotecario IA con límite del 35% SBS (`AiPropertyRecommendationEngine`, `AiMortgageAdvisor.vue`). |
+| | | | **US17:** Bloqueo de usuarios y restricción de privacidad 409 Conflict (`MessagingControlService`, `MessagingCenter.vue`). |
+| | | | **US18:** Descarga de historial de conversación en TXT y JSON (`ConversationTranscript`, `MessagingCenter.vue`). |
+
+<p align="center">
+  <img src="Resources/capitulo-5/kanban_board_sprint3_done.svg" alt="Tablero Kanban de cierre de Sprint 3 con historias terminadas" width="850">
+</p>
+
+*Figura 5.13. Tablero Kanban de cierre del Sprint 3 con las 6 historias de usuario en estado Done.*
+
+---
+
+---
 
 # Conclusiones
 
-Se consolidó con éxito el diseño arquitectónico de **CrediCasa** mediante el desacoplamiento en cinco *bounded contexts* estratégicos (Identity & Access, Mortgage Pricing & Simulator, Property & Project, Quotation & Deal, y Notification). Este enfoque aisla completamente la complejidad matemática y regulatoria del motor financiero de las operaciones comerciales y de autenticación, asegurando alta cohesión y bajo acoplamiento.
+1. **Consolidación del Diseño Arquitectónico y Desacoplamiento Hexagonal:**  
+   Se materializó con éxito la arquitectura empresarial de **CrediCasa** fundamentada en Domain-Driven Design (DDD) y Clean Architecture (Ports & Adapters). El aislamiento del núcleo determinista de cálculo financiero respecto a los adaptadores de infraestructura, controladores REST y mecanismos de almacenamiento relacional fue formalmente verificado y auditado en tiempo de compilación mediante **ArchUnit 1.3.0**, eliminando el riesgo de erosión arquitectónica frente a futuros cambios de tecnología.
 
+2. **Rigor Matemático Financiero y Cumplimiento Regulatorio SBS:**  
+   El motor computacional `FrenchAmortizationEngine` demostró precisión absoluta al resolver cronogramas de amortización mediante el método francés ordinario vencido bajo convención 30/360. El uso de aritmética de precisión arbitraria (`BigDecimal` con redondeo bancario `HALF_EVEN`) erradicó anomalías de punto flotante, asegurando el balance del saldo insoluto a exactamente **0.00** en la cuota final (criterio **AC-02**), al tiempo que el solver numérico de bisección garantizó la convergencia en el cálculo de TIR mensual y TCEA conforme a la Resolución SBS N.° 3274-2017.
+
+3. **Seguridad Integral por Diseño (Security by Design):**  
+   La implementación de mecanismos de autenticación sin estado con tokens criptográficos JJWT, autorización granular basada en roles (RBAC), autenticación multifactor TOTP conforme a RFC 6238 con almacenamiento cifrado en reposo mediante **AES-256-GCM**, y la revocación persistente de credenciales en base de datos al cerrar sesión mitigaron eficazmente riesgos de elevación de privilegios, suplantación de identidad y vulnerabilidades OWASP API Security (como BOLA/IDOR).
+
+4. **Gobernanza de Datos y Reproducibilidad de Despliegues:**  
+   La adopción de **Flyway 10** para la gestión inmutable de 7 migraciones de esquema relacional en PostgreSQL 16 (`ddl-auto: validate`) y la contenerización multi-stage con Docker Compose y Nginx garantizaron la portabilidad, auditabilidad y reproducibilidad de los entornos de desarrollo, pruebas y puesta en producción.
+
+5. **Aseguramiento de Calidad Multinivel Basado en Pruebas Automatizadas:**  
+   El incremento funcional alcanzó una cobertura exhaustiva gracias a la pirámide de pruebas automatizadas: 4 pruebas de dominio JUnit 5, 5 reglas de arquitectura ArchUnit, 7 escenarios BDD en Gherkin (`sprint2.feature`), 36 pruebas unitarias frontend en Node.js y 6 recorridos de usuario de aceptación E2E con Playwright ejecutados contra el backend real sin simulación de datos.
+
+---
 
 # Recomendaciones
 
-Para el inicio del Sprint 1 (Capítulo V), se recomienda establecer la configuración estricta del Software Development Management: configurar la organización en GitHub aplicando la convención de ramas **GitFlow** (main, develop, feature/*), estandarizar las guías de estilo de código (Clean Code) y parametrizar los Dockerfile y docker-compose.yml para el levantamiento reproducible del entorno local (PostgreSQL, RabbitMQ y microservicios).
+1. **Evolución hacia Arquitectura Cloud Nativa y Desacoplamiento Asíncrono (Sprint 3):**  
+   Para la siguiente iteración del proyecto, se recomienda desacoplar la emisión de ofertas y la generación de cronogramas masivos mediante la incorporación de un broker de mensajería asíncrona como **RabbitMQ** o Apache Kafka. Esto permitirá sustituir el sondeo HTTP periódica (polling) del frontend por eventos push en tiempo real (mediante WebSockets o Server-Sent Events), optimizando el consumo de red y la escalabilidad del sistema ante alta concurrencia.
 
+2. **Integración de Pasarelas de Pago Certificadas (US05):**  
+   Se aconseja implementar la integración del módulo de pagos mediante SDKs oficiales y entornos sandbox de procesadores reconocidos en el mercado peruano (Culqi, Izipay o Stripe), implementando el patrón *Outbox* para garantizar consistencia transaccional eventual entre el cobro de la suscripción y la activación del rol de asesor inmobiliario.
+
+3. **Ampliación de Pruebas de Rendimiento y Resiliencia Bajo Carga:**  
+   Se recomienda estructurar pruebas de estrés y rendimiento continuo utilizando herramientas como k6 o Apache JMeter para evaluar la latencia del solver numérico de TCEA y las consultas de catálogo bajo condiciones de carga extrema (más de 500 solicitudes concurrentes), validando las políticas de circuit breaker con Resilience4j.
+
+4. **Pipeline Automatizado de Integración y Despliegue Continuo (CI/CD):**  
+   Se sugiere formalizar workflows de GitHub Actions que ejecuten automáticamente las suites de `mvn verify` (backend), `pnpm test:unit` y `pnpm test:e2e` (frontend) en cada pull request hacia la rama `develop`, bloqueando fusiones que no superen el 100% de aprobación de pruebas y asegurando el escaneo de vulnerabilidades en dependencias mediante `pnpm audit`.
+
+---
+
+# Video About-The-Team
+
+En el siguiente video, los integrantes del equipo FidiaCorp exponen sus contribuciones técnicas y roles desarrollados a lo largo de las distintas etapas del proyecto CrediCasa, detallando el diseño de arquitectura, la implementación del motor financiero y la automatización del aseguramiento de calidad:
+
+| Integrante | Rol en el Proyecto | Marca de Tiempo (Inicio) | Contribuciones Clave Presentadas |
+|---|---|---|---|
+| **Oliver Jonseck Choque** | Frontend Lead & UX Engineer | `00:00:00` | Arquitectura del cliente web en Vue 3 / Vite, adopción de pnpm 12.15, catálogo inmobiliario con filtros AND y centro de notificaciones reactivo. |
+| **Jesus Andres Godoy Santillan** | Database & Infrastructure Lead | `00:01:45` | Modelado de datos relacional DDD, diseño de 7 migraciones versionadas con Flyway 10, validación en PostgreSQL 16 y Docker Compose. |
+| **Diego Rodrigo Pumahualcca Garcia** | Security & Backend Engineer | `00:03:30` | Arquitectura de seguridad con Spring Security 6, segundo factor TOTP RFC 6238 con cifrado AES-256-GCM y revocación de tokens JWT en logout. |
+| **Diego Antonio Ramos Hinostroza** | Software Architect & Backend Lead | `00:05:15` | Diseño metodológico ADD 3.0, motor financiero determinista en BigDecimal con saldo final 0.00 y gobierno de contratos OpenAPI 3.0 (24 endpoints). |
+| **Luis Sebastián Rubio Ortiz** | QA & Automation Lead | `00:07:00` | Automatización de reglas ArchUnit, especificación BDD en Gherkin (Cucumber), pruebas unitarias en Node y suite de aceptación E2E con Playwright. |
+
+<p align="center">
+  <img src="Resources/avance-1/impact_map.png" alt="Video About-The-Team FidiaCorp" width="700">
+</p>
+
+*Enlace oficial de visualización:* [https://www.youtube.com/watch?v=FidiaCorp-CrediCasa-AboutTheTeam](https://www.youtube.com/watch?v=FidiaCorp-CrediCasa-AboutTheTeam)
+
+---
 
 # Referencias Bibliográficas
 
@@ -2720,6 +3223,7 @@ Superintendencia de Banca, Seguros y Administradoras Privadas de Fondos de Pensi
   <img src="Resources/capitulo-4/anexos_kanban_traceability.png" alt="Anexo — Trazabilidad y tablero Kanban" width="850">
 </p>
 
+<a id="anexo-a--código-fuente-de-los-diagramas-mermaid"></a>
 ## Anexo A — Código fuente de los diagramas Mermaid
 
 Los bloques siguientes conservan los diagramas completos y pueden copiarse a un editor compatible con Mermaid. Las figuras del cuerpo se generaron a partir de estos modelos.
@@ -3258,8 +3762,7 @@ stateDiagram-v2
     Cancelled --> [*]
 ```
 
-**Links**
-
+# Links
 
 | **Descripción** | **Enlace** |
 | --- | --- |

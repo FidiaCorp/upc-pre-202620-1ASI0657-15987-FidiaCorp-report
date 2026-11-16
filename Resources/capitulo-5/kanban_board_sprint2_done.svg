@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="1000" height="480" fill="#f8fafc" rx="8" stroke="#cbd5e1"/>
+  <rect x="0" y="0" width="1000" height="48" fill="#1e293b" rx="8"/>
+  <text x="500" y="30" fill="#ffffff" font-size="15" font-weight="bold" text-anchor="middle">Tablero Kanban - Cierre de Sprint 2 (Avance 3) - FidiaCorp CrediCasa</text>
+
+  <!-- Columns -->
+  <!-- Col 1: To Do -->
+  <rect x="20" y="65" width="225" height="395" fill="#f1f5f9" rx="6" stroke="#e2e8f0"/>
+  <text x="132" y="90" fill="#475569" font-size="13" font-weight="bold" text-anchor="middle">Por Hacer (Sprint 3) [0]</text>
+  <rect x="30" y="105" width="205" height="45" fill="#ffffff" rx="4" stroke="#cbd5e1"/>
+  <text x="40" y="125" fill="#64748b" font-size="11" font-weight="bold">US05 - Pasarela de pagos</text>
+  <text x="40" y="140" fill="#94a3b8" font-size="10">Programada para Sprint 3</text>
+
+  <rect x="30" y="160" width="205" height="45" fill="#ffffff" rx="4" stroke="#cbd5e1"/>
+  <text x="40" y="180" fill="#64748b" font-size="11" font-weight="bold">US16 - Mensajería bancaria</text>
+  <text x="40" y="195" fill="#94a3b8" font-size="10">Programada para Sprint 3</text>
+
+  <!-- Col 2: In Process -->
+  <rect x="265" y="65" width="225" height="395" fill="#eff6ff" rx="6" stroke="#bfdbfe"/>
+  <text x="377" y="90" fill="#1d4ed8" font-size="13" font-weight="bold" text-anchor="middle">En Proceso [0]</text>
+  <text x="377" y="240" fill="#93c5fd" font-size="12" font-style="italic" text-anchor="middle">(Todas las tareas de Sprint 2 completadas)</text>
+
+  <!-- Col 3: In Review -->
+  <rect x="510" y="65" width="225" height="395" fill="#fefce8" rx="6" stroke="#fef08a"/>
+  <text x="622" y="90" fill="#a16207" font-size="13" font-weight="bold" text-anchor="middle">En Revisión [0]</text>
+  <text x="622" y="240" fill="#fde047" font-size="12" font-style="italic" text-anchor="middle">(Incremento auditado y verificado)</text>
+
+  <!-- Col 4: Done -->
+  <rect x="755" y="65" width="225" height="395" fill="#f0fdf4" rx="6" stroke="#bbf7d0"/>
+  <text x="867" y="90" fill="#15803d" font-size="13" font-weight="bold" text-anchor="middle">Terminado (Done) [7 US]</text>
+
+  <rect x="765" y="105" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="123" fill="#166534" font-size="11" font-weight="bold">&#10004; US02 - Editar perfil usuario</text>
+  <text x="775" y="137" fill="#15803d" font-size="10">Backend + Frontend + E2E</text>
+
+  <rect x="765" y="153" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="171" fill="#166534" font-size="11" font-weight="bold">&#10004; US03 - Autenticacion 2FA TOTP</text>
+  <text x="775" y="185" fill="#15803d" font-size="10">AES-256-GCM + RFC 6238</text>
+
+  <rect x="765" y="201" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="219" fill="#166534" font-size="11" font-weight="bold">&#10004; US04 - Cierre de sesion</text>
+  <text x="775" y="233" fill="#15803d" font-size="10">Revocacion JWT en BD</text>
+
+  <rect x="765" y="249" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="267" fill="#166534" font-size="11" font-weight="bold">&#10004; US08 - Eliminar inmueble</text>
+  <text x="775" y="281" fill="#15803d" font-size="10">Borrado logico autorizado</text>
+
+  <rect x="765" y="297" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="315" fill="#166534" font-size="11" font-weight="bold">&#10004; US10 - Notificar ofertas DEMO</text>
+  <text x="775" y="329" fill="#15803d" font-size="10">Polling 5s + Aviso atomico</text>
+
+  <rect x="765" y="345" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="363" fill="#166534" font-size="11" font-weight="bold">&#10004; US11 - Cronograma de oferta</text>
+  <text x="775" y="377" fill="#15803d" font-size="10">Idempotente, saldo final 0.00</text>
+
+  <rect x="765" y="393" width="205" height="42" fill="#ffffff" rx="4" stroke="#86efac"/>
+  <text x="775" y="411" fill="#166534" font-size="11" font-weight="bold">&#10004; US14 - Filtrar inmuebles (AND)</text>
+  <text x="775" y="425" fill="#15803d" font-size="10">Filtros combinados normalizados</text>
+</svg>

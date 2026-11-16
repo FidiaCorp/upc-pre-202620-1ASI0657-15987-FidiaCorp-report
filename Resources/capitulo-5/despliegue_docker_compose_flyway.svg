@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 420" width="950" height="420" font-family="'Consolas', 'Courier New', monospace">
+  <rect width="950" height="420" fill="#0d1117" rx="8" stroke="#30363d"/>
+  <rect x="0" y="0" width="950" height="38" fill="#161b22" rx="8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="475" y="24" fill="#8b949e" font-size="13" text-anchor="middle">Docker Compose &amp; Flyway Migration Status</text>
+
+  <text x="25" y="65" fill="#58a6ff" font-size="13">$ docker compose ps</text>
+  <text x="25" y="90" fill="#e6edf3" font-size="12">NAME                     IMAGE                   COMMAND                  SERVICE             STATUS              PORTS</text>
+  <text x="25" y="110" fill="#3fb950" font-size="12">credicasa-backend-1      credicasa-backend:1.0   "java -jar app.jar"      backend             Up (healthy)        127.0.0.1:8080->8080/tcp</text>
+  <text x="25" y="130" fill="#3fb950" font-size="12">credicasa-postgres-1     postgres:16-alpine      "docker-entrypoint.s…"   postgres            Up (healthy)        5432/tcp (internal)</text>
+
+  <line x1="25" y1="155" x2="925" y2="155" stroke="#30363d" stroke-width="1"/>
+
+  <text x="25" y="185" fill="#58a6ff" font-size="13">$ flyway:info (Versioned Database Migrations applied)</text>
+  <text x="25" y="210" fill="#8b949e" font-size="12">Category  | Version | Description                   | Type | Installed On         | State</text>
+  <text x="25" y="230" fill="#3fb950" font-size="12">Versioned | 1       | init schema                   | SQL  | 2026-10-27 10:14:00  | Success</text>
+  <text x="25" y="250" fill="#3fb950" font-size="12">Versioned | 2       | accounts                      | SQL  | 2026-10-27 10:14:01  | Success</text>
+  <text x="25" y="270" fill="#3fb950" font-size="12">Versioned | 3       | two factor                    | SQL  | 2026-10-27 14:22:15  | Success</text>
+  <text x="25" y="290" fill="#3fb950" font-size="12">Versioned | 4       | token revocation              | SQL  | 2026-10-27 17:05:40  | Success</text>
+  <text x="25" y="310" fill="#3fb950" font-size="12">Versioned | 5       | properties                    | SQL  | 2026-10-27 21:18:02  | Success</text>
+  <text x="25" y="330" fill="#3fb950" font-size="12">Versioned | 6       | credit offers &amp; notifications | SQL  | 2026-10-28 01:45:10  | Success</text>
+  <text x="25" y="350" fill="#3fb950" font-size="12">Versioned | 7       | owned schedules precision     | SQL  | 2026-10-28 09:30:22  | Success</text>
+
+  <line x1="25" y1="375" x2="925" y2="375" stroke="#30363d" stroke-width="1"/>
+  <text x="25" y="400" fill="#79c0ff" font-size="12">Schema validation: Hibernate ddl-auto=validate | Flyway baselineVersion=0 | PostgresMigrationIT: PASSED</text>
+</svg>
